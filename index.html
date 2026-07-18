@@ -167,6 +167,13 @@ table.tbl td:first-child{font-family:var(--font-cond);font-weight:600;text-trans
 .callout-strip strong{color:var(--ink)}
 
 
+/* ---------- Language switcher + notice ---------- */
+.sb-lang{margin-top:14px}
+.sb-lang-lbl{font-family:var(--font-cond);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+select.mbl-lang{width:100%;background:#1A1A1A;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:8px 10px;font-family:var(--font-body);font-size:13px;outline:none;cursor:pointer}
+select.mbl-lang:focus{border-color:var(--spark-red)}
+.mbl-lang-note{background:var(--dream-yellow);color:#1A1A1A;font-family:var(--font-body);font-size:12.5px;line-height:1.5;padding:11px 15px;margin:0 0 24px;border-left:4px solid var(--spark-red)}
+
 /* ---------- Section 12 gateway ---------- */
 .gw{background:var(--charcoal);color:#fff;padding:32px 34px;position:relative;overflow:hidden;margin:0 0 14px}
 .gw::after{content:"";position:absolute;right:-90px;bottom:-110px;width:300px;height:300px;border-radius:999px;background:rgba(226,28,36,.16)}
@@ -224,15 +231,16 @@ footer{background:var(--charcoal);padding:32px 56px}
 </style>
 </head>
 <body>
-<button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰ Contents</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" data-i18n="ui.contents">☰ Contents</button>
 <div class="scrim" id="scrim"></div>
 <div class="shell">
   <!-- ================= SIDEBAR ================= -->
   <aside class="sb" id="sidebar">
     <div class="sb-brand">
       <div class="sb-word">Matchbook<br>Learning</div>
-      <div class="sb-sub">SOP Handbook 2026–27</div>
-      <div class="sb-sub2">Standard Operating Procedures · All Staff</div>
+      <div class="sb-sub" data-i18n="brand.sub">SOP Handbook 2026–27</div>
+      <div class="sb-sub2" data-i18n="brand.tag">Standard Operating Procedures · All Staff</div>
+      <div class="sb-lang" id="langMount"><span class="sb-lang-lbl">Language · Idioma · Lang · Lugha</span></div>
     </div>
     <div class="sb-searchwrap">
       <input type="text" id="q" placeholder="Search the handbook…" autocomplete="off" spellcheck="false">
@@ -249,36 +257,38 @@ footer{background:var(--charcoal);padding:32px 56px}
   <main class="main">
     <header class="hero">
       <div class="hero-inner">
-        <div class="hero-kick">The Matchbook Way · 2026–2027</div>
-        <h1>Standard Operating Procedures</h1>
-        <p>How we work together, teach, support students, and uphold the expectations that make our school successful. This is a “how we do school” guide — when you’re unsure, start here.</p>
+        <div class="hero-kick" data-i18n="hero.kicker">The Matchbook Way · 2026–2027</div>
+        <h1 data-i18n="hero.title">Standard Operating Procedures</h1>
+        <p data-i18n="hero.lede">How we work together, teach, support students, and uphold the expectations that make our school successful. This is a “how we do school” guide — when you’re unsure, start here.</p>
       </div>
     </header>
 
     <div class="wrap">
+      <div class="mbl-lang-note" role="note" style="display:none"></div>
+
       <!-- QUICK REFERENCE -->
       <section data-screen-label="Quick Reference">
-        <div class="qref-head">Quick Reference</div>
+        <div class="qref-head" data-i18n="qr.head">Quick Reference</div>
         <div class="qref">
           <div class="qref-card yellow">
-            <div class="qref-lbl">Lesson Plans Due</div>
-            <div class="qref-big">Wed · 5:00 PM</div>
-            <div class="qref-note">Submitted in GROW every week. Before breaks, submit early.</div>
+            <div class="qref-lbl" data-i18n="qr.plans.l">Lesson Plans Due</div>
+            <div class="qref-big" data-i18n="qr.plans.v">Wed · 5:00 PM</div>
+            <div class="qref-note" data-i18n="qr.plans.n">Submitted in GROW every week. Before breaks, submit early.</div>
           </div>
           <div class="qref-card dark">
-            <div class="qref-lbl">Student-Led Conferences</div>
-            <div class="qref-big">Oct 8–9 · Mar 18–19</div>
-            <div class="qref-note">Every student presents competency growth to family each semester.</div>
+            <div class="qref-lbl" data-i18n="qr.slc.l">Student-Led Conferences</div>
+            <div class="qref-big" data-i18n="qr.slc.v">Oct 8–9 · Mar 18–19</div>
+            <div class="qref-note" data-i18n="qr.slc.n">Every student presents competency growth to family each semester.</div>
           </div>
           <div class="qref-card plain">
-            <div class="qref-lbl">Family Events</div>
-            <div class="qref-big">1 per semester</div>
-            <div class="qref-note">All staff help plan and run at least one schoolwide event per semester.</div>
+            <div class="qref-lbl" data-i18n="qr.events.l">Family Events</div>
+            <div class="qref-big" data-i18n="qr.events.v">1 per semester</div>
+            <div class="qref-note" data-i18n="qr.events.n">All staff help plan and run at least one schoolwide event per semester.</div>
           </div>
           <div class="qref-card plain">
-            <div class="qref-lbl">If You’re Unsure</div>
-            <div class="qref-big">Start Here</div>
-            <div class="qref-note">This SOP first → grade-level team or coach → established channels.</div>
+            <div class="qref-lbl" data-i18n="qr.unsure.l">If You’re Unsure</div>
+            <div class="qref-big" data-i18n="qr.unsure.v">Start Here</div>
+            <div class="qref-note" data-i18n="qr.unsure.n">This SOP first → grade-level team or coach → established channels.</div>
           </div>
         </div>
       </section>
@@ -289,13 +299,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-intro" class="sec" data-screen-label="1. Introduction">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 01</div>
-            <h2>Introduction</h2>
+            <div class="kicker" data-i18n="k.sec01">Section 01</div>
+            <h2 data-i18n="h2.intro">Introduction</h2>
           </div>
           <button class="readbtn" data-sec="intro">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we work together, communicate, and uphold the expectations that make our school successful.</p>
+        <p class="sec-sub" data-i18n="sub.intro">How we work together, communicate, and uphold the expectations that make our school successful.</p>
 
         <details class="acc" open data-search data-stitle="Mission, Vision, and Beliefs" data-ssec="1 · Introduction">
           <summary>Mission, Vision, and Beliefs<span class="chev">▾</span></summary>
@@ -359,13 +369,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-practice" class="sec" data-screen-label="1.5 Professional Practice">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 1.5</div>
-            <h2>Professional Practice &amp; Staff Development</h2>
+            <div class="kicker" data-i18n="k.sec15">Section 1.5</div>
+            <h2 data-i18n="h2.practice">Professional Practice &amp; Staff Development</h2>
           </div>
           <button class="readbtn" data-sec="practice">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we support staff development and maintain consistent professional expectations across the school.</p>
+        <p class="sec-sub" data-i18n="sub.practice">How we support staff development and maintain consistent professional expectations across the school.</p>
 
         <details class="acc" open data-search data-stitle="Our Commitment to Staff Development" data-ssec="1.5 · Professional Practice">
           <summary>Our Commitment to Staff Development<span class="chev">▾</span></summary>
@@ -485,13 +495,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-academics" class="sec" data-screen-label="2. Academics & Instruction">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 02</div>
-            <h2>Academics &amp; Instruction</h2>
+            <div class="kicker" data-i18n="k.sec02">Section 02</div>
+            <h2 data-i18n="h2.academics">Academics &amp; Instruction</h2>
           </div>
           <button class="readbtn" data-sec="academics">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we plan, teach, assess, and respond to ensure strong student learning and growth.</p>
+        <p class="sec-sub" data-i18n="sub.academics">How we plan, teach, assess, and respond to ensure strong student learning and growth.</p>
 
         <details class="acc" open data-search data-stitle="Instructional Philosophy" data-ssec="2 · Academics & Instruction">
           <summary>Instructional Philosophy<span class="chev">▾</span></summary>
@@ -715,13 +725,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-assessment" class="sec" data-screen-label="3. Assessment & Grading">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 03</div>
-            <h2>Assessment &amp; Grading</h2>
+            <div class="kicker" data-i18n="k.sec03">Section 03</div>
+            <h2 data-i18n="h2.assessment">Assessment &amp; Grading</h2>
           </div>
           <button class="readbtn" data-sec="assessment">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we use data to understand progress, and how grades reflect current mastery of grade-level standards.</p>
+        <p class="sec-sub" data-i18n="sub.assessment">How we use data to understand progress, and how grades reflect current mastery of grade-level standards.</p>
 
         <details class="acc" open data-search data-stitle="Data & Assessment / Grading Policy" data-ssec="3 · Assessment & Grading">
           <summary>Data &amp; Assessment · Grading Policy<span class="chev">▾</span></summary>
@@ -767,13 +777,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-culture" class="sec" data-screen-label="4. Culture & Behavior Systems">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 04</div>
-            <h2>Schoolwide Culture &amp; Behavior Systems</h2>
+            <div class="kicker" data-i18n="k.sec04">Section 04</div>
+            <h2 data-i18n="h2.culture">Schoolwide Culture &amp; Behavior Systems</h2>
           </div>
           <button class="readbtn" data-sec="culture">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we build a safe, supportive, predictable environment through prevention, recognition, and response.</p>
+        <p class="sec-sub" data-i18n="sub.culture">How we build a safe, supportive, predictable environment through prevention, recognition, and response.</p>
 
         <details class="acc" open data-search data-stitle="Overview: Prevention, Recognition, Response" data-ssec="4 · Culture & Behavior">
           <summary>Overview: Prevention · Recognition · Response<span class="chev">▾</span></summary>
@@ -906,13 +916,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-support" class="sec" data-screen-label="5. Student Support Systems">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 05</div>
-            <h2>Student Support Systems</h2>
+            <div class="kicker" data-i18n="k.sec05">Section 05</div>
+            <h2 data-i18n="h2.support">Student Support Systems</h2>
           </div>
           <button class="readbtn" data-sec="support">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we identify student needs, coordinate services, and ensure every student receives academic, behavioral, and language support.</p>
+        <p class="sec-sub" data-i18n="sub.support">How we identify student needs, coordinate services, and ensure every student receives academic, behavioral, and language support.</p>
 
         <details class="acc" open data-search data-stitle="Collaboration & MTSS Framework" data-ssec="5 · Student Support">
           <summary>Collaboration &amp; MTSS Framework<span class="chev">▾</span></summary>
@@ -974,13 +984,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-sped" class="sec" data-screen-label="6. Special Education">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 06</div>
-            <h2>Special Education</h2>
+            <div class="kicker" data-i18n="k.sec06">Section 06</div>
+            <h2 data-i18n="h2.sped">Special Education</h2>
           </div>
           <button class="readbtn" data-sec="sped">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we identify and serve students with disabilities in accordance with IDEA and Indiana Article 7.</p>
+        <p class="sec-sub" data-i18n="sub.sped">How we identify and serve students with disabilities in accordance with IDEA and Indiana Article 7.</p>
 
         <details class="acc" open data-search data-stitle="Referral and Evaluation Process" data-ssec="6 · Special Education">
           <summary>Referral &amp; Evaluation Process<span class="chev">▾</span></summary>
@@ -1121,13 +1131,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-mll" class="sec" data-screen-label="7. Multilingual Learners">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 07</div>
-            <h2>Multilingual Learners</h2>
+            <div class="kicker" data-i18n="k.sec07">Section 07</div>
+            <h2 data-i18n="h2.mll">Multilingual Learners</h2>
           </div>
           <button class="readbtn" data-sec="mll">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we identify multilingual learners and deliver language services that provide access without lowering rigor.</p>
+        <p class="sec-sub" data-i18n="sub.mll">How we identify multilingual learners and deliver language services that provide access without lowering rigor.</p>
 
         <details class="acc" open data-search data-stitle="MLL Identification & Services" data-ssec="7 · Multilingual Learners">
           <summary>MLL Identification &amp; Services<span class="chev">▾</span></summary>
@@ -1152,13 +1162,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-attendance" class="sec" data-screen-label="8. Attendance & Accountability">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 08</div>
-            <h2>Attendance &amp; Accountability</h2>
+            <div class="kicker" data-i18n="k.sec08">Section 08</div>
+            <h2 data-i18n="h2.attendance">Attendance &amp; Accountability</h2>
           </div>
           <button class="readbtn" data-sec="attendance">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we monitor attendance and ensure consistent student responsibility and participation.</p>
+        <p class="sec-sub" data-i18n="sub.attendance">How we monitor attendance and ensure consistent student responsibility and participation.</p>
 
         <details class="acc" open data-search data-stitle="Attendance Systems" data-ssec="8 · Attendance & Accountability">
           <summary>Attendance Systems<span class="chev">▾</span></summary>
@@ -1189,13 +1199,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-safety" class="sec" data-screen-label="9. Safety">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 09</div>
-            <h2>Safety</h2>
+            <div class="kicker" data-i18n="k.sec09">Section 09</div>
+            <h2 data-i18n="h2.safety">Safety</h2>
           </div>
           <button class="readbtn" data-sec="safety">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we maintain safety, respond to concerns, and follow procedures during emergencies.</p>
+        <p class="sec-sub" data-i18n="sub.safety">How we maintain safety, respond to concerns, and follow procedures during emergencies.</p>
 
         <details class="acc" open data-search data-stitle="Preventing the Preventable" data-ssec="9 · Safety">
           <summary>Preventing the Preventable<span class="chev">▾</span></summary>
@@ -1245,13 +1255,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-family" class="sec" data-screen-label="10. Family & Community Engagement">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 10</div>
-            <h2>Family &amp; Community Engagement</h2>
+            <div class="kicker" data-i18n="k.sec10">Section 10</div>
+            <h2 data-i18n="h2.family">Family &amp; Community Engagement</h2>
           </div>
           <button class="readbtn" data-sec="family">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we communicate and partner with families and the community to support student success.</p>
+        <p class="sec-sub" data-i18n="sub.family">How we communicate and partner with families and the community to support student success.</p>
 
         <details class="acc" open data-search data-stitle="Communication & Conferences" data-ssec="10 · Family & Community">
           <summary>Communication &amp; Conferences<span class="chev">▾</span></summary>
@@ -1323,13 +1333,13 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-tech" class="sec" data-screen-label="11. Technology & Digital Systems">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 11</div>
-            <h2>Technology &amp; Digital Systems</h2>
+            <div class="kicker" data-i18n="k.sec11">Section 11</div>
+            <h2 data-i18n="h2.tech">Technology &amp; Digital Systems</h2>
           </div>
           <button class="readbtn" data-sec="tech">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we use, manage, and protect technology systems to support instruction, communication, and student learning.</p>
+        <p class="sec-sub" data-i18n="sub.tech">How we use, manage, and protect technology systems to support instruction, communication, and student learning.</p>
 
         <details class="acc" open data-search data-stitle="Device Use & Platforms" data-ssec="11 · Technology & Digital Systems">
           <summary>Device Use &amp; Platforms<span class="chev">▾</span></summary>
@@ -1375,41 +1385,41 @@ footer{background:var(--charcoal);padding:32px 56px}
       <section id="sec-cbl" class="sec" data-screen-label="12. Personalized & Competency-Based Learning">
         <div class="sec-top">
           <div>
-            <div class="kicker">Section 12</div>
-            <h2>Personalized &amp; Competency-Based Learning</h2>
+            <div class="kicker" data-i18n="k.sec12">Section 12</div>
+            <h2 data-i18n="h2.cbl">Personalized &amp; Competency-Based Learning</h2>
           </div>
           <button class="readbtn" data-sec="cbl">Mark as read</button>
         </div>
         <div class="rule"></div>
-        <p class="sec-sub">How we develop the whole student through a competency-based model aligned to our Portrait of a Graduate.</p>
+        <p class="sec-sub" data-i18n="sub.cbl">How we develop the whole student through a competency-based model aligned to our Portrait of a Graduate.</p>
 
         <div class="gw">
           <div class="gw-inner">
-            <div class="gw-eye">A Guided Experience · The Matchbook Way</div>
-            <h3>How personalized learning comes together</h3>
-            <div class="gw-vision">Every child known, loved, and flourishing.</div>
-            <p class="gw-lede">Personalized and Competency-Based Learning is not a program we implement — it is how we live our mission every day. Rather than a list of documents, step through a guided walkthrough that shows how strong instruction, student agency, MLL support, competencies, conferences, and coaching connect as one coherent system.</p>
-            <a class="gw-cta" href="personalized-learning.html">Enter the guided experience →</a>
+            <div class="gw-eye" data-i18n="gw.eye">A Guided Experience · The Matchbook Way</div>
+            <h3 data-i18n="gw.h3">How personalized learning comes together</h3>
+            <div class="gw-vision" data-i18n="gw.vision">Every child known, loved, and flourishing.</div>
+            <p class="gw-lede" data-i18n="gw.lede">Personalized and Competency-Based Learning is not a program we implement — it is how we live our mission every day. Rather than a list of documents, step through a guided walkthrough that shows how strong instruction, student agency, MLL support, competencies, conferences, and coaching connect as one coherent system.</p>
+            <a class="gw-cta" data-i18n="gw.cta" href="personalized-learning.html">Enter the guided experience →</a>
           </div>
         </div>
 
         <div class="gw-facts">
-          <div class="gw-fact"><div class="k">Data Conferencing</div><div class="v">Every student · Monthly</div><div class="s">Tied to the progress tracker; feeds Student-Led Conferences.</div></div>
-          <div class="gw-fact"><div class="k">Student-Led Conferences</div><div class="v">Oct 8–9 · Mar 18–19</div><div class="s">Students present competency growth to family, twice a year.</div></div>
-          <div class="gw-fact"><div class="k">Family Materials</div><div class="v">English &amp; Spanish</div><div class="s">Brand-aligned; at least one written update per semester.</div></div>
+          <div class="gw-fact"><div class="k" data-i18n="gw.f1k">Data Conferencing</div><div class="v" data-i18n="gw.f1v">Every student · Monthly</div><div class="s" data-i18n="gw.f1s">Tied to the progress tracker; feeds Student-Led Conferences.</div></div>
+          <div class="gw-fact"><div class="k" data-i18n="gw.f2k">Student-Led Conferences</div><div class="v" data-i18n="gw.f2v">Oct 8–9 · Mar 18–19</div><div class="s" data-i18n="gw.f2s">Students present competency growth to family, twice a year.</div></div>
+          <div class="gw-fact"><div class="k" data-i18n="gw.f3k">Family Materials</div><div class="v" data-i18n="gw.f3v">English &amp; Spanish</div><div class="s" data-i18n="gw.f3s">Brand-aligned; at least one written update per semester.</div></div>
         </div>
 
         <div class="gw-inside">
-          <div class="k">What&rsquo;s inside the walkthrough</div>
+          <div class="k" data-i18n="gw.inside_l">What&rsquo;s inside the walkthrough</div>
           <ol>
-            <li>The North Star — vision &amp; mission</li>
-            <li>What it is, and is not</li>
-            <li>The CBL engine &amp; key terms</li>
-            <li>11 connected classroom elements</li>
-            <li>Measuring the work (domain rubric)</li>
-            <li>What every student experiences weekly</li>
-            <li>The operating rhythm (dates, roles, portfolios)</li>
-            <li>Living the mission &amp; full resource library</li>
+            <li data-i18n="gw.in1">The North Star — vision &amp; mission</li>
+            <li data-i18n="gw.in2">What it is, and is not</li>
+            <li data-i18n="gw.in3">The CBL engine &amp; key terms</li>
+            <li data-i18n="gw.in4">11 connected classroom elements</li>
+            <li data-i18n="gw.in5">Measuring the work (domain rubric)</li>
+            <li data-i18n="gw.in6">What every student experiences weekly</li>
+            <li data-i18n="gw.in7">The operating rhythm (dates, roles, portfolios)</li>
+            <li data-i18n="gw.in8">Living the mission &amp; full resource library</li>
           </ol>
         </div>
 
@@ -1421,14 +1431,15 @@ footer{background:var(--charcoal);padding:32px 56px}
       <div class="foot-inner">
         <div>
           <div class="foot-word">Matchbook Learning</div>
-          <div class="foot-sub">SOP Handbook 2026–27 · Dreams Made Here.</div>
+          <div class="foot-sub" data-i18n="foot.tag">SOP Handbook 2026–27 · Dreams Made Here.</div>
         </div>
-        <button class="printbtn" id="printBtn">Print / Save as PDF →</button>
+        <button class="printbtn" id="printBtn" data-i18n="ui.print">Print / Save as PDF →</button>
       </div>
     </footer>
   </main>
 </div>
 
+<script src="i18n.js"></script>
 <script>
 (function(){
   "use strict";
@@ -1471,7 +1482,7 @@ footer{background:var(--charcoal);padding:32px 56px}
     a.href = '#sec-' + s.id;
     a.setAttribute('data-target', 'sec-' + s.id);
     a.innerHTML = '<span class="nav-num">' + s.num + '</span>' +
-                  '<span class="nav-title">' + s.title + '</span>' +
+                  '<span class="nav-title">' + MBLI18N.t('nav.' + s.id) + '</span>' +
                   '<span class="nav-check">✓</span>';
     a.addEventListener('click', function(e){ e.preventDefault(); jump('sec-' + s.id); closeMobileNav(); });
     nav.appendChild(a);
@@ -1495,11 +1506,11 @@ footer{background:var(--charcoal);padding:32px 56px}
       var btn = document.querySelector('.readbtn[data-sec="' + s.id + '"]');
       if (btn){
         btn.classList.toggle('on', !!read[s.id]);
-        btn.textContent = read[s.id] ? '✓ Read' : 'Mark as read';
+        btn.textContent = read[s.id] ? MBLI18N.t('ui.marked_read') : MBLI18N.t('ui.mark_read');
       }
     });
     var count = SECTIONS.filter(function(s){ return read[s.id]; }).length;
-    document.getElementById('progressLabel').textContent = count + ' of ' + SECTIONS.length + ' sections read';
+    document.getElementById('progressLabel').textContent = MBLI18N.t('ui.progress', { n: count, total: SECTIONS.length });
     document.getElementById('progressBar').style.width = Math.round((count / SECTIONS.length) * 100) + '%';
   }
   [].slice.call(document.querySelectorAll('.readbtn')).forEach(function(btn){
@@ -1525,10 +1536,10 @@ footer{background:var(--charcoal);padding:32px 56px}
     }).slice(0, 10);
 
     if (!matches.length){
-      resultsEl.innerHTML = '<div class="res-head">No results</div>';
+      resultsEl.innerHTML = '<div class="res-head">' + MBLI18N.t('ui.no_results') + '</div>';
       return;
     }
-    var html = '<div class="res-head">' + matches.length + (matches.length === 1 ? ' result' : ' results') + '</div>';
+    var html = '<div class="res-head">' + matches.length + ' ' + (matches.length === 1 ? MBLI18N.t('ui.result') : MBLI18N.t('ui.results')) + '</div>';
     matches.forEach(function(it){
       var lower = it.text.toLowerCase();
       var pos = lower.indexOf(q);
@@ -1570,6 +1581,21 @@ footer{background:var(--charcoal);padding:32px 56px}
     document.querySelectorAll('details.acc').forEach(function(d){ d.open = true; });
     window.print();
   });
+
+  // ---------- i18n wiring ----------
+  function applyI18nDynamic(){
+    SECTIONS.forEach(function(s){
+      var el = nav.querySelector('[data-target="sec-' + s.id + '"] .nav-title');
+      if (el) el.textContent = MBLI18N.t('nav.' + s.id);
+    });
+    qInput.placeholder = MBLI18N.t('ui.search_ph');
+    refreshRead();
+    if (qInput.value.trim().length >= 2) runSearch();
+  }
+  MBLI18N.onChange(applyI18nDynamic);
+  MBLI18N.init();
+  MBLI18N.mountSwitcher(document.getElementById('langMount'), { short: true });
+  applyI18nDynamic();
 
   refreshRead();
 

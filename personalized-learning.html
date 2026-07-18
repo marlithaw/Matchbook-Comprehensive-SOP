@@ -33,6 +33,11 @@ body{margin:0;background:var(--paper);font-family:var(--font-body);color:var(--i
 a{color:var(--spark-red);text-decoration:none}
 a:hover{text-decoration:underline}
 
+/* ---------- Language switcher + note ---------- */
+select.mbl-lang{background:#1A1A1A;color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:6px 10px;font-family:var(--font-body);font-size:12.5px;outline:none;cursor:pointer}
+select.mbl-lang:focus{border-color:var(--dream-yellow)}
+.mbl-lang-note{background:var(--dream-yellow);color:#1A1A1A;font-family:var(--font-body);font-size:12.5px;line-height:1.5;padding:11px 24px;border-bottom:2px solid var(--spark-red)}
+
 /* ---------- Top scroll progress ---------- */
 .scroll-top{position:fixed;top:0;left:0;height:4px;background:var(--spark-red);width:0;z-index:60;transition:width .1s linear}
 
@@ -233,64 +238,65 @@ a:hover{text-decoration:underline}
 <body>
 <div class="scroll-top" id="scrollTop"></div>
 <div class="topbar">
-  <a class="back" href="index.html#sec-cbl">← Back to Handbook</a>
+  <a class="back" href="index.html#sec-cbl" data-i18n="pl.back">← Back to Handbook</a>
   <span class="brand">Matchbook Learning</span>
-  <button class="done" id="doneBtn">Mark section read</button>
+  <div style="display:flex;align-items:center;gap:12px"><span id="langMount"></span><button class="done" id="doneBtn">Mark section read</button></div>
 </div>
 
+<div class="mbl-lang-note" role="note" style="display:none"></div>
 <div class="layout">
   <!-- PROGRESS RAIL -->
   <nav class="rail" id="rail" aria-label="Chapters">
-    <div class="rail-lbl">The Journey</div>
-    <a href="#c-north" data-chap="c-north"><span class="dot"></span>North Star</a>
-    <a href="#c-isnot" data-chap="c-isnot"><span class="dot"></span>Is / Is Not</a>
-    <a href="#c-engine" data-chap="c-engine"><span class="dot"></span>The CBL Engine</a>
-    <a href="#c-classroom" data-chap="c-classroom"><span class="dot"></span>In Every Classroom</a>
-    <a href="#c-rubric" data-chap="c-rubric"><span class="dot"></span>Measuring the Work</a>
-    <a href="#c-weekly" data-chap="c-weekly"><span class="dot"></span>Every Week</a>
-    <a href="#c-rhythm" data-chap="c-rhythm"><span class="dot"></span>Operating Rhythm</a>
-    <a href="#c-mission" data-chap="c-mission"><span class="dot"></span>Living the Mission</a>
-    <a href="#c-library" data-chap="c-library"><span class="dot"></span>Resource Library</a>
+    <div class="rail-lbl" data-i18n="pl.journey">The Journey</div>
+    <a href="#c-north" data-chap="c-north"><span class="dot"></span><span data-i18n="rail.north">North Star</span></a>
+    <a href="#c-isnot" data-chap="c-isnot"><span class="dot"></span><span data-i18n="rail.isnot">Is / Is Not</span></a>
+    <a href="#c-engine" data-chap="c-engine"><span class="dot"></span><span data-i18n="rail.engine">The CBL Engine</span></a>
+    <a href="#c-classroom" data-chap="c-classroom"><span class="dot"></span><span data-i18n="rail.classroom">In Every Classroom</span></a>
+    <a href="#c-rubric" data-chap="c-rubric"><span class="dot"></span><span data-i18n="rail.rubric">Measuring the Work</span></a>
+    <a href="#c-weekly" data-chap="c-weekly"><span class="dot"></span><span data-i18n="rail.weekly">Every Week</span></a>
+    <a href="#c-rhythm" data-chap="c-rhythm"><span class="dot"></span><span data-i18n="rail.rhythm">Operating Rhythm</span></a>
+    <a href="#c-mission" data-chap="c-mission"><span class="dot"></span><span data-i18n="rail.mission">Living the Mission</span></a>
+    <a href="#c-library" data-chap="c-library"><span class="dot"></span><span data-i18n="rail.library">Resource Library</span></a>
   </nav>
 
   <main class="flow">
     <!-- ===================== HERO / NORTH STAR ===================== -->
     <section class="hero" id="c-north">
       <div class="hero-inner">
-        <div class="eyebrow">The Matchbook Way · 2026–2027 · A Guided Walkthrough</div>
-        <h1>Personalized &amp; Competency-Based Learning</h1>
-        <div class="vision">Every child is known, loved, and flourishing.</div>
-        <p class="mission">We personalize learning within a restorative environment, fostering resilience and excellence while preparing students for real-world opportunities.</p>
-        <div class="northstar">Personalized and Competency-Based Learning is <strong>not a program we implement.</strong> It is how we live our mission every single day — in how we group students, the feedback we give, the projects we assign, and the relationships we build.</div>
-        <button class="scrollcue" id="beginBtn">Begin the walkthrough ↓</button>
+        <div class="eyebrow" data-i18n="pl.hero_eye">The Matchbook Way · 2026–2027 · A Guided Walkthrough</div>
+        <h1 data-i18n="pl.hero_title">Personalized &amp; Competency-Based Learning</h1>
+        <div class="vision" data-i18n="pl.vision">Every child is known, loved, and flourishing.</div>
+        <p class="mission" data-i18n="pl.mission">We personalize learning within a restorative environment, fostering resilience and excellence while preparing students for real-world opportunities.</p>
+        <div class="northstar" data-i18n-html="pl.northstar">Personalized and Competency-Based Learning is <strong>not a program we implement.</strong> It is how we live our mission every single day — in how we group students, the feedback we give, the projects we assign, and the relationships we build.</div>
+        <button class="scrollcue" id="beginBtn" data-i18n="pl.begin">Begin the walkthrough ↓</button>
       </div>
     </section>
 
     <!-- ===================== IS / IS NOT ===================== -->
     <section class="chap" id="c-isnot">
       <div class="rv">
-        <div class="stepnum">Chapter 01</div>
-        <div class="kicker">Setting the Record Straight</div>
-        <h2>What It Is, and Is Not</h2>
+        <div class="stepnum" data-i18n="ch.s1">Chapter 01</div>
+        <div class="kicker" data-i18n="ch.k1">Setting the Record Straight</div>
+        <h2 data-i18n="ch.h1">What It Is, and Is Not</h2>
         <div class="rule"></div>
-        <p class="lead">Personalized learning at Matchbook is often misunderstood. Before we walk through how it works, let’s be clear about what it actually means.</p>
+        <p class="lead" data-i18n="ch.l1">Personalized learning at Matchbook is often misunderstood. Before we walk through how it works, let’s be clear about what it actually means.</p>
       </div>
       <div class="isnot rv">
         <div class="isnot-col no">
-          <div class="isnot-head">Personalized Learning is NOT…</div>
-          <div class="isnot-row">Students on technology all day</div>
-          <div class="isnot-row">Unstructured choice without rigor</div>
-          <div class="isnot-row">Replacing teachers with technology</div>
-          <div class="isnot-row">Lowering expectations for any student</div>
-          <div class="isnot-row">Disconnected systems running in parallel</div>
+          <div class="isnot-head" data-i18n="isnot.no_head">Personalized Learning is NOT…</div>
+          <div class="isnot-row" data-i18n="isnot.no1">Students on technology all day</div>
+          <div class="isnot-row" data-i18n="isnot.no2">Unstructured choice without rigor</div>
+          <div class="isnot-row" data-i18n="isnot.no3">Replacing teachers with technology</div>
+          <div class="isnot-row" data-i18n="isnot.no4">Lowering expectations for any student</div>
+          <div class="isnot-row" data-i18n="isnot.no5">Disconnected systems running in parallel</div>
         </div>
         <div class="isnot-col yes">
-          <div class="isnot-head">Personalized Learning IS…</div>
-          <div class="isnot-row">Teacher-led, structured, and responsive</div>
-          <div class="isnot-row">Language-rich and multilingual learner-centered</div>
-          <div class="isnot-row">Data-informed with ongoing feedback</div>
-          <div class="isnot-row">Student-owned and academically rigorous</div>
-          <div class="isnot-row">Restorative, future-focused, and connected</div>
+          <div class="isnot-head" data-i18n="isnot.yes_head">Personalized Learning IS…</div>
+          <div class="isnot-row" data-i18n="isnot.yes1">Teacher-led, structured, and responsive</div>
+          <div class="isnot-row" data-i18n="isnot.yes2">Language-rich and multilingual learner-centered</div>
+          <div class="isnot-row" data-i18n="isnot.yes3">Data-informed with ongoing feedback</div>
+          <div class="isnot-row" data-i18n="isnot.yes4">Student-owned and academically rigorous</div>
+          <div class="isnot-row" data-i18n="isnot.yes5">Restorative, future-focused, and connected</div>
         </div>
       </div>
     </section>
@@ -298,26 +304,26 @@ a:hover{text-decoration:underline}
     <!-- ===================== CBL ENGINE ===================== -->
     <section class="chap" id="c-engine">
       <div class="rv">
-        <div class="stepnum">Chapter 02</div>
-        <div class="kicker">The Engine</div>
-        <h2>Competency-Based Learning</h2>
+        <div class="stepnum" data-i18n="ch.s2">Chapter 02</div>
+        <div class="kicker" data-i18n="ch.k2">The Engine</div>
+        <h2 data-i18n="ch.h2">Competency-Based Learning</h2>
         <div class="rule"></div>
-        <p class="lead">Competency-Based Learning is how personalized learning comes to life at Matchbook K–8. It rests on four commitments — and a shared vocabulary.</p>
+        <p class="lead" data-i18n="ch.l2">Competency-Based Learning is how personalized learning comes to life at Matchbook K–8. It rests on four commitments — and a shared vocabulary.</p>
       </div>
       <div class="pcards rv">
-        <div class="pcard"><h4>Targeted Support</h4><p>Students receive instruction based on what they need, not just what grade they are in.</p></div>
-        <div class="pcard"><h4>Evidence Over Time</h4><p>Learning is measured through demonstrated <span class="term" tabindex="0" data-term="mastery">mastery<span class="pop"></span></span>, not seat time or completion.</p></div>
-        <div class="pcard"><h4>Actionable Feedback</h4><p>Students receive ongoing, specific feedback tied to clear success criteria.</p></div>
-        <div class="pcard"><h4>Revision &amp; Growth</h4><p>Students always have the opportunity to revisit learning, receive support, and demonstrate mastery again.</p></div>
+        <div class="pcard"><h4 data-i18n="pc1.t">Targeted Support</h4><p data-i18n="pc1.p">Students receive instruction based on what they need, not just what grade they are in.</p></div>
+        <div class="pcard"><h4 data-i18n="pc2.t">Evidence Over Time</h4><p data-i18n-html="pc2.p">Learning is measured through demonstrated <span class="term" tabindex="0" data-term="mastery">mastery<span class="pop"></span></span>, not seat time or completion.</p></div>
+        <div class="pcard"><h4 data-i18n="pc3.t">Actionable Feedback</h4><p data-i18n="pc3.p">Students receive ongoing, specific feedback tied to clear success criteria.</p></div>
+        <div class="pcard"><h4 data-i18n="pc4.t">Revision &amp; Growth</h4><p data-i18n="pc4.p">Students always have the opportunity to revisit learning, receive support, and demonstrate mastery again.</p></div>
       </div>
       <div class="glossary rv">
-        <div class="g-lbl">Key Terms — the shared language of CBL</div>
+        <div class="g-lbl" data-i18n="gl.label">Key Terms — the shared language of CBL</div>
         <dl>
-          <div><dt>Competency</dt><dd>A clearly defined skill or knowledge area aligned to academic standards and student success outcomes.</dd></div>
-          <div><dt>Mastery</dt><dd>Consistent demonstration of understanding at the expected level — not perfection, but reliable, repeatable evidence.</dd></div>
-          <div><dt>Evidence of Learning</dt><dd>Student work that demonstrates mastery: projects, assessments, discussions, and teacher observations.</dd></div>
-          <div><dt>Formative Feedback</dt><dd>Ongoing, specific feedback that helps students understand strengths and identify clear next steps.</dd></div>
-          <div><dt>Reassessment</dt><dd>Structured opportunities to revisit learning, receive additional support, and demonstrate mastery again.</dd></div>
+          <div><dt data-i18n="gl.t1">Competency</dt><dd data-i18n="gl.d1">A clearly defined skill or knowledge area aligned to academic standards and student success outcomes.</dd></div>
+          <div><dt data-i18n="gl.t2">Mastery</dt><dd data-i18n="gl.d2">Consistent demonstration of understanding at the expected level — not perfection, but reliable, repeatable evidence.</dd></div>
+          <div><dt data-i18n="gl.t3">Evidence of Learning</dt><dd data-i18n="gl.d3">Student work that demonstrates mastery: projects, assessments, discussions, and teacher observations.</dd></div>
+          <div><dt data-i18n="gl.t4">Formative Feedback</dt><dd data-i18n="gl.d4">Ongoing, specific feedback that helps students understand strengths and identify clear next steps.</dd></div>
+          <div><dt data-i18n="gl.t5">Reassessment</dt><dd data-i18n="gl.d5">Structured opportunities to revisit learning, receive additional support, and demonstrate mastery again.</dd></div>
         </dl>
       </div>
     </section>
@@ -325,41 +331,41 @@ a:hover{text-decoration:underline}
     <!-- ===================== IN EVERY CLASSROOM (STEPPER) ===================== -->
     <section class="chap" id="c-classroom">
       <div class="rv">
-        <div class="stepnum">Chapter 03</div>
-        <div class="kicker">The Heart of the Model</div>
-        <h2>In Every Classroom</h2>
+        <div class="stepnum" data-i18n="ch.s3">Chapter 03</div>
+        <div class="kicker" data-i18n="ch.k3">The Heart of the Model</div>
+        <h2 data-i18n="ch.h3">In Every Classroom</h2>
         <div class="rule"></div>
-        <p class="lead">Personalized, competency-based learning shows up across eleven interconnected elements. <strong>These are not separate programs — they are one coherent system.</strong> Step through each to see how they build on one another.</p>
+        <p class="lead" data-i18n-html="ch.l3">Personalized, competency-based learning shows up across eleven interconnected elements. <strong>These are not separate programs — they are one coherent system.</strong> Step through each to see how they build on one another.</p>
       </div>
       <div class="stepper rv">
         <div class="chips" id="chips" role="tablist" aria-label="Classroom elements"></div>
         <div class="panel" id="panel" aria-live="polite"></div>
         <div class="stepnav">
-          <button class="stepbtn" id="prevBtn">← Prev</button>
+          <button class="stepbtn" id="prevBtn" data-i18n="pl.prev">← Prev</button>
           <div class="step-progress"><div id="stepBar"></div></div>
           <button class="stepbtn primary" id="nextBtn">Next →</button>
         </div>
-        <div class="coherence">“Every student gets what they need — not the exact same next step.”</div>
+        <div class="coherence" data-i18n="cls.coherence">“Every student gets what they need — not the exact same next step.”</div>
       </div>
     </section>
 
     <!-- ===================== RUBRIC ===================== -->
     <section class="chap" id="c-rubric">
       <div class="rv">
-        <div class="stepnum">Chapter 04</div>
-        <div class="kicker">Keeping It Accountable</div>
-        <h2>Measuring the Work</h2>
+        <div class="stepnum" data-i18n="ch.s4">Chapter 04</div>
+        <div class="kicker" data-i18n="ch.k4">Keeping It Accountable</div>
+        <h2 data-i18n="ch.h4">Measuring the Work</h2>
         <div class="rule"></div>
-        <p class="lead">To keep this vision from becoming an abstraction, the CBL Director’s work is organized around seven rubric domains — each weighted by its impact, each with an observable definition of strong practice.</p>
+        <p class="lead" data-i18n="ch.l4">To keep this vision from becoming an abstraction, the CBL Director’s work is organized around seven rubric domains — each weighted by its impact, each with an observable definition of strong practice.</p>
       </div>
       <div class="rubric rv" id="rubric"></div>
       <div class="rv">
-        <p style="margin-top:26px"><strong>Four performance levels</strong> — each domain is measured against the same scale, usable mid-year for a real-time check, not only at formal evaluation time.</p>
+        <p style="margin-top:26px" data-i18n-html="rub.levels_intro"><strong>Four performance levels</strong> — each domain is measured against the same scale, usable mid-year for a real-time check, not only at formal evaluation time.</p>
         <div class="levels">
-          <div class="level he"><h5>Highly Effective</h5><p>Practice is proactive, data-driven, and consistently reaches every student or teacher on schedule.</p></div>
-          <div class="level e"><h5>Effective</h5><p>Practice happens on schedule and as planned, with regular review.</p></div>
-          <div class="level in"><h5>Improvement Necessary</h5><p>Practice happens but is inconsistent, reactive, or not consistently tied to data.</p></div>
-          <div class="level ie"><h5>Ineffective</h5><p>Little or no evidence of the practice; not aligned to CBL implementation.</p></div>
+          <div class="level he"><h5 data-i18n="lvl.he_t">Highly Effective</h5><p data-i18n="lvl.he_p">Practice is proactive, data-driven, and consistently reaches every student or teacher on schedule.</p></div>
+          <div class="level e"><h5 data-i18n="lvl.e_t">Effective</h5><p data-i18n="lvl.e_p">Practice happens on schedule and as planned, with regular review.</p></div>
+          <div class="level in"><h5 data-i18n="lvl.in_t">Improvement Necessary</h5><p data-i18n="lvl.in_p">Practice happens but is inconsistent, reactive, or not consistently tied to data.</p></div>
+          <div class="level ie"><h5 data-i18n="lvl.ie_t">Ineffective</h5><p data-i18n="lvl.ie_p">Little or no evidence of the practice; not aligned to CBL implementation.</p></div>
         </div>
       </div>
     </section>
@@ -367,70 +373,70 @@ a:hover{text-decoration:underline}
     <!-- ===================== WEEKLY ===================== -->
     <section class="chap" id="c-weekly">
       <div class="rv">
-        <div class="stepnum">Chapter 05</div>
-        <div class="kicker">The Lived Experience</div>
-        <h2>Every Student, Every Week</h2>
+        <div class="stepnum" data-i18n="ch.s5">Chapter 05</div>
+        <div class="kicker" data-i18n="ch.k5">The Lived Experience</div>
+        <h2 data-i18n="ch.h5">Every Student, Every Week</h2>
         <div class="rule"></div>
-        <p class="lead">When the system is holding together, this is what every Matchbook student experiences — every single week.</p>
+        <p class="lead" data-i18n="ch.l5">When the system is holding together, this is what every Matchbook student experiences — every single week.</p>
       </div>
       <div class="weekly rv">
-        <div class="wk"><span class="ck">✓</span><span>Strong grade-level core instruction</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Voice and choice in practice or demonstration</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Small-group support or extension</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Language support (MLL scaffolds) as needed</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Targeted, data-driven practice</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Competency reflection and goal-setting</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Peer collaboration and discussion</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Conference or check-in over time</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Authentic application or project work</span></div>
-        <div class="wk"><span class="ck">✓</span><span>Safe, restorative, structured environment</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk1">Strong grade-level core instruction</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk2">Voice and choice in practice or demonstration</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk3">Small-group support or extension</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk4">Language support (MLL scaffolds) as needed</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk5">Targeted, data-driven practice</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk6">Competency reflection and goal-setting</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk7">Peer collaboration and discussion</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk8">Conference or check-in over time</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk9">Authentic application or project work</span></div>
+        <div class="wk"><span class="ck">✓</span><span data-i18n="wk10">Safe, restorative, structured environment</span></div>
       </div>
     </section>
 
     <!-- ===================== OPERATING RHYTHM ===================== -->
     <section class="chap" id="c-rhythm">
       <div class="rv">
-        <div class="stepnum">Chapter 06</div>
-        <div class="kicker">How It Runs</div>
-        <h2>The Operating Rhythm</h2>
+        <div class="stepnum" data-i18n="ch.s6">Chapter 06</div>
+        <div class="kicker" data-i18n="ch.k6">How It Runs</div>
+        <h2 data-i18n="ch.h6">The Operating Rhythm</h2>
         <div class="rule"></div>
-        <p class="lead">The vision holds together because concrete routines and responsibilities keep it on schedule. Here is the operational backbone for the year.</p>
+        <p class="lead" data-i18n="ch.l6">The vision holds together because concrete routines and responsibilities keep it on schedule. Here is the operational backbone for the year.</p>
       </div>
       <div class="rhythm rv">
-        <div class="ritem"><h4>Monthly Data Conferencing</h4>
+        <div class="ritem"><h4 data-i18n="rh1.h">Monthly Data Conferencing</h4>
           <ul>
             <li>Every student is conferenced <strong>each calendar month</strong>, tied to the Google Sheets progress tracker.</li>
             <li>Grades K–6: teacher completes the Google Form <em>during</em> the conference. Grades 7–8: students complete it <em>before</em> the conference.</li>
             <li>The Director of CBL monitors completion, follows up within three school days of any missed deadline, and produces a building-wide summary each semester for the Head of School.</li>
           </ul>
         </div>
-        <div class="ritem"><h4>Student-Led Conferences (Family-Facing)</h4>
+        <div class="ritem"><h4 data-i18n="rh2.h">Student-Led Conferences (Family-Facing)</h4>
           <ul>
             <li><span class="datepill">Fall · Oct 8 (3–7 PM)</span><span class="datepill">Oct 9 (8 AM–3 PM)</span><span class="datepill">Spring · Mar 18 (3–7 PM)</span><span class="datepill">Mar 19 (8 AM–3 PM)</span></li>
             <li>Every student leads the conference with their family and teacher, presenting evidence of growth across all five competencies.</li>
             <li>Prep materials reach teachers no fewer than <strong>three weeks</strong> before each date; family materials are provided in English and Spanish.</li>
           </ul>
         </div>
-        <div class="ritem"><h4>Artifacts &amp; Portfolios</h4>
+        <div class="ritem"><h4 data-i18n="rh3.h">Artifacts &amp; Portfolios</h4>
           <ul>
             <li>Grades 7–8 digitize portfolios to <strong>UNRULR</strong> this year, aligning with The Match High School and preparing students for high school.</li>
             <li>At least one grade-band pilot operates in semester one; the system expands in semester two. Teachers collect and submit artifacts on the established schedule.</li>
           </ul>
         </div>
-        <div class="ritem"><h4>Onboarding, PD &amp; Framework Maintenance</h4>
+        <div class="ritem"><h4 data-i18n="rh4.h">Onboarding, PD &amp; Framework Maintenance</h4>
           <ul>
             <li>A full-staff CBL session each August (before students arrive) covers the vision, the five competencies, framework updates, data deadlines, and the SLC calendar; PD continues throughout the year.</li>
             <li>Definitions and K–8 progressions are reviewed each July and approved by the Head of School and Assistant Principal before distribution. Prior versions are archived, not deleted, to show the system’s growth.</li>
             <li>Matchbook intends to partner more directly with <strong>Marzano Resources</strong> to build the competency system with fidelity.</li>
           </ul>
         </div>
-        <div class="ritem"><h4>Pathways &amp; College/Career Readiness</h4>
+        <div class="ritem"><h4 data-i18n="rh5.h">Pathways &amp; College/Career Readiness</h4>
           <ul>
             <li>Every 8th grader completes an annual pathway-identification process each spring, connected explicitly to competency growth and long-term outcomes.</li>
             <li>CCR is taught in dedicated class time K–8: the Director of CBL teaches grades 7–8; the College &amp; Career Teacher teaches grades K–6.</li>
           </ul>
         </div>
-        <div class="ritem"><h4>Family Communication Standards</h4>
+        <div class="ritem"><h4 data-i18n="rh6.h">Family Communication Standards</h4>
           <ul>
             <li>All family-facing CBL materials are produced in English and Spanish and follow Matchbook brand standards (Century Gothic; red, black, gray).</li>
             <li>The Director of CBL prepares at least one written progress update per semester; the Head of School receives a board-ready CBL update each month.</li>
@@ -442,32 +448,32 @@ a:hover{text-decoration:underline}
     <!-- ===================== LIVING THE MISSION ===================== -->
     <section class="chap" id="c-mission">
       <div class="rv">
-        <div class="stepnum">Chapter 07</div>
-        <div class="kicker gold">The Why Behind It All</div>
-        <h2>How We Live the Mission</h2>
+        <div class="stepnum" data-i18n="ch.s7">Chapter 07</div>
+        <div class="kicker gold" data-i18n="ch.k7">The Why Behind It All</div>
+        <h2 data-i18n="ch.h7">How We Live the Mission</h2>
         <div class="rule"></div>
-        <p class="lead">Every element you just walked through exists to make three words real for every child.</p>
+        <p class="lead" data-i18n="ch.l7">Every element you just walked through exists to make three words real for every child.</p>
       </div>
       <div class="klf rv">
-        <div class="klf-card k"><h3>Known</h3><p>Every student has a teacher who sees them — not just their data, but their strengths, their story, and their potential. Conferences, small groups, and restorative relationships ensure no child falls through the cracks.</p></div>
-        <div class="klf-card l"><h3>Loved</h3><p>A restorative environment is a commitment to belonging. Students are held to high expectations within a culture of care, accountability, and second chances.</p></div>
-        <div class="klf-card f"><h3>Flourishing</h3><p>Flourishing is academic growth, resilience, and real-world readiness beyond test scores — excellence shown through projects, competencies, presentations, and habits students carry beyond Matchbook.</p></div>
+        <div class="klf-card k"><h3 data-i18n="klf.k_t">Known</h3><p data-i18n="klf.k_p">Every student has a teacher who sees them — not just their data, but their strengths, their story, and their potential. Conferences, small groups, and restorative relationships ensure no child falls through the cracks.</p></div>
+        <div class="klf-card l"><h3 data-i18n="klf.l_t">Loved</h3><p data-i18n="klf.l_p">A restorative environment is a commitment to belonging. Students are held to high expectations within a culture of care, accountability, and second chances.</p></div>
+        <div class="klf-card f"><h3 data-i18n="klf.f_t">Flourishing</h3><p data-i18n="klf.f_p">Flourishing is academic growth, resilience, and real-world readiness beyond test scores — excellence shown through projects, competencies, presentations, and habits students carry beyond Matchbook.</p></div>
       </div>
-      <div class="mantra rv">Strong instruction. <span>Meaningful agency.</span> Explicit MLL support.<br>Restorative structures. <span>Real-world application.</span> Future-ready students.</div>
+      <div class="mantra rv" data-i18n-html="klf.mantra">Strong instruction. <span>Meaningful agency.</span> Explicit MLL support.<br>Restorative structures. <span>Real-world application.</span> Future-ready students.</div>
     </section>
 
     <!-- ===================== RESOURCE LIBRARY ===================== -->
     <section class="chap" id="c-library">
       <div class="rv">
-        <div class="stepnum">Chapter 08</div>
-        <div class="kicker">Everything in One Place</div>
-        <h2>Resource Library</h2>
+        <div class="stepnum" data-i18n="ch.s8">Chapter 08</div>
+        <div class="kicker" data-i18n="ch.k8">Everything in One Place</div>
+        <h2 data-i18n="ch.h8">Resource Library</h2>
         <div class="rule"></div>
-        <p class="lead">The tools referenced throughout this walkthrough, organized by how you’ll use them. Each opens in a new tab.</p>
+        <p class="lead" data-i18n="ch.l8">The tools referenced throughout this walkthrough, organized by how you’ll use them. Each opens in a new tab.</p>
       </div>
       <div class="lib rv">
         <div class="lib-col instr">
-          <h4>Instructional Tools</h4>
+          <h4 data-i18n="lib.instr">Instructional Tools</h4>
           <ul>
             <li><a href="https://drive.google.com/drive/folders/1uEfTRSoh81X6dQQeyrvR-wK5avdOYs2e?usp=sharing" target="_blank" rel="noopener">Student Conferencing Scripts</a></li>
             <li><a href="https://docs.google.com/document/d/1NXCAsvLFetejvOLTkMsr0AjYBKsedTsTp9hSeh1hM2g/edit?usp=sharing" target="_blank" rel="noopener">Student Reflection Sheets — K–2</a></li>
@@ -479,7 +485,7 @@ a:hover{text-decoration:underline}
           </ul>
         </div>
         <div class="lib-col">
-          <h4>Clarity Tools</h4>
+          <h4 data-i18n="lib.clarity">Clarity Tools</h4>
           <ul>
             <li><a href="https://docs.google.com/document/d/1Jr7Cvbu_UdAy0sZf5hzZB9pPoCH4rC9t/edit?usp=sharing" target="_blank" rel="noopener">Classroom Competency Indicators</a></li>
             <li><a href="https://docs.google.com/document/d/10_BAZ2VXuH1JUczHmX2UxVRjhU0cSox6/edit?usp=sharing" target="_blank" rel="noopener">Competency Language Guide — Student (EN)</a></li>
@@ -489,7 +495,7 @@ a:hover{text-decoration:underline}
           </ul>
         </div>
         <div class="lib-col">
-          <h4>Communication Tools</h4>
+          <h4 data-i18n="lib.comm">Communication Tools</h4>
           <ul>
             <li><a href="https://docs.google.com/document/d/1x1yM3vU6np1dWgpgtia-lu4uy26yHsK8JUrYIN7mPnY/edit?usp=sharing" target="_blank" rel="noopener">Staff Implementation Guide</a></li>
             <li><a href="https://docs.google.com/document/d/1QIexhPkRUu6SuVxVd8qZ0m-ElsKor8gH/edit?usp=sharing" target="_blank" rel="noopener">Competency Language Guide — Student (ES)</a></li>
@@ -501,17 +507,18 @@ a:hover{text-decoration:underline}
       </div>
 
       <div class="endcard rv">
-        <h3>That’s the Matchbook Way</h3>
-        <p>Personalized learning isn’t a program — it’s how we live the mission every day.</p>
+        <h3 data-i18n="end.h">That’s the Matchbook Way</h3>
+        <p data-i18n="end.p">Personalized learning isn’t a program — it’s how we live the mission every day.</p>
         <div class="endbtns">
           <button class="yellow" id="doneBtn2">Mark section read</button>
-          <a class="ghost" href="index.html#sec-cbl">← Return to Handbook</a>
+          <a class="ghost" href="index.html#sec-cbl" data-i18n="pl.back">← Return to Handbook</a>
         </div>
       </div>
     </section>
   </main>
 </div>
 
+<script src="i18n.js"></script>
 <script>
 (function(){
   "use strict";
@@ -592,18 +599,18 @@ a:hover{text-decoration:underline}
     var el = ELEMENTS[idx];
     var resHtml = '';
     if (el.res && el.res.length){
-      resHtml = '<div class="res-inline"><div class="r-lbl">Supporting tools for this element</div><div class="r-list">' +
+      resHtml = '<div class="res-inline"><div class="r-lbl">' + MBLI18N.t('pl.tools') + '</div><div class="r-list">' +
         el.res.map(function(r){ return '<a class="res-chip" href="'+r.href+'" target="_blank" rel="noopener">'+r.label+'</a>'; }).join('') +
         '</div></div>';
     }
     panelEl.innerHTML =
       '<div class="panel-top"><div class="big">'+(idx+1)+'</div><div class="t-meta">' +
-        '<div class="t-count">Element '+(idx+1)+' of '+ELEMENTS.length+'</div>' +
-        '<h3>'+el.title+'</h3><div class="t-tag">'+el.tag+'</div></div></div>' +
+        '<div class="t-count">' + MBLI18N.t('pl.element_x', { n: idx+1, total: ELEMENTS.length }) + '</div>' +
+        '<h3>'+MBLI18N.t('el.'+(idx+1)+'.t')+'</h3><div class="t-tag">'+MBLI18N.t('el.'+(idx+1)+'.tag')+'</div></div></div>' +
       '<div class="panel-body">'+el.body+'</div>' + resHtml;
     stepBar.style.width = Math.round(((idx+1)/ELEMENTS.length)*100) + '%';
     prevBtn.disabled = (idx === 0);
-    nextBtn.textContent = (idx === ELEMENTS.length-1) ? 'Start over ↺' : 'Next →';
+    nextBtn.textContent = (idx === ELEMENTS.length-1) ? MBLI18N.t('pl.startover') : MBLI18N.t('pl.next');
     [].forEach.call(chipsEl.children, function(c, i){
       c.classList.toggle('active', i === idx);
       c.classList.toggle('visited', !!visited[i] && i !== idx);
@@ -630,15 +637,15 @@ a:hover{text-decoration:underline}
     { d:'D7', name:'Student Agency', w:null }
   ];
   var rubricEl = document.getElementById('rubric');
-  DOMAINS.forEach(function(dm){
+  DOMAINS.forEach(function(dm, i){
     var pct = dm.w == null ? 100 : dm.w;
     var supp = dm.w == null;
     var row = document.createElement('div');
     row.className = 'bar-row';
     row.innerHTML = '<div class="d">'+dm.d+'</div>' +
       '<div class="bar-track"><div class="bar-fill'+(supp?' supp':'')+'" data-w="'+pct+'">' +
-        '<span class="bar-name'+(supp?' dark':'')+'">'+dm.name+'</span></div></div>' +
-      '<div class="w">'+(supp?'Suppl.':dm.w+'%')+'</div>';
+        '<span class="bar-name'+(supp?' dark':'')+'" data-i18n="dom.d'+(i+1)+'">'+dm.name+'</span></div></div>' +
+      '<div class="w"'+(supp?' data-i18n="dom.suppl"':'')+'>'+(supp?'Suppl.':dm.w+'%')+'</div>';
     rubricEl.appendChild(row);
   });
 
@@ -699,11 +706,17 @@ a:hover{text-decoration:underline}
   function refreshDone(){
     var done = !!readState().cbl;
     btn1.classList.toggle('is-done', done);
-    btn1.textContent = done ? '✓ Marked read' : 'Mark section read';
-    if (btn2){ btn2.classList.toggle('is-done', done); btn2.textContent = done ? '✓ Marked read' : 'Mark section read'; }
+    btn1.textContent = done ? MBLI18N.t('pl.done_on') : MBLI18N.t('pl.done');
+    if (btn2){ btn2.classList.toggle('is-done', done); btn2.textContent = done ? MBLI18N.t('pl.done_on') : MBLI18N.t('pl.done'); }
   }
   btn1.addEventListener('click', function(){ setDone(!readState().cbl); });
   if (btn2) btn2.addEventListener('click', function(){ setDone(!readState().cbl); });
+
+  // ---------- i18n wiring ----------
+  MBLI18N.onChange(function(){ render(); refreshDone(); });
+  MBLI18N.init();
+  MBLI18N.mountSwitcher(document.getElementById('langMount'), { short: true });
+  render();
   refreshDone();
 })();
 </script>

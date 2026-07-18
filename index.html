@@ -166,6 +166,29 @@ table.tbl td:first-child{font-family:var(--font-cond);font-weight:600;text-trans
 .callout-strip{background:var(--dream-yellow);padding:16px 18px;margin:0 0 14px;font-family:var(--font-body);font-size:14.5px;line-height:1.6;color:var(--ink)}
 .callout-strip strong{color:var(--ink)}
 
+
+/* ---------- Section 12 gateway ---------- */
+.gw{background:var(--charcoal);color:#fff;padding:32px 34px;position:relative;overflow:hidden;margin:0 0 14px}
+.gw::after{content:"";position:absolute;right:-90px;bottom:-110px;width:300px;height:300px;border-radius:999px;background:rgba(226,28,36,.16)}
+.gw-inner{position:relative;z-index:1;max-width:640px}
+.gw-eye{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dream-yellow)}
+.gw h3{font-family:var(--font-display);font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:.98;text-transform:uppercase;color:#fff;margin:10px 0 0}
+.gw .gw-vision{font-family:var(--font-body);font-weight:800;font-size:18px;line-height:1.35;color:var(--dream-yellow);margin:16px 0 0}
+.gw .gw-lede{font-family:var(--font-body);font-size:15px;line-height:1.6;color:#DcDcDc;margin:12px 0 0}
+.gw-cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--spark-red);color:#fff;padding:14px 26px;border-radius:999px}
+.gw-cta:hover{background:var(--spark-red-press);color:#fff;text-decoration:none}
+.gw-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 14px}
+@media(max-width:640px){.gw-facts{grid-template-columns:1fr}}
+.gw-fact{background:#fff;border:1px solid var(--hairline);padding:14px 16px}
+.gw-fact .k{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--spark-red)}
+.gw-fact .v{font-family:var(--font-cond);font-weight:600;font-size:15px;color:var(--ink);margin-top:4px;line-height:1.2}
+.gw-fact .s{font-family:var(--font-body);font-size:12px;color:var(--slate);margin-top:4px;line-height:1.4}
+.gw-inside{background:var(--paper);border:1px solid var(--hairline);padding:16px 18px}
+.gw-inside .k{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--spark-red);margin-bottom:10px}
+.gw-inside ol{margin:0;padding-left:20px;columns:2;column-gap:26px;font-size:13.5px;line-height:1.7;color:var(--slate)}
+@media(max-width:640px){.gw-inside ol{columns:1}}
+.gw-inside li{break-inside:avoid}
+
 /* ---------- Footer ---------- */
 footer{background:var(--charcoal);padding:32px 56px}
 .foot-inner{max-width:920px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
@@ -1360,83 +1383,36 @@ footer{background:var(--charcoal);padding:32px 56px}
         <div class="rule"></div>
         <p class="sec-sub">How we develop the whole student through a competency-based model aligned to our Portrait of a Graduate.</p>
 
-        <details class="acc" open data-search data-stitle="Competency Framework Overview" data-ssec="12 · Competency-Based Learning">
-          <summary>Competency Framework Overview<span class="chev">▾</span></summary>
-          <div class="acc-body">
-            <p>Matchbook Learning is committed to developing the whole student through a competency-based education model that measures growth and mastery across five core competencies aligned to our Portrait of a Graduate. See the <a href="https://docs.google.com/document/d/1DQ8KTo0omQciW0EjQg117ysSLr99uu25/edit?usp=sharing&ouid=113019159512598987979&rtpof=true&sd=true" target="_blank" rel="noopener">Personalized Learning North Star</a>.</p>
-            <p>All instruction, assessment, and conferencing practices connect to the five competencies:</p>
-            <ul><li>Academic Ownership</li><li>Collaboration</li><li>Communication</li><li>Honor</li><li>Resilience</li></ul>
-            <p>Competency definitions, learning progressions, and grade-band benchmarks are maintained by the Director of CBL, reviewed annually each July, and housed in the CBL shared drive.</p>
-            <h4>Annual Review Process</h4>
-            <ul>
-              <li>Review all five competency definitions and K–8 learning progressions each July before the school year.</li>
-              <li>Update documentation based on staff feedback, student outcome data, and alignment to priorities.</li>
-              <li>Submit revisions to the Head of School and Assistant Principal for approval before distribution.</li>
-              <li>Archive prior versions rather than deleting them, to show the growth of the systems over time.</li>
-            </ul>
-            <div class="note"><div class="bang">!</div><p>Matchbook intends to work more directly with Marzano Resources — a nationally recognized personalized-learning company — to build the competency system with fidelity.</p></div>
+        <div class="gw">
+          <div class="gw-inner">
+            <div class="gw-eye">A Guided Experience · The Matchbook Way</div>
+            <h3>How personalized learning comes together</h3>
+            <div class="gw-vision">Every child known, loved, and flourishing.</div>
+            <p class="gw-lede">Personalized and Competency-Based Learning is not a program we implement — it is how we live our mission every day. Rather than a list of documents, step through a guided walkthrough that shows how strong instruction, student agency, MLL support, competencies, conferences, and coaching connect as one coherent system.</p>
+            <a class="gw-cta" href="personalized-learning.html">Enter the guided experience →</a>
           </div>
-        </details>
+        </div>
 
-        <details class="acc" data-search data-stitle="Onboarding, Data Collection & Progress Monitoring" data-ssec="12 · Competency-Based Learning">
-          <summary>Onboarding, Data Collection &amp; Progress Monitoring<span class="chev">▾</span></summary>
-          <div class="acc-body">
-            <h4>CBL Onboarding &amp; Professional Development</h4>
-            <p>All staff receive CBL onboarding at the start of each year and ongoing PD throughout. The Director of CBL facilitates a full-staff session each August (before students arrive) reviewing the CBL vision and five competencies, framework updates, data-collection expectations and deadlines, and the student-led conferencing calendar.</p>
-            <h4>Data Collection &amp; Progress Monitoring — Teachers will</h4>
-            <ul>
-              <li>Complete student conferencing for every student each calendar month. In grades K–6, teachers complete the Google Form during the conference; in grades 7–8, students complete the form prior to the conference.</li>
-              <li>Document evidence of mastery through observation, artifacts, conferencing data, and other measures.</li>
-              <li>Submit data by established deadlines.</li>
-            </ul>
-            <p>The Director of CBL monitors data completion across all teachers, follows up within three school days with any teacher who misses a deadline, and produces a building-wide data summary each semester for the Head of School. Evidence of mastery may include observation records, student work samples, conferencing data and reflections, artifact-portfolio entries, and assessment data aligned to competency indicators.</p>
-          </div>
-        </details>
+        <div class="gw-facts">
+          <div class="gw-fact"><div class="k">Data Conferencing</div><div class="v">Every student · Monthly</div><div class="s">Tied to the progress tracker; feeds Student-Led Conferences.</div></div>
+          <div class="gw-fact"><div class="k">Student-Led Conferences</div><div class="v">Oct 8–9 · Mar 18–19</div><div class="s">Students present competency growth to family, twice a year.</div></div>
+          <div class="gw-fact"><div class="k">Family Materials</div><div class="v">English &amp; Spanish</div><div class="s">Brand-aligned; at least one written update per semester.</div></div>
+        </div>
 
-        <details class="acc" data-search data-stitle="Artifact & Portfolio System" data-ssec="12 · Competency-Based Learning">
-          <summary>Artifact &amp; Portfolio System<span class="chev">▾</span></summary>
-          <div class="acc-body">
-            <p>Matchbook maintains an artifact and portfolio system for documenting student competency mastery. Beginning this year, grades 7–8 will digitize the portfolio to UNRULR, aligning with The Match High School and preparing upper-grade students for high school.</p>
-            <p>The Director of CBL establishes and maintains the system, ensures at minimum one grade-band pilot in semester one, expands to additional grade bands in semester two, and communicates artifact-collection expectations to teachers in writing at the start of each semester. Teachers collect and organize artifacts per those expectations and submit on the established schedule.</p>
-          </div>
-        </details>
+        <div class="gw-inside">
+          <div class="k">What&rsquo;s inside the walkthrough</div>
+          <ol>
+            <li>The North Star — vision &amp; mission</li>
+            <li>What it is, and is not</li>
+            <li>The CBL engine &amp; key terms</li>
+            <li>11 connected classroom elements</li>
+            <li>Measuring the work (domain rubric)</li>
+            <li>What every student experiences weekly</li>
+            <li>The operating rhythm (dates, roles, portfolios)</li>
+            <li>Living the mission &amp; full resource library</li>
+          </ol>
+        </div>
 
-        <details class="acc" data-search data-stitle="Student-Led Conferences" data-ssec="12 · Competency-Based Learning">
-          <summary>Student-Led Conferences<span class="chev">▾</span></summary>
-          <div class="acc-body">
-            <p>Student-led conferences are the primary formal structure through which students demonstrate competency growth to their families. Every student leads the conference with their family and teacher.</p>
-            <div class="grid2">
-              <div class="mv yellow"><div class="mv-lbl">Fall Conferences</div><p>October 8th (3–7 PM) · October 9th (8 AM–3 PM)</p></div>
-              <div class="mv dark"><div class="mv-lbl">Spring Conferences</div><p>March 18th (3–7 PM) · March 19th (8 AM–3 PM)</p></div>
-            </div>
-            <p>The Director of CBL manages the full preparation process (teacher readiness, student data-packet completion, family communication, bilingual materials), ensures materials reach teachers no fewer than three weeks before the conference date, and documents participation rate after each cycle. Teachers prepare students to present evidence across all five competencies, complete data packets by the deadline, and communicate with families in advance using school-provided materials. Family materials are provided in English and Spanish for all cycles.</p>
-          </div>
-        </details>
-
-        <details class="acc" data-search data-stitle="Pathways, STEAM & Career-Connected Learning" data-ssec="12 · Competency-Based Learning">
-          <summary>Pathways, STEAM &amp; Career-Connected Learning<span class="chev">▾</span></summary>
-          <div class="acc-body">
-            <h4>Student Pathway Identification</h4>
-            <p>Matchbook supports students in identifying interests, strengths, and postsecondary goals through an annual pathway-identification process for all eighth-grade students. The Director of CBL designs and oversees the process each spring, ensures all 8th graders participate, tracks and documents participation, and connects pathway data explicitly to competency growth and long-term outcomes.</p>
-            <h4>STEAM &amp; Career-Connected Learning</h4>
-            <p>Matchbook cultivates STEAM and career-connected learning opportunities (including Project Lead the Way) as part of its competency-based model. The Director of CBL maintains and expands programming, supports teachers in connecting competency-aligned instruction to career/postsecondary outcomes, and coordinates with the STEAM Teacher for vertical alignment of CCR content and competency language across K–8.</p>
-            <h4>College &amp; Career Readiness (CCR)</h4>
-            <p>CCR is embedded across all grade levels through dedicated class instruction: the Director of CBL teaches CCR for grades 7–8, and the College and Career Teacher teaches CCR for grades K–6, aligned to competency expectations, grade-band benchmarks, and postsecondary-readiness goals.</p>
-          </div>
-        </details>
-
-        <details class="acc" data-search data-stitle="Family Communication (CBL)" data-ssec="12 · Competency-Based Learning">
-          <summary>Family Communication (CBL)<span class="chev">▾</span></summary>
-          <div class="acc-body">
-            <p>Consistent, accessible communication with families about CBL is a shared responsibility across the school.</p>
-            <ul>
-              <li>All family-facing CBL materials are produced in English and Spanish.</li>
-              <li>All materials follow Matchbook brand standards: Century Gothic font; red, black, and gray.</li>
-              <li>The Director of CBL prepares at least one written update on student competency progress for families each semester.</li>
-              <li>The Head of School receives a board-ready CBL progress update each month for leadership reporting.</li>
-            </ul>
-          </div>
-        </details>
       </section>
 
     </div><!-- /wrap -->

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personalized &amp; Competency-Based Learning · The Matchbook Way</title>
+<meta name="description" content="A guided walkthrough of Personalized & Competency-Based Learning at Matchbook Learning K–8 — how strong instruction, agency, MLL support, competencies, conferences, and coaching come together as one coherent system.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Caveat:wght@600;700&display=swap');
+
+:root{
+  --spark-red:#E21C24;
+  --spark-red-press:#B5151A;
+  --ember:#C8161D;
+  --dream-yellow:#F9DC7C;
+  --gold:#F7B23C;
+  --ink:#1A1A1A;
+  --charcoal:#232323;
+  --slate:#4A4A4A;
+  --muted:#8A8A8A;
+  --hairline:#E4E2DE;
+  --paper:#F6F6F4;
+  --cloud:#EDEDEB;
+  --white:#FFFFFF;
+  --font-display:'Anton','Arial Narrow',sans-serif;
+  --font-cond:'Oswald','Arial Narrow',sans-serif;
+  --font-body:'Mulish',system-ui,-apple-system,sans-serif;
+  --font-script:'Caveat','Comic Sans MS',cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--spark-red);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ---------- Top scroll progress ---------- */
+.scroll-top{position:fixed;top:0;left:0;height:4px;background:var(--spark-red);width:0;z-index:60;transition:width .1s linear}
+
+/* ---------- Top bar ---------- */
+.topbar{position:fixed;top:0;left:0;right:0;height:56px;z-index:55;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 24px;background:rgba(35,35,35,.92);backdrop-filter:blur(8px);color:#fff}
+.topbar .back{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#EDEDEB;display:inline-flex;align-items:center;gap:8px}
+.topbar .back:hover{color:var(--dream-yellow);text-decoration:none}
+.topbar .brand{font-family:var(--font-display);font-size:15px;text-transform:uppercase;color:var(--spark-red);letter-spacing:.02em}
+.topbar .done{font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal);background:var(--dream-yellow);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+.topbar .done.is-done{background:#3CB371;color:#fff}
+
+/* ---------- Layout: rail + flow ---------- */
+.layout{display:grid;grid-template-columns:236px 1fr;gap:0;max-width:1240px;margin:0 auto;padding-top:56px}
+.rail{position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);overflow-y:auto;padding:28px 18px 28px 24px}
+.rail-lbl{font-family:var(--font-cond);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.rail a{display:flex;align-items:center;gap:11px;padding:7px 0;color:var(--slate);font-family:var(--font-cond);font-weight:500;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;line-height:1.2}
+.rail a:hover{color:var(--ink);text-decoration:none}
+.rail a .dot{width:9px;height:9px;border-radius:999px;border:2px solid var(--hairline);background:transparent;flex:0 0 9px;transition:all .2s}
+.rail a.active{color:var(--spark-red)}
+.rail a.active .dot{background:var(--spark-red);border-color:var(--spark-red);box-shadow:0 0 0 3px rgba(226,28,36,.15)}
+.rail a.seen .dot{border-color:var(--spark-red)}
+
+.flow{min-width:0;padding:0 0 120px}
+.chap{padding:64px 56px;max-width:860px;scroll-margin-top:56px}
+@media(max-width:1080px){.chap{padding:56px 32px}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- Typographic helpers ---------- */
+.kicker{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--spark-red)}
+.kicker.gold{color:var(--gold)}
+.chap h2{font-family:var(--font-display);font-weight:400;font-size:clamp(34px,4.6vw,54px);line-height:.95;text-transform:uppercase;color:var(--ink);margin:10px 0 0}
+.lead{font-family:var(--font-body);font-size:19px;line-height:1.6;color:var(--slate);margin:18px 0 0}
+.chap p{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--slate)}
+.rule{height:5px;width:72px;background:var(--spark-red);margin:16px 0 24px}
+.stepnum{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--spark-red);color:#fff;padding:96px 56px 88px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;bottom:-140px;width:420px;height:420px;border-radius:999px;background:rgba(255,255,255,.06)}
+.hero-inner{max-width:860px;position:relative;z-index:1}
+.hero .eyebrow{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--dream-yellow)}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(44px,6.4vw,88px);line-height:.9;text-transform:uppercase;margin:14px 0 0}
+.hero .vision{font-family:var(--font-body);font-weight:800;font-size:clamp(20px,2.6vw,30px);line-height:1.3;margin:26px 0 0;max-width:640px}
+.hero .mission{font-family:var(--font-body);font-size:17px;line-height:1.65;color:#fff;margin:18px 0 0;max-width:600px;opacity:.95}
+.hero .northstar{margin:30px 0 0;padding:18px 22px;background:rgba(0,0,0,.16);border-left:4px solid var(--dream-yellow);max-width:620px;font-size:16.5px;line-height:1.6}
+.scrollcue{margin-top:40px;display:inline-flex;align-items:center;gap:12px;font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:transparent;border:2px solid rgba(255,255,255,.5);border-radius:999px;padding:12px 22px;cursor:pointer}
+.scrollcue:hover{background:#fff;color:var(--spark-red)}
+
+/* ---------- Is / Is Not ---------- */
+.isnot{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+@media(max-width:720px){.isnot{grid-template-columns:1fr}}
+.isnot-col{border:1px solid var(--hairline);background:#fff}
+.isnot-head{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:14px 18px;border-bottom:1px solid var(--hairline)}
+.isnot-col.no .isnot-head{color:var(--muted)}
+.isnot-col.yes{border-color:var(--spark-red)}
+.isnot-col.yes .isnot-head{background:var(--spark-red);color:#fff;border-bottom-color:var(--spark-red)}
+.isnot-row{padding:12px 18px;font-size:14.5px;line-height:1.5;border-bottom:1px solid var(--cloud)}
+.isnot-row:last-child{border-bottom:0}
+.isnot-col.no .isnot-row{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(138,138,138,.5)}
+.isnot-col.yes .isnot-row{color:var(--ink);font-weight:600}
+
+/* ---------- Principle cards ---------- */
+.pcards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
+@media(max-width:720px){.pcards{grid-template-columns:1fr}}
+.pcard{border:1px solid var(--hairline);border-top:5px solid var(--spark-red);background:#fff;padding:18px 20px}
+.pcard h4{font-family:var(--font-cond);font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
+.pcard p{margin:0;font-size:14.5px;line-height:1.6}
+
+/* ---------- Glossary ---------- */
+.glossary{margin-top:26px;background:var(--charcoal);color:#fff;padding:24px 26px}
+.glossary .g-lbl{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dream-yellow);margin-bottom:14px}
+.glossary dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+@media(max-width:720px){.glossary dl{grid-template-columns:1fr}}
+.glossary dt{font-family:var(--font-cond);font-weight:600;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--dream-yellow)}
+.glossary dd{margin:4px 0 0;font-size:14px;line-height:1.55;color:#DcDcDc}
+
+/* inline term */
+.term{border-bottom:2px dotted var(--spark-red);cursor:help;font-weight:600;color:var(--ink);position:relative}
+.term:focus{outline:2px solid var(--spark-red);outline-offset:2px}
+.term .pop{display:none;position:absolute;left:0;bottom:calc(100% + 8px);width:250px;background:var(--charcoal);color:#fff;font-family:var(--font-body);font-weight:400;font-size:12.5px;line-height:1.5;padding:10px 12px;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:20;text-transform:none;letter-spacing:0}
+.term.open .pop,.term:hover .pop{display:block}
+.term .pop::after{content:"";position:absolute;top:100%;left:16px;border:6px solid transparent;border-top-color:var(--charcoal)}
+
+/* ---------- Elements stepper ---------- */
+.stepper{margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.chip{font-family:var(--font-cond);font-weight:600;font-size:12px;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--hairline);background:#fff;color:var(--slate);cursor:pointer;border-radius:4px;transition:all .15s}
+.chip:hover{border-color:var(--spark-red);color:var(--spark-red)}
+.chip.active{background:var(--spark-red);border-color:var(--spark-red);color:#fff}
+.chip.visited{border-color:rgba(226,28,36,.45)}
+.panel{border:1px solid var(--hairline);background:#fff;min-height:340px;display:flex;flex-direction:column}
+.panel-top{background:var(--charcoal);color:#fff;padding:22px 26px;display:flex;align-items:flex-start;gap:18px}
+.panel-top .big{font-family:var(--font-display);font-size:52px;line-height:.8;color:var(--dream-yellow);flex:0 0 auto}
+.panel-top .t-meta{flex:1}
+.panel-top .t-count{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.panel-top h3{font-family:var(--font-cond);font-weight:700;font-size:23px;line-height:1.05;text-transform:uppercase;letter-spacing:.02em;margin:4px 0 0;color:#fff}
+.panel-top .t-tag{font-family:var(--font-body);font-style:italic;font-size:14.5px;color:var(--dream-yellow);margin:8px 0 0}
+.panel-body{padding:22px 26px;flex:1}
+.panel-body p{margin:0 0 12px;font-size:15px;line-height:1.65}
+.panel-body ul{margin:0 0 12px;padding-left:20px;font-size:15px;line-height:1.7;color:var(--slate)}
+.panel-body .indicator{background:var(--paper);border-left:4px solid var(--gold);padding:12px 16px;font-size:14px;line-height:1.55;color:var(--slate);margin:0 0 12px}
+.panel-body .indicator b{color:var(--ink)}
+.panel-body .comp-grid{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 12px}
+.panel-body .comp{border:1px solid var(--hairline);border-left:5px solid var(--spark-red);padding:10px 14px;font-size:14px;line-height:1.5}
+.panel-body .comp b{font-family:var(--font-cond);font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);font-size:13px}
+.res-inline{border-top:1px dashed var(--hairline);padding:16px 26px;background:#FBFBFA}
+.res-inline .r-lbl{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--spark-red);margin-bottom:8px}
+.res-inline .r-list{display:flex;flex-wrap:wrap;gap:8px}
+.res-chip{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--hairline);padding:7px 13px;border-radius:999px}
+.res-chip:hover{border-color:var(--spark-red);color:var(--spark-red);text-decoration:none}
+.res-chip::before{content:"↗";color:var(--spark-red);font-weight:700}
+.stepnav{display:flex;align-items:center;justify-content:space-between;margin-top:18px;gap:12px}
+.stepbtn{font-family:var(--font-cond);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:11px 22px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;transition:all .15s}
+.stepbtn:hover:not(:disabled){background:var(--ink);color:#fff}
+.stepbtn.primary{background:var(--spark-red);border-color:var(--spark-red);color:#fff}
+.stepbtn.primary:hover:not(:disabled){background:var(--spark-red-press)}
+.stepbtn:disabled{opacity:.35;cursor:not-allowed}
+.step-progress{flex:1;height:5px;background:var(--cloud);border-radius:999px;overflow:hidden;margin:0 6px}
+.step-progress > div{height:100%;background:var(--spark-red);width:0;transition:width .25s ease}
+.coherence{margin-top:16px;text-align:center;font-family:var(--font-body);font-style:italic;font-size:15px;color:var(--slate)}
+
+/* ---------- Rubric ---------- */
+.rubric{margin-top:8px}
+.bar-row{display:grid;grid-template-columns:52px 1fr 46px;align-items:center;gap:14px;margin:0 0 10px}
+.bar-row .d{font-family:var(--font-display);font-size:22px;color:var(--ink)}
+.bar-track{background:var(--cloud);height:26px;border-radius:3px;overflow:hidden;position:relative}
+.bar-fill{height:100%;background:var(--spark-red);width:0;transition:width .8s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center}
+.bar-fill.supp{background:repeating-linear-gradient(45deg,var(--gold),var(--gold) 8px,#e2a233 8px,#e2a233 16px)}
+.bar-name{font-family:var(--font-cond);font-weight:500;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;color:#fff;padding-left:12px;white-space:nowrap}
+.bar-name.dark{color:var(--ink)}
+.bar-row .w{font-family:var(--font-cond);font-weight:600;font-size:13px;color:var(--slate);text-align:right}
+.levels{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
+@media(max-width:720px){.levels{grid-template-columns:1fr}}
+.level{border:1px solid var(--hairline);padding:14px 16px;border-top:4px solid var(--slate)}
+.level.he{border-top-color:#3CB371}.level.e{border-top-color:var(--spark-red)}.level.in{border-top-color:var(--gold)}.level.ie{border-top-color:var(--muted)}
+.level h5{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 5px;color:var(--ink)}
+.level p{margin:0;font-size:13.5px;line-height:1.5}
+
+/* ---------- Weekly grid ---------- */
+.weekly{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+@media(max-width:720px){.weekly{grid-template-columns:1fr}}
+.wk{display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid var(--hairline);padding:14px 16px}
+.wk .ck{flex:0 0 22px;width:22px;height:22px;border-radius:999px;background:var(--spark-red);color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.wk span{font-size:14.5px;line-height:1.45;color:var(--ink);font-weight:600}
+
+/* ---------- Rhythm ---------- */
+.rhythm{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
+.ritem{border:1px solid var(--hairline);background:#fff;padding:18px 20px;border-left:5px solid var(--charcoal)}
+.ritem h4{font-family:var(--font-cond);font-weight:600;font-size:15px;letter-spacing:.03em;text-transform:uppercase;margin:0 0 8px;color:var(--ink)}
+.ritem ul{margin:0;padding-left:20px;font-size:14.5px;line-height:1.65;color:var(--slate)}
+.datepill{display:inline-block;background:var(--dream-yellow);color:var(--ink);font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.03em;text-transform:uppercase;padding:3px 10px;margin:2px 4px 2px 0;border-radius:3px}
+
+/* ---------- Mission finale ---------- */
+.klf{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+@media(max-width:820px){.klf{grid-template-columns:1fr}}
+.klf-card{padding:24px 22px;color:#fff}
+.klf-card.k{background:var(--spark-red)}.klf-card.l{background:var(--charcoal)}.klf-card.f{background:var(--ember)}
+.klf-card h3{font-family:var(--font-display);font-size:30px;text-transform:uppercase;margin:0 0 10px;color:var(--dream-yellow)}
+.klf-card p{margin:0;font-size:14.5px;line-height:1.6;color:#fff}
+.mantra{margin-top:22px;text-align:center;font-family:var(--font-display);font-size:clamp(20px,2.6vw,30px);text-transform:uppercase;color:var(--ink);line-height:1.15}
+.mantra span{color:var(--spark-red)}
+
+/* ---------- Resource library ---------- */
+.lib{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+@media(max-width:900px){.lib{grid-template-columns:1fr}}
+.lib-col{background:#fff;border:1px solid var(--hairline)}
+.lib-col h4{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--charcoal);margin:0;padding:12px 16px}
+.lib-col.instr h4{background:var(--spark-red)}
+.lib-col ul{list-style:none;margin:0;padding:8px 0}
+.lib-col li{border-bottom:1px solid var(--cloud)}
+.lib-col li:last-child{border-bottom:0}
+.lib-col li a{display:block;padding:10px 16px;font-size:13.5px;line-height:1.45;color:var(--ink);font-weight:600}
+.lib-col li a:hover{background:var(--paper);color:var(--spark-red);text-decoration:none}
+.lib-col li a::before{content:"↗ ";color:var(--spark-red)}
+.lib-col li span{display:block;padding:10px 16px;font-size:13.5px;color:var(--slate)}
+
+/* ---------- End CTA ---------- */
+.endcard{margin-top:40px;background:var(--charcoal);color:#fff;padding:32px 30px;text-align:center}
+.endcard h3{font-family:var(--font-display);font-size:28px;text-transform:uppercase;color:#fff;margin:0 0 8px}
+.endcard p{color:#C9C9C9;font-size:15px;margin:0 0 18px}
+.endbtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.endbtns a,.endbtns button{font-family:var(--font-cond);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:12px 24px;border-radius:999px;cursor:pointer;border:2px solid transparent}
+.endbtns .yellow{background:var(--dream-yellow);color:var(--charcoal)}
+.endbtns .ghost{background:transparent;border-color:rgba(255,255,255,.45);color:#fff}
+.endbtns .yellow.is-done{background:#3CB371;color:#fff}
+
+/* ---------- Mobile rail ---------- */
+@media(max-width:960px){
+  .layout{grid-template-columns:1fr}
+  .rail{display:none}
+}
+</style>
+</head>
+<body>
+<div class="scroll-top" id="scrollTop"></div>
+<div class="topbar">
+  <a class="back" href="index.html#sec-cbl">← Back to Handbook</a>
+  <span class="brand">Matchbook Learning</span>
+  <button class="done" id="doneBtn">Mark section read</button>
+</div>
+
+<div class="layout">
+  <!-- PROGRESS RAIL -->
+  <nav class="rail" id="rail" aria-label="Chapters">
+    <div class="rail-lbl">The Journey</div>
+    <a href="#c-north" data-chap="c-north"><span class="dot"></span>North Star</a>
+    <a href="#c-isnot" data-chap="c-isnot"><span class="dot"></span>Is / Is Not</a>
+    <a href="#c-engine" data-chap="c-engine"><span class="dot"></span>The CBL Engine</a>
+    <a href="#c-classroom" data-chap="c-classroom"><span class="dot"></span>In Every Classroom</a>
+    <a href="#c-rubric" data-chap="c-rubric"><span class="dot"></span>Measuring the Work</a>
+    <a href="#c-weekly" data-chap="c-weekly"><span class="dot"></span>Every Week</a>
+    <a href="#c-rhythm" data-chap="c-rhythm"><span class="dot"></span>Operating Rhythm</a>
+    <a href="#c-mission" data-chap="c-mission"><span class="dot"></span>Living the Mission</a>
+    <a href="#c-library" data-chap="c-library"><span class="dot"></span>Resource Library</a>
+  </nav>
+
+  <main class="flow">
+    <!-- ===================== HERO / NORTH STAR ===================== -->
+    <section class="hero" id="c-north">
+      <div class="hero-inner">
+        <div class="eyebrow">The Matchbook Way · 2026–2027 · A Guided Walkthrough</div>
+        <h1>Personalized &amp; Competency-Based Learning</h1>
+        <div class="vision">Every child is known, loved, and flourishing.</div>
+        <p class="mission">We personalize learning within a restorative environment, fostering resilience and excellence while preparing students for real-world opportunities.</p>
+        <div class="northstar">Personalized and Competency-Based Learning is <strong>not a program we implement.</strong> It is how we live our mission every single day — in how we group students, the feedback we give, the projects we assign, and the relationships we build.</div>
+        <button class="scrollcue" id="beginBtn">Begin the walkthrough ↓</button>
+      </div>
+    </section>
+
+    <!-- ===================== IS / IS NOT ===================== -->
+    <section class="chap" id="c-isnot">
+      <div class="rv">
+        <div class="stepnum">Chapter 01</div>
+        <div class="kicker">Setting the Record Straight</div>
+        <h2>What It Is, and Is Not</h2>
+        <div class="rule"></div>
+        <p class="lead">Personalized learning at Matchbook is often misunderstood. Before we walk through how it works, let’s be clear about what it actually means.</p>
+      </div>
+      <div class="isnot rv">
+        <div class="isnot-col no">
+          <div class="isnot-head">Personalized Learning is NOT…</div>
+          <div class="isnot-row">Students on technology all day</div>
+          <div class="isnot-row">Unstructured choice without rigor</div>
+          <div class="isnot-row">Replacing teachers with technology</div>
+          <div class="isnot-row">Lowering expectations for any student</div>
+          <div class="isnot-row">Disconnected systems running in parallel</div>
+        </div>
+        <div class="isnot-col yes">
+          <div class="isnot-head">Personalized Learning IS…</div>
+          <div class="isnot-row">Teacher-led, structured, and responsive</div>
+          <div class="isnot-row">Language-rich and multilingual learner-centered</div>
+          <div class="isnot-row">Data-informed with ongoing feedback</div>
+          <div class="isnot-row">Student-owned and academically rigorous</div>
+          <div class="isnot-row">Restorative, future-focused, and connected</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CBL ENGINE ===================== -->
+    <section class="chap" id="c-engine">
+      <div class="rv">
+        <div class="stepnum">Chapter 02</div>
+        <div class="kicker">The Engine</div>
+        <h2>Competency-Based Learning</h2>
+        <div class="rule"></div>
+        <p class="lead">Competency-Based Learning is how personalized learning comes to life at Matchbook K–8. It rests on four commitments — and a shared vocabulary.</p>
+      </div>
+      <div class="pcards rv">
+        <div class="pcard"><h4>Targeted Support</h4><p>Students receive instruction based on what they need, not just what grade they are in.</p></div>
+        <div class="pcard"><h4>Evidence Over Time</h4><p>Learning is measured through demonstrated <span class="term" tabindex="0" data-term="mastery">mastery<span class="pop"></span></span>, not seat time or completion.</p></div>
+        <div class="pcard"><h4>Actionable Feedback</h4><p>Students receive ongoing, specific feedback tied to clear success criteria.</p></div>
+        <div class="pcard"><h4>Revision &amp; Growth</h4><p>Students always have the opportunity to revisit learning, receive support, and demonstrate mastery again.</p></div>
+      </div>
+      <div class="glossary rv">
+        <div class="g-lbl">Key Terms — the shared language of CBL</div>
+        <dl>
+          <div><dt>Competency</dt><dd>A clearly defined skill or knowledge area aligned to academic standards and student success outcomes.</dd></div>
+          <div><dt>Mastery</dt><dd>Consistent demonstration of understanding at the expected level — not perfection, but reliable, repeatable evidence.</dd></div>
+          <div><dt>Evidence of Learning</dt><dd>Student work that demonstrates mastery: projects, assessments, discussions, and teacher observations.</dd></div>
+          <div><dt>Formative Feedback</dt><dd>Ongoing, specific feedback that helps students understand strengths and identify clear next steps.</dd></div>
+          <div><dt>Reassessment</dt><dd>Structured opportunities to revisit learning, receive additional support, and demonstrate mastery again.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== IN EVERY CLASSROOM (STEPPER) ===================== -->
+    <section class="chap" id="c-classroom">
+      <div class="rv">
+        <div class="stepnum">Chapter 03</div>
+        <div class="kicker">The Heart of the Model</div>
+        <h2>In Every Classroom</h2>
+        <div class="rule"></div>
+        <p class="lead">Personalized, competency-based learning shows up across eleven interconnected elements. <strong>These are not separate programs — they are one coherent system.</strong> Step through each to see how they build on one another.</p>
+      </div>
+      <div class="stepper rv">
+        <div class="chips" id="chips" role="tablist" aria-label="Classroom elements"></div>
+        <div class="panel" id="panel" aria-live="polite"></div>
+        <div class="stepnav">
+          <button class="stepbtn" id="prevBtn">← Prev</button>
+          <div class="step-progress"><div id="stepBar"></div></div>
+          <button class="stepbtn primary" id="nextBtn">Next →</button>
+        </div>
+        <div class="coherence">“Every student gets what they need — not the exact same next step.”</div>
+      </div>
+    </section>
+
+    <!-- ===================== RUBRIC ===================== -->
+    <section class="chap" id="c-rubric">
+      <div class="rv">
+        <div class="stepnum">Chapter 04</div>
+        <div class="kicker">Keeping It Accountable</div>
+        <h2>Measuring the Work</h2>
+        <div class="rule"></div>
+        <p class="lead">To keep this vision from becoming an abstraction, the CBL Director’s work is organized around seven rubric domains — each weighted by its impact, each with an observable definition of strong practice.</p>
+      </div>
+      <div class="rubric rv" id="rubric"></div>
+      <div class="rv">
+        <p style="margin-top:26px"><strong>Four performance levels</strong> — each domain is measured against the same scale, usable mid-year for a real-time check, not only at formal evaluation time.</p>
+        <div class="levels">
+          <div class="level he"><h5>Highly Effective</h5><p>Practice is proactive, data-driven, and consistently reaches every student or teacher on schedule.</p></div>
+          <div class="level e"><h5>Effective</h5><p>Practice happens on schedule and as planned, with regular review.</p></div>
+          <div class="level in"><h5>Improvement Necessary</h5><p>Practice happens but is inconsistent, reactive, or not consistently tied to data.</p></div>
+          <div class="level ie"><h5>Ineffective</h5><p>Little or no evidence of the practice; not aligned to CBL implementation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WEEKLY ===================== -->
+    <section class="chap" id="c-weekly">
+      <div class="rv">
+        <div class="stepnum">Chapter 05</div>
+        <div class="kicker">The Lived Experience</div>
+        <h2>Every Student, Every Week</h2>
+        <div class="rule"></div>
+        <p class="lead">When the system is holding together, this is what every Matchbook student experiences — every single week.</p>
+      </div>
+      <div class="weekly rv">
+        <div class="wk"><span class="ck">✓</span><span>Strong grade-level core instruction</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Voice and choice in practice or demonstration</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Small-group support or extension</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Language support (MLL scaffolds) as needed</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Targeted, data-driven practice</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Competency reflection and goal-setting</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Peer collaboration and discussion</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Conference or check-in over time</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Authentic application or project work</span></div>
+        <div class="wk"><span class="ck">✓</span><span>Safe, restorative, structured environment</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== OPERATING RHYTHM ===================== -->
+    <section class="chap" id="c-rhythm">
+      <div class="rv">
+        <div class="stepnum">Chapter 06</div>
+        <div class="kicker">How It Runs</div>
+        <h2>The Operating Rhythm</h2>
+        <div class="rule"></div>
+        <p class="lead">The vision holds together because concrete routines and responsibilities keep it on schedule. Here is the operational backbone for the year.</p>
+      </div>
+      <div class="rhythm rv">
+        <div class="ritem"><h4>Monthly Data Conferencing</h4>
+          <ul>
+            <li>Every student is conferenced <strong>each calendar month</strong>, tied to the Google Sheets progress tracker.</li>
+            <li>Grades K–6: teacher completes the Google Form <em>during</em> the conference. Grades 7–8: students complete it <em>before</em> the conference.</li>
+            <li>The Director of CBL monitors completion, follows up within three school days of any missed deadline, and produces a building-wide summary each semester for the Head of School.</li>
+          </ul>
+        </div>
+        <div class="ritem"><h4>Student-Led Conferences (Family-Facing)</h4>
+          <ul>
+            <li><span class="datepill">Fall · Oct 8 (3–7 PM)</span><span class="datepill">Oct 9 (8 AM–3 PM)</span><span class="datepill">Spring · Mar 18 (3–7 PM)</span><span class="datepill">Mar 19 (8 AM–3 PM)</span></li>
+            <li>Every student leads the conference with their family and teacher, presenting evidence of growth across all five competencies.</li>
+            <li>Prep materials reach teachers no fewer than <strong>three weeks</strong> before each date; family materials are provided in English and Spanish.</li>
+          </ul>
+        </div>
+        <div class="ritem"><h4>Artifacts &amp; Portfolios</h4>
+          <ul>
+            <li>Grades 7–8 digitize portfolios to <strong>UNRULR</strong> this year, aligning with The Match High School and preparing students for high school.</li>
+            <li>At least one grade-band pilot operates in semester one; the system expands in semester two. Teachers collect and submit artifacts on the established schedule.</li>
+          </ul>
+        </div>
+        <div class="ritem"><h4>Onboarding, PD &amp; Framework Maintenance</h4>
+          <ul>
+            <li>A full-staff CBL session each August (before students arrive) covers the vision, the five competencies, framework updates, data deadlines, and the SLC calendar; PD continues throughout the year.</li>
+            <li>Definitions and K–8 progressions are reviewed each July and approved by the Head of School and Assistant Principal before distribution. Prior versions are archived, not deleted, to show the system’s growth.</li>
+            <li>Matchbook intends to partner more directly with <strong>Marzano Resources</strong> to build the competency system with fidelity.</li>
+          </ul>
+        </div>
+        <div class="ritem"><h4>Pathways &amp; College/Career Readiness</h4>
+          <ul>
+            <li>Every 8th grader completes an annual pathway-identification process each spring, connected explicitly to competency growth and long-term outcomes.</li>
+            <li>CCR is taught in dedicated class time K–8: the Director of CBL teaches grades 7–8; the College &amp; Career Teacher teaches grades K–6.</li>
+          </ul>
+        </div>
+        <div class="ritem"><h4>Family Communication Standards</h4>
+          <ul>
+            <li>All family-facing CBL materials are produced in English and Spanish and follow Matchbook brand standards (Century Gothic; red, black, gray).</li>
+            <li>The Director of CBL prepares at least one written progress update per semester; the Head of School receives a board-ready CBL update each month.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LIVING THE MISSION ===================== -->
+    <section class="chap" id="c-mission">
+      <div class="rv">
+        <div class="stepnum">Chapter 07</div>
+        <div class="kicker gold">The Why Behind It All</div>
+        <h2>How We Live the Mission</h2>
+        <div class="rule"></div>
+        <p class="lead">Every element you just walked through exists to make three words real for every child.</p>
+      </div>
+      <div class="klf rv">
+        <div class="klf-card k"><h3>Known</h3><p>Every student has a teacher who sees them — not just their data, but their strengths, their story, and their potential. Conferences, small groups, and restorative relationships ensure no child falls through the cracks.</p></div>
+        <div class="klf-card l"><h3>Loved</h3><p>A restorative environment is a commitment to belonging. Students are held to high expectations within a culture of care, accountability, and second chances.</p></div>
+        <div class="klf-card f"><h3>Flourishing</h3><p>Flourishing is academic growth, resilience, and real-world readiness beyond test scores — excellence shown through projects, competencies, presentations, and habits students carry beyond Matchbook.</p></div>
+      </div>
+      <div class="mantra rv">Strong instruction. <span>Meaningful agency.</span> Explicit MLL support.<br>Restorative structures. <span>Real-world application.</span> Future-ready students.</div>
+    </section>
+
+    <!-- ===================== RESOURCE LIBRARY ===================== -->
+    <section class="chap" id="c-library">
+      <div class="rv">
+        <div class="stepnum">Chapter 08</div>
+        <div class="kicker">Everything in One Place</div>
+        <h2>Resource Library</h2>
+        <div class="rule"></div>
+        <p class="lead">The tools referenced throughout this walkthrough, organized by how you’ll use them. Each opens in a new tab.</p>
+      </div>
+      <div class="lib rv">
+        <div class="lib-col instr">
+          <h4>Instructional Tools</h4>
+          <ul>
+            <li><a href="https://drive.google.com/drive/folders/1uEfTRSoh81X6dQQeyrvR-wK5avdOYs2e?usp=sharing" target="_blank" rel="noopener">Student Conferencing Scripts</a></li>
+            <li><a href="https://docs.google.com/document/d/1NXCAsvLFetejvOLTkMsr0AjYBKsedTsTp9hSeh1hM2g/edit?usp=sharing" target="_blank" rel="noopener">Student Reflection Sheets — K–2</a></li>
+            <li><a href="https://docs.google.com/document/d/1-Js1iVW8J0M9d-Tt65AjvwSeFEDhTk-R1XrtCU6PTYU/edit?usp=sharing" target="_blank" rel="noopener">Student Reflection Sheets — 3–5</a></li>
+            <li><a href="https://docs.google.com/document/d/1fnczF_OaMrwFVLBLjqVPwOtzy5YmaWuphXJKmrZtl-Q/edit?usp=sharing" target="_blank" rel="noopener">Student Reflection Sheets — 6–8</a></li>
+            <li><a href="https://docs.google.com/document/d/1A3BcR8o_UTe_To1Jp2qqkBYq8Gw7nzVb/edit?usp=sharing" target="_blank" rel="noopener">Competencies One-Pager: Student &amp; Teacher Lens</a></li>
+            <li><a href="https://docs.google.com/document/d/1oJHumW1KQATaIuhs0gct6DOe8-8QlsWG/edit?usp=sharing" target="_blank" rel="noopener">Small Group Planning Template</a></li>
+            <li><a href="https://drive.google.com/file/d/1MXCaqpw4Hq8tKHk95VG84ilB-gIHq8FN/view?usp=sharing" target="_blank" rel="noopener">Employability Skills Guide — IDOE</a></li>
+          </ul>
+        </div>
+        <div class="lib-col">
+          <h4>Clarity Tools</h4>
+          <ul>
+            <li><a href="https://docs.google.com/document/d/1Jr7Cvbu_UdAy0sZf5hzZB9pPoCH4rC9t/edit?usp=sharing" target="_blank" rel="noopener">Classroom Competency Indicators</a></li>
+            <li><a href="https://docs.google.com/document/d/10_BAZ2VXuH1JUczHmX2UxVRjhU0cSox6/edit?usp=sharing" target="_blank" rel="noopener">Competency Language Guide — Student (EN)</a></li>
+            <li><a href="https://docs.google.com/document/d/1Ao607chygxBivdRM23r54mNYGqNrYSHk/edit?usp=sharing" target="_blank" rel="noopener">Competency Language Guide — Family (EN)</a></li>
+            <li><a href="https://docs.google.com/document/d/1JumQpNPDIqtzSTkkeZeeTygvemI-_mC00itwoRuTCns/edit?usp=sharing" target="_blank" rel="noopener">Competency Generalized Rubrics</a></li>
+            <li><a href="https://docs.google.com/document/d/1ct5PJhm-ZmZ2P1F2MzEaYf9Lc9WATjGH/edit?usp=sharing" target="_blank" rel="noopener">Teacher &amp; Student Daily Action Guide</a></li>
+          </ul>
+        </div>
+        <div class="lib-col">
+          <h4>Communication Tools</h4>
+          <ul>
+            <li><a href="https://docs.google.com/document/d/1x1yM3vU6np1dWgpgtia-lu4uy26yHsK8JUrYIN7mPnY/edit?usp=sharing" target="_blank" rel="noopener">Staff Implementation Guide</a></li>
+            <li><a href="https://docs.google.com/document/d/1QIexhPkRUu6SuVxVd8qZ0m-ElsKor8gH/edit?usp=sharing" target="_blank" rel="noopener">Competency Language Guide — Student (ES)</a></li>
+            <li><a href="https://docs.google.com/document/d/1-xTA-b8UMIjn0DETEG-Bsl-lvKHKDd5d/edit?usp=sharing" target="_blank" rel="noopener">Competency Language Guide — Family (ES)</a></li>
+            <li><a href="https://docs.google.com/document/d/1o27esVdzKnaHEhL2B_O8hKjaZo8DZRGOEeAFTFoiBxo/edit?usp=sharing" target="_blank" rel="noopener">Family Elevator Pitch</a></li>
+            <li><a href="https://docs.google.com/document/d/1XJswltYcsWX5aLgiIsPhv2PN0DdzQ5fV/edit?usp=sharing" target="_blank" rel="noopener">Family Guide</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="endcard rv">
+        <h3>That’s the Matchbook Way</h3>
+        <p>Personalized learning isn’t a program — it’s how we live the mission every day.</p>
+        <div class="endbtns">
+          <button class="yellow" id="doneBtn2">Mark section read</button>
+          <a class="ghost" href="index.html#sec-cbl">← Return to Handbook</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var STORAGE_KEY = 'mbl-sop-read-2627';
+
+  // ---------- Glossary term popovers ----------
+  var DEFS = {
+    mastery: 'Consistent demonstration of understanding at the expected level — not perfection, but reliable, repeatable evidence.'
+  };
+  document.querySelectorAll('.term').forEach(function(t){
+    var key = t.getAttribute('data-term');
+    var pop = t.querySelector('.pop');
+    if (pop && DEFS[key]) pop.textContent = DEFS[key];
+    t.addEventListener('click', function(e){ e.stopPropagation(); t.classList.toggle('open'); });
+  });
+  document.addEventListener('click', function(){ document.querySelectorAll('.term.open').forEach(function(t){ t.classList.remove('open'); }); });
+
+  // ---------- Elements data ----------
+  var R = {
+    smallgroup: { label:'Small Group Planning Template', href:'https://docs.google.com/document/d/1oJHumW1KQATaIuhs0gct6DOe8-8QlsWG/edit?usp=sharing' },
+    reflectK2:  { label:'Reflection Sheets K–2', href:'https://docs.google.com/document/d/1NXCAsvLFetejvOLTkMsr0AjYBKsedTsTp9hSeh1hM2g/edit?usp=sharing' },
+    reflect35:  { label:'Reflection Sheets 3–5', href:'https://docs.google.com/document/d/1-Js1iVW8J0M9d-Tt65AjvwSeFEDhTk-R1XrtCU6PTYU/edit?usp=sharing' },
+    reflect68:  { label:'Reflection Sheets 6–8', href:'https://docs.google.com/document/d/1fnczF_OaMrwFVLBLjqVPwOtzy5YmaWuphXJKmrZtl-Q/edit?usp=sharing' },
+    indicators: { label:'Classroom Competency Indicators', href:'https://docs.google.com/document/d/1Jr7Cvbu_UdAy0sZf5hzZB9pPoCH4rC9t/edit?usp=sharing' },
+    onepager:   { label:'Competencies One-Pager', href:'https://docs.google.com/document/d/1A3BcR8o_UTe_To1Jp2qqkBYq8Gw7nzVb/edit?usp=sharing' },
+    rubrics:    { label:'Competency Generalized Rubrics', href:'https://docs.google.com/document/d/1JumQpNPDIqtzSTkkeZeeTygvemI-_mC00itwoRuTCns/edit?usp=sharing' },
+    scripts:    { label:'Student Conferencing Scripts', href:'https://drive.google.com/drive/folders/1uEfTRSoh81X6dQQeyrvR-wK5avdOYs2e?usp=sharing' },
+    employ:     { label:'Employability Skills Guide (IDOE)', href:'https://drive.google.com/file/d/1MXCaqpw4Hq8tKHk95VG84ilB-gIHq8FN/view?usp=sharing' },
+    daily:      { label:'Daily Action Guide', href:'https://docs.google.com/document/d/1ct5PJhm-ZmZ2P1F2MzEaYf9Lc9WATjGH/edit?usp=sharing' }
+  };
+
+  var ELEMENTS = [
+    { title:'Strong Core Instruction', tag:'Tier 1 for all students',
+      body:'<p>Personalization never replaces rigorous, grade-level instruction — it strengthens access to it.</p><ul><li>ELA: MyView / MyPerspectives · Math: EnVision Math</li><li>Teacher-led, standards-aligned instruction for every student, every day</li><li>Frequent checks for understanding with modeling, guided practice, and discussion</li><li>High expectations held for all learners</li></ul>' },
+    { title:'Data-Driven Small Groups', tag:'Where personalization becomes most visible',
+      body:'<p>Students are regrouped frequently based on real evidence:</p><ul><li>Weekly assessments and classroom performance</li><li>Benchmark and checkpoint data</li><li>Demonstrated mastery or unfinished learning</li></ul><p>Small groups are used for reteaching, intervention, extension, language support, and targeted feedback.</p>',
+      res:[R.smallgroup] },
+    { title:'Student Agency', tag:'Voice, choice, and ownership',
+      body:'<p>Agency is bounded choice within strong structures. Students have intentional opportunities to:</p><ul><li>Set and revisit academic and competency goals</li><li>Choose how they practice or demonstrate learning</li><li>Track their own growth and reflect on strengths</li><li>Lead the conversation in their conferences</li></ul><div class="indicator"><b>In the classroom:</b> students say “My goal is…” or “I want to improve…” and feel ownership and confidence in sharing ideas.</div>',
+      res:[R.reflectK2,R.reflect35,R.reflect68] },
+    { title:'Multilingual Learner Support', tag:'Language access as a core design principle',
+      body:'<p>Because Matchbook serves a large, growing multilingual population, language access is built in — not added on. MLL students receive:</p><ul><li>Language scaffolds embedded in Tier 1 instruction</li><li>Visuals, vocabulary supports, and sentence stems all day</li><li>Structured daily chances to speak, read, write, and process</li><li>Targeted small-group language development</li><li>Instruction that builds content knowledge and English proficiency at once</li></ul>' },
+    { title:'Targeted Practice Tools', tag:'Technology as a support, not the model',
+      body:'<p>Tools like IXL support personalization when used with intention and teacher direction — for:</p><ul><li>Targeted skill practice tied to recent instruction</li><li>Intervention for students who need more support</li><li>Closing specific, identified gaps</li><li>Independent reinforcement after direct teaching</li></ul><p>They never replace teacher-led instruction, writing, discussion, or collaboration.</p>' },
+    { title:'The Five Competencies', tag:'Habits, mindsets, and behaviors for readiness',
+      body:'<p>Students understand each competency, reflect on their growth, receive competency-aligned feedback, and connect competencies to real behaviors and goals.</p><div class="comp-grid"><div class="comp"><b>Academic Ownership</b> — set goals, track progress, reflect, seek support, produce quality work.</div><div class="comp"><b>Collaboration</b> — work toward shared goals, value perspectives, contribute to the group.</div><div class="comp"><b>Communication</b> — share thinking clearly; listen, respond, and build on ideas.</div><div class="comp"><b>Honor</b> — take responsibility, follow through, contribute to a restorative community.</div><div class="comp"><b>Resilience</b> — persist through challenges, adjust to feedback, keep working toward goals.</div></div>',
+      res:[R.indicators,R.onepager,R.rubrics] },
+    { title:'Student Conferences', tag:'Where personalization, agency & competencies converge',
+      body:'<p>Conferencing runs on two tracks that feed each other:</p><ul><li><b>Teacher–Student Data Conferencing</b> — ongoing, internal, every-student check-ins at least monthly, tied to the progress tracker. The day-to-day pulse.</li><li><b>Student-Led Conferences (SLC)</b> — the formal, family-facing event held twice a year, where students present their own growth and goals.</li></ul><p>The monthly track builds the evidence and confidence that make the twice-yearly events meaningful. This is how students <em>Design Their Path</em> — the heart of Matchbook’s mission.</p>',
+      res:[R.scripts] },
+    { title:'Project-Based & Applied Learning', tag:'Learning used in authentic contexts',
+      body:'<p>Students build lasting confidence when they apply learning. Applied learning happens through:</p><ul><li>Project Lead the Way (PLTW) in place of visual arts</li><li>College and Career Readiness coursework</li><li>ELA and Math performance tasks embedded in core curriculum</li><li>Classroom projects connected to reading, writing, math, and problem-solving</li></ul><p>Students regularly create, build, present, solve, collaborate, and revise — mission in action.</p>' },
+    { title:'College & Career Readiness', tag:'Awareness, identity, and purpose in K–8',
+      body:'<p>CCR begins in K–8 as awareness, identity, purpose, and pathway-building. Students explore:</p><ul><li>Their own strengths, interests, and values</li><li>Connections between learning and real careers and opportunities</li><li>Habits of success — communication, teamwork, problem-solving, persistence</li><li>How school connects to long-term goals and possibilities</li></ul>',
+      res:[R.employ] },
+    { title:'Restorative & Structured Environment', tag:'Personalization works best when students feel known',
+      body:'<p>A personalized school must also be safe and relational. Our restorative culture includes:</p><ul><li>Clear, consistent routines and expectations</li><li>Strong adult–student relationships built on trust and care</li><li>Restorative conversations and structured reflection</li><li>Opportunities to repair harm, re-engage, and grow</li><li>Alignment between student support, competencies, and expectations</li></ul>' },
+    { title:'Coaching That Sustains the Work', tag:'The engine behind every element above',
+      body:'<p>Personalized instruction only holds up when teachers are consistently supported. Coaching runs on a rotation model — every teacher cycles through on a set schedule.</p><ul><li>Observations tied directly to CBL instruction feed each coaching cycle</li><li>Conversations are informed by real classroom data, not a generic checklist</li><li>Structured reflection (clinics, team debriefs, PLCs) is built into the calendar</li><li>Backup coverage means one reschedule never leaves a teacher without support</li></ul>',
+      res:[R.daily] }
+  ];
+
+  var chipsEl = document.getElementById('chips');
+  var panelEl = document.getElementById('panel');
+  var stepBar = document.getElementById('stepBar');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var idx = 0, visited = {};
+
+  ELEMENTS.forEach(function(el, i){
+    var c = document.createElement('button');
+    c.className = 'chip'; c.textContent = (i+1); c.setAttribute('role','tab');
+    c.addEventListener('click', function(){ show(i); });
+    chipsEl.appendChild(c);
+  });
+
+  function render(){
+    var el = ELEMENTS[idx];
+    var resHtml = '';
+    if (el.res && el.res.length){
+      resHtml = '<div class="res-inline"><div class="r-lbl">Supporting tools for this element</div><div class="r-list">' +
+        el.res.map(function(r){ return '<a class="res-chip" href="'+r.href+'" target="_blank" rel="noopener">'+r.label+'</a>'; }).join('') +
+        '</div></div>';
+    }
+    panelEl.innerHTML =
+      '<div class="panel-top"><div class="big">'+(idx+1)+'</div><div class="t-meta">' +
+        '<div class="t-count">Element '+(idx+1)+' of '+ELEMENTS.length+'</div>' +
+        '<h3>'+el.title+'</h3><div class="t-tag">'+el.tag+'</div></div></div>' +
+      '<div class="panel-body">'+el.body+'</div>' + resHtml;
+    stepBar.style.width = Math.round(((idx+1)/ELEMENTS.length)*100) + '%';
+    prevBtn.disabled = (idx === 0);
+    nextBtn.textContent = (idx === ELEMENTS.length-1) ? 'Start over ↺' : 'Next →';
+    [].forEach.call(chipsEl.children, function(c, i){
+      c.classList.toggle('active', i === idx);
+      c.classList.toggle('visited', !!visited[i] && i !== idx);
+    });
+  }
+  function show(i){ idx = (i + ELEMENTS.length) % ELEMENTS.length; visited[idx] = true; render(); }
+  prevBtn.addEventListener('click', function(){ show(idx-1); });
+  nextBtn.addEventListener('click', function(){ show(idx+1); });
+  visited[0] = true; render();
+
+  // keyboard nav within stepper
+  document.getElementById('c-classroom').addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight'){ show(idx+1); } else if (e.key === 'ArrowLeft'){ show(idx-1); }
+  });
+
+  // ---------- Rubric ----------
+  var DOMAINS = [
+    { d:'D1', name:'Framework & Curriculum Design', w:20 },
+    { d:'D2', name:'Implementation & Teacher Support', w:20 },
+    { d:'D3', name:'Data & Progress Monitoring', w:20 },
+    { d:'D4', name:'Change Management & Communication', w:15 },
+    { d:'D5', name:'Student Pathways & Career Readiness', w:15 },
+    { d:'D6', name:'Professionalism', w:10 },
+    { d:'D7', name:'Student Agency', w:null }
+  ];
+  var rubricEl = document.getElementById('rubric');
+  DOMAINS.forEach(function(dm){
+    var pct = dm.w == null ? 100 : dm.w;
+    var supp = dm.w == null;
+    var row = document.createElement('div');
+    row.className = 'bar-row';
+    row.innerHTML = '<div class="d">'+dm.d+'</div>' +
+      '<div class="bar-track"><div class="bar-fill'+(supp?' supp':'')+'" data-w="'+pct+'">' +
+        '<span class="bar-name'+(supp?' dark':'')+'">'+dm.name+'</span></div></div>' +
+      '<div class="w">'+(supp?'Suppl.':dm.w+'%')+'</div>';
+    rubricEl.appendChild(row);
+  });
+
+  // ---------- Scroll progress + reveals + rail active ----------
+  var scrollTop = document.getElementById('scrollTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    scrollTop.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  var revObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); revObs.unobserve(en.target); } });
+  }, { threshold:0.12 });
+  document.querySelectorAll('.rv').forEach(function(el){ revObs.observe(el); });
+
+  // animate rubric bars when visible
+  var rubObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){
+        en.target.querySelectorAll('.bar-fill').forEach(function(b){ b.style.width = b.getAttribute('data-w') + '%'; });
+        rubObs.unobserve(en.target);
+      }
+    });
+  }, { threshold:0.3 });
+  rubObs.observe(rubricEl);
+
+  // rail active state
+  var railLinks = {};
+  document.querySelectorAll('.rail a').forEach(function(a){ railLinks[a.getAttribute('data-chap')] = a; });
+  var chapObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      var a = railLinks[en.target.id];
+      if (!a) return;
+      if (en.isIntersecting){
+        Object.keys(railLinks).forEach(function(k){ railLinks[k].classList.remove('active'); });
+        a.classList.add('active'); a.classList.add('seen');
+      }
+    });
+  }, { rootMargin:'-45% 0px -50% 0px' });
+  document.querySelectorAll('.chap, .hero').forEach(function(s){ chapObs.observe(s); });
+
+  // ---------- Begin button ----------
+  document.getElementById('beginBtn').addEventListener('click', function(){
+    document.getElementById('c-isnot').scrollIntoView({ behavior:'smooth' });
+  });
+
+  // ---------- Mark section read (syncs with handbook progress) ----------
+  function readState(){ try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch(e){ return {}; } }
+  function setDone(v){
+    var r = readState(); r.cbl = v;
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(r)); } catch(e){}
+    refreshDone();
+  }
+  var btn1 = document.getElementById('doneBtn'), btn2 = document.getElementById('doneBtn2');
+  function refreshDone(){
+    var done = !!readState().cbl;
+    btn1.classList.toggle('is-done', done);
+    btn1.textContent = done ? '✓ Marked read' : 'Mark section read';
+    if (btn2){ btn2.classList.toggle('is-done', done); btn2.textContent = done ? '✓ Marked read' : 'Mark section read'; }
+  }
+  btn1.addEventListener('click', function(){ setDone(!readState().cbl); });
+  if (btn2) btn2.addEventListener('click', function(){ setDone(!readState().cbl); });
+  refreshDone();
+})();
+</script>
+</body>
+</html>

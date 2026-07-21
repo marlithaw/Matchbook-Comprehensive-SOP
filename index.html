@@ -196,6 +196,15 @@ select.mbl-lang:focus{border-color:var(--spark-red)}
 @media(max-width:640px){.gw-inside ol{columns:1}}
 .gw-inside li{break-inside:avoid}
 
+/* ---------- Glossary ---------- */
+.gloss{margin:0}
+.gloss dt{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink);margin-top:16px}
+.gloss dt:first-child{margin-top:0}
+.gloss dd{margin:3px 0 0;font-size:14.5px;line-height:1.55;color:var(--slate)}
+.gloss dd .ph{font-style:italic;color:var(--muted)}
+.nav-ref-lbl{font-family:var(--font-cond);font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:16px 10px 6px;margin-top:8px;border-top:1px solid rgba(255,255,255,.12)}
+.nav-item.nav-ref .nav-num{font-family:var(--font-display);font-size:15px;color:var(--spark-red)}
+
 /* ---------- Footer ---------- */
 footer{background:var(--charcoal);padding:32px 56px}
 .foot-inner{max-width:920px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
@@ -1530,6 +1539,120 @@ footer{background:var(--charcoal);padding:32px 56px}
 
       </section>
 
+      <!-- ========================================================= -->
+      <!-- GLOSSARY & ACRONYMS (reference) -->
+      <!-- ========================================================= -->
+      <section id="sec-glossary" class="sec" data-screen-label="Glossary & Acronyms">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.glossary">Reference</div>
+            <h2 data-i18n="h2.glossary">Glossary &amp; Acronyms</h2>
+          </div>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.glossary">Definitions for the terms, frameworks, and acronyms used throughout this handbook.</p>
+
+        <details class="acc" open data-search data-stitle="Instructional Framework & Coaching" data-ssec="Glossary">
+          <summary>Instructional Framework &amp; Coaching<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>Teach Like a Champion (TLaC)</dt><dd>A set of concrete, high-leverage teaching techniques (Doug Lemov, Uncommon Schools) that Matchbook uses as shared instructional language.</dd>
+              <dt>Get Better Faster (GBF)</dt><dd>A coaching scope-and-sequence (Paul Bambrick-Santoyo, Uncommon Schools) that orders the highest-priority teaching skills; the source of the coaching Waterfall.</dd>
+              <dt>Get Better Faster Waterfall</dt><dd>The prioritized sequence of instructional skills from Get Better Faster. Coaches draw each teacher’s next action step from it.</dd>
+              <dt>Glows &amp; Grows</dt><dd>Matchbook’s feedback structure: a Glow (a specific instructional strength to keep building) and a Grow (one high-leverage next step).</dd>
+              <dt>RELAY GSE (RELAY Graduate School of Education)</dt><dd>A teacher- and leader-preparation institution whose common instructional language coaches use for consistency.</dd>
+              <dt>Gradual Release (I Do / We Do / You Do)</dt><dd>The lesson structure that moves from teacher model (I Do) to guided practice (We Do) to independent practice and an exit ticket (You Do).</dd>
+              <dt>Means of Participation (MOP)</dt><dd>The planned ways students respond and engage — cold call, turn &amp; talk, choral response, whiteboards, and more.</dd>
+              <dt>Check for Understanding (CFU)</dt><dd>A planned question or task used to gauge whether students have learned the material and to adjust instruction in the moment.</dd>
+              <dt>Active Monitoring</dt><dd>Circulating with an exemplar and a tracking system to check student work in real time, name mastery percentages, and give fast feedback.</dd>
+              <dt>Laps</dt><dd>The specific student responses a teacher checks on each pass while Active Monitoring.</dd>
+              <dt>DNPG</dt><dd><span class="ph">[Internal term — full expansion to be confirmed.]</span> A designated in-lesson moment teachers monitor and give feedback on during Active Monitoring.</dd>
+              <dt>WTD Directions</dt><dd>“What-To-Do” directions: specific, scripted directions for transitional moments so expectations are clear.</dd>
+              <dt>Lesson Internalization</dt><dd>Studying and preparing a lesson thoroughly enough to deliver it while holding the content, the students, and the room at once.</dd>
+              <dt>Exit Ticket</dt><dd>A brief end-of-lesson task used to measure mastery of the objective and inform the next day’s instruction.</dd>
+              <dt>Walk to Intervention (WTI)</dt><dd>The Tuesday–Thursday enrichment/intervention block where students move to targeted groups.</dd>
+              <dt>Teacher’s Edition (TE)</dt><dd>The curriculum teacher’s guide that lessons are planned and annotated from.</dd>
+              <dt>GROW</dt><dd>The platform where lesson plans are submitted (due Wednesdays by 5:00 PM).</dd>
+            </dl>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Assessment & Data" data-ssec="Glossary">
+          <summary>Assessment &amp; Data<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>ILEARN</dt><dd>Indiana’s statewide summative assessment (Grades 3–8) in ELA, Math, and Science where applicable.</dd>
+              <dt>ILEARN Checkpoints</dt><dd>Interim assessments during the year that measure progress toward mastery of state standards.</dd>
+              <dt>BWA (Bi-Weekly Assessment)</dt><dd>ELA curriculum progress check-ups given every two weeks, alternating with Math Topic assessments.</dd>
+              <dt>IREAD / IREAD-3</dt><dd>Indiana’s Grade 3 reading proficiency assessment (also administered in Grade 2).</dd>
+              <dt>Acadience</dt><dd>K–2 literacy screening and progress-monitoring assessment (phonemic awareness, decoding, fluency, comprehension).</dd>
+              <dt>Forefront</dt><dd>K–2 math assessment system aligned to priority standards.</dd>
+              <dt>WIDA ACCESS</dt><dd>Annual English language proficiency assessment for multilingual learners (listening, speaking, reading, writing).</dd>
+              <dt>NWEA MAP (MAP Growth)</dt><dd>Nationally normed, computer-adaptive assessment of reading and math growth.</dd>
+              <dt>CogAT</dt><dd>Cognitive Abilities Test measuring verbal, quantitative, and nonverbal reasoning; typically Grades 2 &amp; 5.</dd>
+              <dt>ClearSight</dt><dd>Diagnostic and progress-monitoring tool used between benchmark windows.</dd>
+              <dt>BOY / MOY / EOY</dt><dd>Beginning-, Middle-, and End-of-Year assessment administration windows.</dd>
+              <dt>Good Cause Exemption</dt><dd>A state provision allowing a Grade 3 student who does not pass IREAD-3 to be promoted under specific conditions.</dd>
+            </dl>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Student Support, Special Education & MLL" data-ssec="Glossary">
+          <summary>Student Support, Special Education &amp; MLL<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>MTSS</dt><dd>Multi-Tiered System of Supports: the framework of tiered academic and behavioral support.</dd>
+              <dt>Section 504</dt><dd>A 504 Plan under the Rehabilitation Act of 1973 providing accommodations for a qualifying disability.</dd>
+              <dt>IDEA</dt><dd>Individuals with Disabilities Education Act — the federal law governing special education.</dd>
+              <dt>Article 7</dt><dd>Indiana’s special-education rule implementing IDEA.</dd>
+              <dt>IEP</dt><dd>Individualized Education Program: the legal plan of services for a student with a disability.</dd>
+              <dt>CCC (Case Conference Committee)</dt><dd>The team that develops, reviews, and revises each student’s IEP.</dd>
+              <dt>TOR (Teacher of Record)</dt><dd>The special-education teacher responsible for a student’s IEP.</dd>
+              <dt>PLAAFP</dt><dd>Present Levels of Academic Achievement and Functional Performance — the data-based baseline in an IEP.</dd>
+              <dt>FBA</dt><dd>Functional Behavioral Assessment: a process to identify the function of a challenging behavior.</dd>
+              <dt>BIP</dt><dd>Behavior Intervention Plan: preventative strategies and replacement behaviors developed from an FBA.</dd>
+              <dt>UDL</dt><dd>Universal Design for Learning: designing instruction for learner variability so all students can access it.</dd>
+              <dt>DREAM</dt><dd>Matchbook’s specialized program for students with significant cognitive, adaptive, communication, or functional needs.</dd>
+              <dt>DBRC</dt><dd>Daily Behavior Report Card: a Tier 2 check-in/check-out and daily feedback tool.</dd>
+              <dt>MLL</dt><dd>Multilingual Learner: a student developing English while learning grade-level content.</dd>
+              <dt>ILP (Individual Learning Plan)</dt><dd>Plan used for MLL support and for the WIDA ACCESS exit-review committee.</dd>
+              <dt>SIOP</dt><dd>Sheltered Instruction Observation Protocol: strategies that make grade-level content accessible to multilingual learners.</dd>
+              <dt>Restorative Room</dt><dd>A Tier 2 space for reflection, restorative dialogue, replacement-behavior practice, and structured re-entry.</dd>
+            </dl>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Competency-Based Learning & Pathways" data-ssec="Glossary">
+          <summary>Competency-Based Learning &amp; Pathways<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>CBL</dt><dd>Competency-Based Learning: measuring growth and mastery against defined competencies rather than seat time.</dd>
+              <dt>Portrait of a Graduate</dt><dd>Matchbook’s five competencies: Academic Ownership, Collaboration, Communication, Honor, and Resilience.</dd>
+              <dt>SLC (Student-Led Conference)</dt><dd>The twice-yearly, family-facing conference students lead to present their competency growth.</dd>
+              <dt>CCR</dt><dd>College &amp; Career Readiness: dedicated K–8 instruction building awareness, identity, and pathways.</dd>
+              <dt>STEAM</dt><dd>Science, Technology, Engineering, Arts, and Mathematics — career-connected programming.</dd>
+              <dt>PLTW (Project Lead the Way)</dt><dd>A hands-on STEAM / project-based program, offered in place of visual arts.</dd>
+              <dt>UNRULR</dt><dd>The digital portfolio platform used for grades 7–8, aligned with The Match High School.</dd>
+            </dl>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Culture & Systems" data-ssec="Glossary">
+          <summary>Culture &amp; Systems<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>Safe, Respectful, Responsible</dt><dd>The three universal schoolwide behavior expectations.</dd>
+              <dt>CARDINALS</dt><dd>The Cardinal Character values: Character, Achievement, Resilience, Determination, Integrity, Nurturing, Acceptance, Leadership, Service.</dd>
+              <dt>LiveSchool</dt><dd>The positive-behavior points and rewards platform.</dd>
+              <dt>TRI</dt><dd>Temporary Remote Instruction: used during the expulsion process or pending an alternative-placement decision.</dd>
+              <dt>PowerSchool</dt><dd>The student information system used for attendance and records.</dd>
+              <dt>ParentSquare</dt><dd>The family communication platform.</dd>
+              <dt>SafeVisitor</dt><dd>The visitor check-in and screening system.</dd>
+            </dl>
+          </div>
+        </details>
+      </section>
+
     </div><!-- /wrap -->
 
     <footer>
@@ -1592,6 +1715,19 @@ footer{background:var(--charcoal);padding:32px 56px}
     a.addEventListener('click', function(e){ e.preventDefault(); jump('sec-' + s.id); closeMobileNav(); });
     nav.appendChild(a);
   });
+  // Reference: Glossary (not numbered, not part of read progress)
+  var refLbl = document.createElement('div');
+  refLbl.className = 'nav-ref-lbl';
+  refLbl.textContent = MBLI18N.t('nav.reference');
+  nav.appendChild(refLbl);
+  var glossLink = document.createElement('a');
+  glossLink.className = 'nav-item nav-ref';
+  glossLink.href = '#sec-glossary';
+  glossLink.setAttribute('data-target', 'sec-glossary');
+  glossLink.innerHTML = '<span class="nav-num">§</span>' +
+                        '<span class="nav-title">' + MBLI18N.t('nav.glossary') + '</span>';
+  glossLink.addEventListener('click', function(e){ e.preventDefault(); jump('sec-glossary'); closeMobileNav(); });
+  nav.appendChild(glossLink);
 
   function jump(id){
     var el = document.getElementById(id);
@@ -1693,6 +1829,8 @@ footer{background:var(--charcoal);padding:32px 56px}
       var el = nav.querySelector('[data-target="sec-' + s.id + '"] .nav-title');
       if (el) el.textContent = MBLI18N.t('nav.' + s.id);
     });
+    var rl = nav.querySelector('.nav-ref-lbl'); if (rl) rl.textContent = MBLI18N.t('nav.reference');
+    var gl = nav.querySelector('.nav-ref .nav-title'); if (gl) gl.textContent = MBLI18N.t('nav.glossary');
     qInput.placeholder = MBLI18N.t('ui.search_ph');
     refreshRead();
     if (qInput.value.trim().length >= 2) runSearch();

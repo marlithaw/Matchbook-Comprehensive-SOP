@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matchbook Learning · SOP Handbook 2026–27</title>
+<meta name="description" content="Matchbook Learning Standard Operating Procedures Handbook 2026–27 — how we work together, teach, support students, and uphold the expectations that make our school successful.">
+<style>
+/* ============================================================
+   MATCHBOOK LEARNING — SOP Handbook
+   Implemented from "Matchbook SOP Handbook.dc.html" design.
+   Brand tokens mirror the Matchbook Learning Design System.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap');
+
+:root{
+  --spark-red:#E21C24;
+  --spark-red-press:#B5151A;
+  --dream-yellow:#F9DC7C;
+  --ink:#1A1A1A;
+  --charcoal:#232323;
+  --slate:#4A4A4A;
+  --muted:#8A8A8A;
+  --hairline:#E4E2DE;
+  --paper:#F6F6F4;
+  --white:#FFFFFF;
+  --font-display:'Anton','Arial Narrow',sans-serif;
+  --font-cond:'Oswald','Arial Narrow',sans-serif;
+  --font-body:'Mulish',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:var(--spark-red);text-decoration:none}
+a:hover{color:var(--spark-red-press);text-decoration:underline}
+summary{list-style:none}
+summary::-webkit-details-marker{display:none}
+
+/* ---------- Layout ---------- */
+.shell{display:flex;align-items:flex-start;min-height:100vh;background:var(--paper)}
+
+/* ---------- Sidebar ---------- */
+.sb{position:sticky;top:0;height:100vh;overflow-y:auto;width:296px;flex:0 0 296px;background:var(--charcoal);color:var(--white);display:flex;flex-direction:column}
+.sb-brand{padding:24px 22px 18px;border-bottom:1px solid rgba(255,255,255,.12)}
+.sb-home{display:inline-block;font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#C9C9C9;margin-bottom:14px}
+.sb-home:hover{color:var(--dream-yellow);text-decoration:none}
+.sb-word{font-family:var(--font-display);font-size:26px;line-height:.95;text-transform:uppercase;color:var(--spark-red)}
+.sb-sub{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--white);margin-top:10px}
+.sb-sub2{font-family:var(--font-body);font-size:12px;color:var(--muted);margin-top:4px}
+.sb-searchwrap{padding:16px 22px 12px}
+#q{width:100%;background:#1A1A1A;border:1px solid rgba(255,255,255,.18);color:var(--white);padding:10px 14px;font-family:var(--font-body);font-size:13.5px;border-radius:999px;outline:none}
+#q::placeholder{color:#8A8A8A}
+#q:focus{border-color:var(--spark-red)}
+.res-head{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:10px 0 6px}
+.res{cursor:pointer;padding:8px 10px;background:#1A1A1A;margin-bottom:6px;border-left:3px solid var(--spark-red)}
+.res:hover{background:#2E2E2E}
+.res-title{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--white)}
+.res-sec{font-family:var(--font-body);font-size:11.5px;color:var(--muted);margin-top:2px}
+.res-snip{font-family:var(--font-body);font-size:11.5px;color:#C9C9C9;margin-top:3px;line-height:1.4}
+.res-snip mark{background:var(--dream-yellow);color:#1A1A1A;padding:0 1px}
+.nav{padding:4px 12px 12px;flex:1}
+.nav-item{cursor:pointer;display:flex;align-items:center;gap:10px;padding:9px 10px;text-decoration:none}
+.nav-item:hover{background:#2E2E2E;text-decoration:none}
+.nav-num{font-family:var(--font-display);font-size:13px;color:var(--spark-red);width:26px;flex:0 0 26px}
+.nav-title{font-family:var(--font-cond);font-weight:500;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#EDEDEB;flex:1;line-height:1.25}
+.nav-item:hover .nav-title{color:var(--white)}
+.nav-check{font-family:var(--font-body);font-weight:800;font-size:11px;color:var(--charcoal);background:var(--dream-yellow);border-radius:999px;width:16px;height:16px;display:none;align-items:center;justify-content:center}
+.nav-item.read .nav-check{display:inline-flex}
+.sb-foot{padding:16px 22px 22px;border-top:1px solid rgba(255,255,255,.12)}
+.sb-foot-lbl{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.bar{height:6px;background:#1A1A1A;border-radius:999px;overflow:hidden}
+.bar > div{height:100%;background:var(--spark-red);width:0;transition:width 180ms cubic-bezier(.2,.7,.2,1)}
+
+/* ---------- Main ---------- */
+.main{flex:1;min-width:0}
+.hero{background:var(--spark-red);padding:56px 56px 48px}
+.hero-inner{max-width:920px}
+.hero-kick{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--dream-yellow)}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(48px,6vw,84px);line-height:.92;text-transform:uppercase;color:var(--white);margin:12px 0 0}
+.hero p{font-family:var(--font-body);font-size:18px;line-height:1.6;color:var(--white);margin:20px 0 0;max-width:640px}
+.wrap{max-width:920px;padding:40px 56px 96px}
+
+/* ---------- Quick reference ---------- */
+.qref-head{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--spark-red);margin-bottom:14px}
+.qref{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0 0 64px}
+.qref-card{padding:20px}
+.qref-card.yellow{background:var(--dream-yellow)}
+.qref-card.dark{background:var(--charcoal)}
+.qref-card.plain{background:var(--white);border:1px solid var(--hairline)}
+.qref-lbl{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.qref-card.yellow .qref-lbl{color:var(--ink)}
+.qref-card.dark .qref-lbl{color:var(--dream-yellow)}
+.qref-card.plain .qref-lbl{color:var(--spark-red)}
+.qref-big{font-family:var(--font-display);font-size:26px;text-transform:uppercase;margin-top:6px;line-height:1}
+.qref-card.dark .qref-big{color:var(--white)}
+.qref-card.yellow .qref-big,.qref-card.plain .qref-big{color:var(--ink)}
+.qref-note{font-family:var(--font-body);font-size:12.5px;margin-top:6px;line-height:1.45}
+.qref-card.dark .qref-note{color:#C9C9C9}
+.qref-card.yellow .qref-note,.qref-card.plain .qref-note{color:var(--slate)}
+
+/* ---------- Section header ---------- */
+.sec{margin:0 0 72px;scroll-margin-top:16px}
+.sec-top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.kicker{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--spark-red)}
+.sec h2{font-family:var(--font-display);font-weight:400;font-size:clamp(34px,4.4vw,44px);line-height:.96;text-transform:uppercase;color:var(--ink);margin:6px 0 0}
+.readbtn{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:8px 18px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.readbtn:hover{background:var(--ink);color:var(--white)}
+.readbtn.on{background:var(--ink);color:var(--white)}
+.rule{height:5px;width:72px;background:var(--spark-red);margin:14px 0 10px}
+.sec-sub{font-family:var(--font-body);font-style:italic;font-size:16px;color:var(--slate);margin:0 0 20px}
+
+/* ---------- Accordion cards ---------- */
+.acc{background:var(--white);border:1px solid var(--hairline);margin:0 0 10px}
+.acc > summary{cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 18px;font-family:var(--font-cond);font-weight:600;font-size:15px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+.acc > summary:hover{color:var(--spark-red)}
+.acc > summary .chev{margin-left:auto;color:var(--spark-red);font-size:12px;transition:transform .2s}
+.acc[open] > summary .chev{transform:rotate(180deg)}
+.acc-body{padding:4px 20px 22px}
+.acc-body p{font-family:var(--font-body);font-size:15px;line-height:1.65;color:var(--slate);margin:0 0 14px}
+.acc-body p:last-child{margin-bottom:0}
+.acc-body ul,.acc-body ol{font-family:var(--font-body);margin:0 0 14px;padding-left:22px;color:var(--slate);font-size:15px;line-height:1.7}
+.acc-body li{margin:0 0 3px}
+.acc-body h4{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);margin:18px 0 8px}
+.acc-body h4:first-child{margin-top:2px}
+.acc-body strong{color:var(--ink)}
+
+/* content sub-blocks */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 14px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+.mv{padding:18px 20px}
+.mv.yellow{background:var(--dream-yellow)}
+.mv.dark{background:var(--charcoal)}
+.mv-lbl{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.mv.yellow .mv-lbl{color:var(--ink)}
+.mv.dark .mv-lbl{color:var(--dream-yellow)}
+.mv p{margin:8px 0 0;font-size:14.5px;line-height:1.6}
+.mv.yellow p{color:var(--ink)}
+.mv.dark p{color:var(--white)}
+
+.rcard{border:1px solid var(--hairline);border-left:5px solid var(--spark-red);padding:14px 18px;margin:0 0 10px}
+.rcard-t{font-family:var(--font-cond);font-weight:600;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.rcard p{font-size:14px;line-height:1.6;color:var(--slate);margin:6px 0 0}
+
+.tile{background:var(--paper);padding:16px 18px;margin-top:14px}
+.tile-lbl{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--spark-red);margin-bottom:8px}
+.tile ul{margin:0;font-size:14px}
+
+.note{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:#FFF7E0;border:1px solid #F0D98A;padding:16px 18px;margin:0 0 14px}
+.note .bang{font-family:var(--font-display);font-size:30px;color:var(--spark-red);line-height:1;text-align:center}
+.note p{margin:0;font-size:14px;line-height:1.6;color:var(--slate)}
+.note.dark{background:var(--charcoal);border-color:var(--charcoal)}
+.note.dark p{color:#EDEDEB}
+.note.dark .bang{color:var(--dream-yellow)}
+
+.reslinks{background:var(--paper);padding:14px 18px;margin-top:14px}
+.reslinks .tile-lbl{margin-bottom:6px}
+.reslinks ul{margin:0;padding-left:20px;font-size:14px;line-height:1.7}
+
+.tier{border-left:5px solid var(--spark-red);padding:2px 0 2px 16px;margin:0 0 16px}
+.tier-t{font-family:var(--font-cond);font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+
+.tablewrap{overflow-x:auto;margin:0 0 16px;border:1px solid var(--hairline)}
+table.tbl{border-collapse:collapse;width:100%;min-width:560px;font-family:var(--font-body);font-size:13px}
+table.tbl th{background:var(--charcoal);color:var(--white);font-family:var(--font-cond);font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:11.5px;text-align:left;padding:10px 12px;vertical-align:top}
+table.tbl td{border:1px solid var(--hairline);padding:10px 12px;vertical-align:top;color:var(--slate);line-height:1.5}
+table.tbl tr:nth-child(even) td{background:#FBFBFA}
+table.tbl td:first-child{font-family:var(--font-cond);font-weight:600;text-transform:uppercase;color:var(--ink);font-size:12px;white-space:nowrap}
+.callout-strip{background:var(--dream-yellow);padding:16px 18px;margin:0 0 14px;font-family:var(--font-body);font-size:14.5px;line-height:1.6;color:var(--ink)}
+.callout-strip strong{color:var(--ink)}
+
+
+/* ---------- Language switcher + notice ---------- */
+.sb-lang{margin-top:14px}
+.sb-lang-lbl{font-family:var(--font-cond);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+select.mbl-lang{width:100%;background:#1A1A1A;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:8px 10px;font-family:var(--font-body);font-size:13px;outline:none;cursor:pointer}
+select.mbl-lang:focus{border-color:var(--spark-red)}
+.mbl-lang-note{background:var(--dream-yellow);color:#1A1A1A;font-family:var(--font-body);font-size:12.5px;line-height:1.5;padding:11px 15px;margin:0 0 24px;border-left:4px solid var(--spark-red)}
+
+/* ---------- Section 12 gateway ---------- */
+.gw{background:var(--charcoal);color:#fff;padding:32px 34px;position:relative;overflow:hidden;margin:0 0 14px}
+.gw::after{content:"";position:absolute;right:-90px;bottom:-110px;width:300px;height:300px;border-radius:999px;background:rgba(226,28,36,.16)}
+.gw-inner{position:relative;z-index:1;max-width:640px}
+.gw-eye{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dream-yellow)}
+.gw h3{font-family:var(--font-display);font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:.98;text-transform:uppercase;color:#fff;margin:10px 0 0}
+.gw .gw-vision{font-family:var(--font-body);font-weight:800;font-size:18px;line-height:1.35;color:var(--dream-yellow);margin:16px 0 0}
+.gw .gw-lede{font-family:var(--font-body);font-size:15px;line-height:1.6;color:#DcDcDc;margin:12px 0 0}
+.gw-cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--spark-red);color:#fff;padding:14px 26px;border-radius:999px}
+.gw-cta:hover{background:var(--spark-red-press);color:#fff;text-decoration:none}
+.gw-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 14px}
+@media(max-width:640px){.gw-facts{grid-template-columns:1fr}}
+.gw-fact{background:#fff;border:1px solid var(--hairline);padding:14px 16px}
+.gw-fact .k{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--spark-red)}
+.gw-fact .v{font-family:var(--font-cond);font-weight:600;font-size:15px;color:var(--ink);margin-top:4px;line-height:1.2}
+.gw-fact .s{font-family:var(--font-body);font-size:12px;color:var(--slate);margin-top:4px;line-height:1.4}
+.gw-inside{background:var(--paper);border:1px solid var(--hairline);padding:16px 18px}
+.gw-inside .k{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--spark-red);margin-bottom:10px}
+.gw-inside ol{margin:0;padding-left:20px;columns:2;column-gap:26px;font-size:13.5px;line-height:1.7;color:var(--slate)}
+@media(max-width:640px){.gw-inside ol{columns:1}}
+.gw-inside li{break-inside:avoid}
+
+/* ---------- Glossary ---------- */
+.gloss{margin:0}
+.gloss dt{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink);margin-top:16px}
+.gloss dt:first-child{margin-top:0}
+.gloss dd{margin:3px 0 0;font-size:14.5px;line-height:1.55;color:var(--slate)}
+.gloss dd .ph{font-style:italic;color:var(--muted)}
+.nav-ref-lbl{font-family:var(--font-cond);font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:16px 10px 6px;margin-top:8px;border-top:1px solid rgba(255,255,255,.12)}
+.nav-item.nav-ref .nav-num{font-family:var(--font-display);font-size:15px;color:var(--spark-red)}
+
+/* ---------- Footer ---------- */
+footer{background:var(--charcoal);padding:32px 56px}
+.foot-inner{max-width:920px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.foot-word{font-family:var(--font-display);font-size:18px;text-transform:uppercase;color:var(--spark-red)}
+.foot-sub{font-family:var(--font-body);font-size:12.5px;color:var(--muted);margin-top:4px}
+.printbtn{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dream-yellow);background:transparent;border:1px solid rgba(249,220,124,.5);border-radius:999px;padding:9px 18px;cursor:pointer}
+.printbtn:hover{background:var(--dream-yellow);color:var(--charcoal)}
+
+/* ---------- Mobile ---------- */
+.menu-toggle{display:none}
+@media(max-width:900px){
+  .sb{position:fixed;left:0;top:0;z-index:40;transform:translateX(-100%);transition:transform .25s ease;box-shadow:0 0 40px rgba(0,0,0,.4)}
+  body.nav-open .sb{transform:translateX(0)}
+  body.nav-open .scrim{display:block}
+  .scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:30}
+  .menu-toggle{display:inline-flex;align-items:center;gap:8px;position:fixed;left:14px;top:14px;z-index:50;background:var(--charcoal);color:var(--white);border:0;border-radius:999px;padding:10px 16px;font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+  .hero{padding:72px 28px 40px}
+  .wrap{padding:32px 24px 80px}
+  footer{padding:28px 24px}
+}
+
+/* ---------- Print ---------- */
+@media print{
+  .sb,.menu-toggle,.scrim,.readbtn,.printbtn{display:none!important}
+  .shell{display:block}
+  .main{width:100%}
+  .hero{background:var(--spark-red)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .acc{break-inside:avoid}
+  .acc-body{display:block!important}
+  .sec{margin-bottom:36px}
+  a{color:var(--ink)}
+}
+</style>
+</head>
+<body>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" data-i18n="ui.contents">☰ Contents</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sb" id="sidebar">
+    <div class="sb-brand">
+      <a class="sb-home" href="index.html">← Handbook Library</a>
+      <div class="sb-word">Matchbook<br>Learning</div>
+      <div class="sb-sub" data-i18n="brand.sub">SOP Handbook 2026–27</div>
+      <div class="sb-sub2" data-i18n="brand.tag">Standard Operating Procedures · All Staff</div>
+      <div class="sb-lang" id="langMount"><span class="sb-lang-lbl">Language · Idioma · Lang · Lugha</span></div>
+    </div>
+    <div class="sb-searchwrap">
+      <input type="text" id="q" placeholder="Search the handbook…" autocomplete="off" spellcheck="false">
+      <div id="results"></div>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sb-foot">
+      <div class="sb-foot-lbl" id="progressLabel">0 of 13 sections read</div>
+      <div class="bar"><div id="progressBar"></div></div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-kick" data-i18n="hero.kicker">The Matchbook Way · 2026–2027</div>
+        <h1 data-i18n="hero.title">Standard Operating Procedures</h1>
+        <p data-i18n="hero.lede">How we work together, teach, support students, and uphold the expectations that make our school successful. This is a “how we do school” guide — when you’re unsure, start here.</p>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <div class="mbl-lang-note" role="note" style="display:none"></div>
+
+      <!-- QUICK REFERENCE -->
+      <section data-screen-label="Quick Reference">
+        <div class="qref-head" data-i18n="qr.head">Quick Reference</div>
+        <div class="qref">
+          <div class="qref-card yellow">
+            <div class="qref-lbl" data-i18n="qr.plans.l">Lesson Plans Due</div>
+            <div class="qref-big" data-i18n="qr.plans.v">Wed · 5:00 PM</div>
+            <div class="qref-note" data-i18n="qr.plans.n">Submitted in GROW every week. Before breaks, submit early.</div>
+          </div>
+          <div class="qref-card dark">
+            <div class="qref-lbl" data-i18n="qr.slc.l">Student-Led Conferences</div>
+            <div class="qref-big" data-i18n="qr.slc.v">Oct 8–9 · Mar 18–19</div>
+            <div class="qref-note" data-i18n="qr.slc.n">Every student presents competency growth to family each semester.</div>
+          </div>
+          <div class="qref-card plain">
+            <div class="qref-lbl" data-i18n="qr.events.l">Family Events</div>
+            <div class="qref-big" data-i18n="qr.events.v">1 per semester</div>
+            <div class="qref-note" data-i18n="qr.events.n">All staff help plan and run at least one schoolwide event per semester.</div>
+          </div>
+          <div class="qref-card plain">
+            <div class="qref-lbl" data-i18n="qr.unsure.l">If You’re Unsure</div>
+            <div class="qref-big" data-i18n="qr.unsure.v">Start Here</div>
+            <div class="qref-note" data-i18n="qr.unsure.n">This SOP first → grade-level team or coach → established channels.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 01 — INTRODUCTION -->
+      <!-- ========================================================= -->
+      <section id="sec-intro" class="sec" data-screen-label="1. Introduction">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec01">Section 01</div>
+            <h2 data-i18n="h2.intro">Introduction</h2>
+          </div>
+          <button class="readbtn" data-sec="intro">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.intro">How we work together, communicate, and uphold the expectations that make our school successful.</p>
+
+        <details class="acc" open data-search data-stitle="Mission, Vision, and Beliefs" data-ssec="1 · Introduction">
+          <summary>Mission, Vision, and Beliefs<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <div class="grid2">
+              <div class="mv yellow">
+                <div class="mv-lbl">Mission</div>
+                <p>We personalize learning within a restorative community, fostering resilience and excellence while preparing students for real-world opportunities.</p>
+              </div>
+              <div class="mv dark">
+                <div class="mv-lbl">Vision</div>
+                <p style="font-weight:700;font-size:16px">Every child known, loved, and flourishing.</p>
+              </div>
+            </div>
+            <ul>
+              <li>Core instructional beliefs</li>
+              <li>Core culture beliefs</li>
+              <li>Equity belief statement — all students access grade-level content with support</li>
+              <li>Adult culture beliefs — how we work together</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Portrait of a Graduate / Competencies" data-ssec="1 · Introduction">
+          <summary>Portrait of a Graduate / Competencies<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Five competencies define the knowledge, skills, and dispositions every student develops. Each is paired with what mastery looks like in practice.</p>
+            <div class="rcard"><div class="rcard-t">Academic Ownership</div><p>Students take responsibility for their learning by setting goals, monitoring progress, and advocating for support. <strong>Mastery looks like:</strong> tracking their own data, identifying where they are stuck, asking for help before a problem grows, and articulating learning goals unprompted.</p></div>
+            <div class="rcard"><div class="rcard-t">Collaboration</div><p>Students work effectively with others by contributing strengths, listening actively, and supporting shared goals. <strong>Mastery looks like:</strong> sharing work fairly, staying engaged when others lead, giving honest and kind feedback, and holding up their end of group commitments.</p></div>
+            <div class="rcard"><div class="rcard-t">Communication</div><p>Students express ideas clearly across formats and audiences, and listen to understand. <strong>Mastery looks like:</strong> adjusting tone and format for the audience, listening without interrupting, and explaining thinking in writing, conversation, and presentation.</p></div>
+            <div class="rcard"><div class="rcard-t">Honor</div><p>Students act with integrity, respect themselves and others, and take responsibility for their impact. <strong>Mastery looks like:</strong> telling the truth even when it is hard, treating peers and adults with consistent respect, and owning mistakes without deflecting.</p></div>
+            <div class="rcard"><div class="rcard-t">Resilience</div><p>Students persist through challenges, learn from mistakes, and adapt their approach. <strong>Mastery looks like:</strong> trying a new strategy when the first fails, recovering from a low grade without shutting down, and reflecting on what to do differently.</p></div>
+            <div class="tile">
+              <div class="tile-lbl">Alignment to Instructional Systems</div>
+              <ul>
+                <li>Competencies are embedded in daily instruction — not a separate behavior system. Teachers reference competency language during lessons, transitions, and feedback.</li>
+                <li>Student-led conferences are the primary formal structure for competency demonstration, each semester.</li>
+                <li>Competency progress is tracked alongside academic data through observation, artifacts, and conferencing data logged in Matchbook’s progress monitoring system.</li>
+                <li>Lesson design connects competency expectations to content standards explicitly — students know which competency they are practicing and why.</li>
+                <li>Competency language lives in the student handbook, family-facing materials, and classroom norms for consistency across settings.</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="How to Use This SOP" data-ssec="1 · Introduction">
+          <summary>How to Use This SOP<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <ul>
+              <li><strong>This is a “how we do school” guide, not every detail.</strong> It outlines the essential systems and expectations that guide consistent practice — it does not cover every scenario.</li>
+              <li><strong>Where detailed tools live:</strong> detailed tools, templates, and resources are housed in designated systems and shared drives. Reference those materials for specific procedures.</li>
+              <li><strong>If you’re unsure, start here:</strong> begin with this SOP as the primary reference → collaborate with grade-level teams or instructional leaders → use established communication channels for clarification and support.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 1.5 — PROFESSIONAL PRACTICE & STAFF DEVELOPMENT -->
+      <!-- ========================================================= -->
+      <section id="sec-practice" class="sec" data-screen-label="1.5 Professional Practice">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec15">Section 1.5</div>
+            <h2 data-i18n="h2.practice">Professional Practice &amp; Staff Development</h2>
+          </div>
+          <button class="readbtn" data-sec="practice">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.practice">How we support staff development and maintain consistent professional expectations across the school.</p>
+
+        <details class="acc" open data-search data-stitle="Our Commitment to Staff Development" data-ssec="1.5 · Professional Practice">
+          <summary>Our Commitment to Staff Development<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>At Matchbook Learning, we believe that excellent teaching is developed through intentional practice, meaningful feedback, and continuous reflection. Professional growth is an expectation for every educator, regardless of years of experience or current level of performance.</p>
+            <p>Our approach to staff development is built on coaching, collaboration, and shared accountability. We are committed to creating a culture where feedback is welcomed, growth is celebrated, and every staff member has the support needed to continuously improve their practice in service of student success.</p>
+            <p>We also believe that teaching should be deeply meaningful and joyful. While the work is demanding, we strive to create a school where educators feel supported, appreciated, and inspired by the difference they make each day. We celebrate progress, recognize excellence, and believe that investing in our people is one of the most important ways we invest in our students.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Coaching" data-ssec="1.5 · Professional Practice">
+          <summary>Coaching<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Culture of Coaching</h4>
+            <p>Instructional coaching is a core component of professional growth at Matchbook Learning and an expectation for all teachers. Coaching is universal — it is not optional, nor is it reserved for struggling teachers. Every educator participates in coaching because strong instruction is developed through consistent feedback, reflection, and implementation over time.</p>
+            <p>At Matchbook, coaching is rooted in partnership before oversight. Like the relationship between a resident and an attending physician, coaches meet teachers where they are, recognize strengths, and provide the precise guidance needed to accelerate growth. The purpose of coaching is developmental rather than punitive. Coaches are not cataloging mistakes — they are identifying the highest-leverage instructional moves that will have the greatest impact on student learning.</p>
+            <p>Strong teaching is not achieved in isolation. It is cultivated through ongoing collaboration, meaningful feedback, and a shared commitment to continuous improvement. Our goal is not simply to improve instructional practice, but to build confident educators who find purpose, fulfillment, and joy in helping students grow.</p>
+            <h4>Coaching Cycles</h4>
+            <p>Every teacher participates in ongoing coaching cycles that may include:</p>
+            <ul>
+              <li>Goal-setting conversations</li>
+              <li>Classroom observations</li>
+              <li>Feedback meetings</li>
+              <li>One clear, actionable next step</li>
+              <li>Follow-up observations and support</li>
+            </ul>
+            <h4>Coaching Formats</h4>
+            <p>Coaching may occur in a variety of ways depending on teacher needs and instructional goals, including:</p>
+            <ul>
+              <li>Live Coaching</li>
+              <li>Observation &amp; Feedback Cycles</li>
+              <li>Video Reflection</li>
+              <li>Modeling &amp; Co-Teaching</li>
+              <li>Clinics</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Observation Feedback Model" data-ssec="1.5 · Professional Practice">
+          <summary>Observation Feedback Model<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Our instructional coaching model is grounded in the principles of Teach Like a Champion (TLaC), Get Better Faster (GBF) and utilizes a Glows &amp; Grows feedback structure.</p>
+            <p>Teachers can expect feedback that is:</p>
+            <ul>
+              <li>Timely</li><li>Specific</li><li>Actionable</li><li>Evidence-based</li><li>Focused on one high-leverage instructional action step</li>
+            </ul>
+            <p>Every coaching conversation includes:</p>
+            <div class="grid2">
+              <div class="mv yellow"><div class="mv-lbl">Glow</div><p>A specific instructional strength to continue building.</p></div>
+              <div class="mv dark"><div class="mv-lbl">Grow</div><p>One actionable next step that will have the greatest impact on student learning.</p></div>
+            </div>
+            <p>Whenever possible, coaches utilize common language from Teach Like a Champion (TLaC), Get Better Faster (GBF) and RELAY Graduate School of Education to ensure consistency across coaching experiences.</p>
+            <div class="reslinks">
+              <div class="tile-lbl">Related Resources</div>
+              <ul><li><a href="https://drive.google.com/open?id=1kWOx19zEutGXSjGfbe6HC3d8e8A3si1z" target="_blank" rel="noopener">Get Better Faster Waterfall</a></li></ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Professional Growth Expectations" data-ssec="1.5 · Professional Practice">
+          <summary>Professional Growth Expectations<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Professional growth requires active participation from every staff member. Coaching is most effective when teachers actively engage in the process and view feedback as an opportunity for continuous improvement.</p>
+            <p>Teachers are expected to:</p>
+            <ul>
+              <li>Participate fully in coaching cycles.</li>
+              <li>Implement agreed-upon action steps.</li>
+              <li>Reflect on instructional practice.</li>
+              <li>Arrive prepared for coaching conversations.</li>
+              <li>Seek support when needed.</li>
+              <li>Collaborate professionally with coaches and colleagues.</li>
+              <li>Maintain a growth mindset and a willingness to continuously refine instructional practice.</li>
+            </ul>
+            <p>We believe professional growth is strengthened when we celebrate successes, encourage one another, and contribute to a positive school culture where both adults and students enjoy coming to school each day.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Evaluation System" data-ssec="1.5 · Professional Practice">
+          <summary>Evaluation System<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>At Matchbook Learning, coaching and evaluation serve complementary but distinct purposes. Coaching is developmental and ongoing, while evaluations provide a formal measure of instructional effectiveness and professional responsibilities.</p>
+            <p>Teachers are evaluated using the Matchbook Learning Teacher Evaluation Rubric, which is aligned to our instructional framework and reflects the practices that lead to strong student outcomes. Evaluations may include evidence gathered through:</p>
+            <ul>
+              <li>Formal observations</li><li>Informal walkthroughs</li><li>Coaching cycles</li><li>Professional responsibilities</li><li>Student learning evidence</li><li>Progress toward professional goals</li>
+            </ul>
+            <p>Instructional coaching is focused on supporting growth, reflection, and the ongoing development of strong instructional practice. Coaching is grounded in partnership and is designed to help teachers refine their craft over time in a supportive space. Instructional coaches are not evaluators; coaching conversations are separate from the formal evaluation process. Coaches may, however, use the evaluation tool as a shared reference point to align feedback, highlight strengths, and identify next steps connected to schoolwide expectations.</p>
+            <p>At the beginning of each school year, teachers should become familiar with the evaluation rubric and performance expectations. This shared understanding helps ensure clarity around what strong instruction looks like and supports more focused, consistent coaching throughout the year.</p>
+            <div class="reslinks">
+              <div class="tile-lbl">Related Resources</div>
+              <ul><li>Matchbook Learning Teacher Evaluation Rubric</li></ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Professional Learning" data-ssec="1.5 · Professional Practice">
+          <summary>Professional Learning<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Professional learning is an ongoing expectation for every staff member and is designed to continuously strengthen instructional practice while supporting a positive, collaborative school culture where teachers feel equipped, valued, and successful in their work.</p>
+            <p>Professional learning opportunities include:</p>
+            <ul>
+              <li>Weekly Professional Development</li>
+              <li>Grade-Level and Department Meetings</li>
+              <li>Curriculum Training</li>
+              <li>Data Meetings</li>
+              <li>Coaching Cycles</li>
+              <li>Compliance Training</li>
+            </ul>
+            <p>These structures are intentionally connected and designed to work together, not as separate or competing demands. The goal is coherence — so that time spent in professional learning directly supports classroom instruction, reduces uncertainty, and builds shared clarity around what strong teaching looks like in practice.</p>
+            <p>Professional learning is informed by student data, school priorities, and staff needs to ensure learning remains relevant, practical, and impactful. We also prioritize balance and focus, so that expectations remain clear and manageable. Our goal is for every professional learning experience to leave teachers feeling more confident, better equipped, and supported with actionable strategies they can immediately apply in their classrooms to positively impact students.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 02 — ACADEMICS & INSTRUCTION -->
+      <!-- ========================================================= -->
+      <section id="sec-academics" class="sec" data-screen-label="2. Academics & Instruction">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec02">Section 02</div>
+            <h2 data-i18n="h2.academics">Academics &amp; Instruction</h2>
+          </div>
+          <button class="readbtn" data-sec="academics">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.academics">How we plan, teach, assess, and respond to ensure strong student learning and growth.</p>
+
+        <details class="acc" open data-search data-stitle="Instructional Philosophy" data-ssec="2 · Academics & Instruction">
+          <summary>Instructional Philosophy<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p><strong>Great instruction is planned, joyful, and relentlessly focused on student outcomes.</strong> At Matchbook Learning, excellent teaching is prepared in advance, informed by data, and executed with precision and warmth. We start with the end in mind: we begin by unpacking the unit assessment to name the knowledge, skills, and reasoning students must demonstrate. This is not teaching to the test — it is planning toward a clear target so we can map the most direct route to get every student there. And when the data tells us students are not arriving, we adjust. Instruction that does not respond to evidence is not instruction; it is repetition.</p>
+            <p><strong>Curriculum fidelity is the foundation of that route.</strong> Our curricula are research-based and vertically aligned, ensuring every student receives coherent, rigorous instruction regardless of classroom. Matchbook teachers follow the curriculum with integrity, freeing themselves from designing lessons from scratch to do the deeper work instead: internalizing the content, anticipating misconceptions, and responding to what data tells them in real time. Consistency across classrooms is equity — it guarantees that every student builds on the same evidence-based foundation.</p>
+            <p><strong>Planning is where instruction begins</strong> — not a separate task that precedes it, but the first act of teaching itself. Strong outcomes are not a product of good intentions — they are a product of tight plans. The real work is internalization: knowing your lesson so thoroughly that you can hold the content, the students, and the room all at once. Tight, well-scripted planning builds the muscle memory that allows a teacher to eventually hold the structure in their head rather than on the page. As instruction strengthens and planning becomes habitual, the rigidity of planning can loosen — because the foundation has already been built.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Instruction Block Design" data-ssec="2 · Academics & Instruction">
+          <summary>Instruction Block Design<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Instructional minutes by grade band. ELA and Math are delivered from Savvas. Enrichment (WTI — Walk To Intervention) runs Tuesday–Thursday, with Monday &amp; Friday reserved for teacher choice.</p>
+            <div class="tablewrap">
+              <table class="tbl">
+                <thead><tr><th>Grades</th><th>ELA</th><th>Math</th><th>Flex / Sci / SS</th><th>Enrichment (WTI)</th></tr></thead>
+                <tbody>
+                  <tr><td>K–2</td><td>90 min (Savvas): 60 core lesson · 30 writing · 30 small group</td><td>85 min (Savvas): 60 core lesson · 20 small group</td><td>Cross-reference standards on pacing guide</td><td>30 min · Tue–Thu Walk To Intervention. Mon &amp; Fri teacher choice.</td></tr>
+                  <tr><td>3–4</td><td>90 min (Savvas): 60 core lesson · 30 writing · 30 small group</td><td>3rd: 100 min / 4th: 90 min — 60–65 core lesson · 30–35 small group</td><td>Cross-reference standards on pacing guide</td><td>30 min · Tue–Thu Walk To Intervention. Mon &amp; Fri teacher choice.</td></tr>
+                  <tr><td>5th</td><td>60 min (Savvas): 45 core lesson · 15–20 small group (days 1,3,5; days 2 &amp; 4 are reading days)</td><td>60 min (Savvas): 45 core lesson · 15–20 small group</td><td>30 min writing · 30 min Practice Buddy (Savvas Math)</td><td>Default rostered to HR teacher. Mon &amp; Fri teacher choice; Tue–Thu SpEd/MTSS/MLL, conferencing, baseline testing.</td></tr>
+                  <tr><td>6th</td><td>60 min (Savvas), same as Grade 5: 45 core lesson · 15–20 small group (days 1,3,5; days 2 &amp; 4 reading days)</td><td>60 min · two days per lesson; small group at least every other day (40 min instruction · 20 min small group). Daily exit ticket — day 2 needs a clarified stopping point and an exit ticket identified for mastery.</td><td>30 min writing · 30 min Practice Buddy (Savvas Math)</td><td>Default rostered to HR teacher. Mon &amp; Fri teacher choice; Tue–Thu intervention/support blocks.</td></tr>
+                  <tr><td>7–8th</td><td>70–80 min (Savvas): 50 core lesson · 20–25 small group (days 1,3,5; days 2 &amp; 4 reading days)</td><td>70–80 min · two days per lesson; small group at least every other day (50 min instruction · 20 min small group). Daily exit ticket — day 2 needs a clarified stopping point and an exit ticket identified for mastery.</td><td>70–80 min · one semester each. 7th grade starts with Science, 8th grade starts with Social Studies; switch after Winter Break. Social Studies uses content-specific writing prompts on the ILEARN rubric.</td><td>Default rostered to HR teacher. Mon &amp; Fri teacher choice; Tue–Thu intervention/support blocks.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tile">
+              <div class="tile-lbl">Monday &amp; Friday — Teacher Choice may include</div>
+              <ul><li>Additional small-group time · additional progress monitoring · student conferences</li><li>Whole-class reteach · SEL · extension activities</li><li>Holiday / cultural lessons · Science · Social Studies · Math PracticeBuddy</li></ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Curriculum & Pacing" data-ssec="2 · Academics & Instruction">
+          <summary>Curriculum &amp; Pacing<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Approved Curriculum</h4>
+            <div class="tablewrap">
+              <table class="tbl">
+                <thead><tr><th>Grade(s)</th><th>Content</th><th>Curriculum</th></tr></thead>
+                <tbody>
+                  <tr><td>K–8</td><td>Math</td><td>Savvas enVision Math</td></tr>
+                  <tr><td>K–8</td><td>Reading</td><td>Savvas myView (K–5) · Savvas myPerspectives (6–8)</td></tr>
+                  <tr><td>7–8</td><td>Social Studies</td><td>myWorld Interactive — Eastern &amp; Western Hemisphere</td></tr>
+                  <tr><td>6–8</td><td>Science</td><td>Elevate Science</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Pacing Guide Expectations</h4>
+            <p>See the <a href="https://docs.google.com/spreadsheets/d/1J4dtiO4YNa53iNrBINMULe58ltGcZS-mmu3V_aFNCVs/edit?usp=sharing" target="_blank" rel="noopener">Pacing Guide 2026–27</a>. To understand the pacing guide’s design, start with the assessments.</p>
+            <ol>
+              <li>Internal (curriculum) and external (state, benchmark) assessment dates are set on the pacing guide and are rigid.</li>
+              <li>ELA takes Bi-Weekly Assessments (BWAs / progress check-ups) on a bi-weekly basis to alternate with Math Topic assessments, preventing multiple assessments in one week.</li>
+              <li>Checkpoints can be retaken after the initial assessments. DOE sets the window for Checkpoints 1, 2, and 3; Matchbook may set dates for subsequent retests based on when standards are taught. A Checkpoint 1 retake is given after all assessed standards have been taught.</li>
+              <li>Flexible days are built in to absorb unforeseen interruptions (weather, testing pulls) and maintain pacing. Unused Flex Days can be used for reteaching or to get ahead. Flex Days are <strong>not</strong> free/reward days — lesson plans are still required.</li>
+              <li>Standards and IDOE Item Specifications are identified for each unit — your North Star when planning and internalizing.</li>
+              <li>Deviations from the Pacing Guide require approval from the Director of Academics.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Lesson Planning Expectations" data-ssec="2 · Academics & Instruction">
+          <summary>Lesson Planning Expectations<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Submission</h4>
+            <p>Plans are due in GROW every Wednesday by 5:00 PM. Plans should not be submitted during school breaks — submit before the break begins.</p>
+            <h4>Why It Matters</h4>
+            <p>Planning in advance lets SpEd teachers preview content and prepare accommodations, MLL specialists anticipate language demands, and coaches offer meaningful feedback before instruction — not after. Submit by Wednesday and every student gets your best lesson.</p>
+            <h4>Format Options (before gradual release)</h4>
+            <p>The plan you submit is the one in your hands during instruction.</p>
+            <div class="rcard"><div class="rcard-t">Option A — Digital Template</div><p>Paste TE content into the Matchbook template. Submit the digital file to GROW, then print for class. Do not modify the template without first consulting your coach. Examples: <a href="https://docs.google.com/document/d/1YkcChpgMbi_3SN4kQFC2JqxcsvkACbD8iv7NDKB_UVw/edit?usp=sharing" target="_blank" rel="noopener">8th Math</a>, <a href="https://docs.google.com/document/d/17Ll_wwqg9cd-0nYCNY5O-3BpXxa_wY7n_1wgedlQmxs/edit?usp=sharing" target="_blank" rel="noopener">6th Reading</a>, <a href="https://docs.google.com/document/d/1oCaoo_86biWjwUc_Aadw5d8Oo1zqsdI1IPJ_MoSLPzs/edit?usp=sharing" target="_blank" rel="noopener">2nd Math</a>, <a href="https://docs.google.com/document/d/1Bxn-cHbt1g6unXrsEiDZ5xFkLqQ0FMT_b_MzG7xHDj0/edit?usp=sharing" target="_blank" rel="noopener">2nd Reading</a>. <a href="https://docs.google.com/document/d/1P0dKtGpjs55L8jfh6Y9TecuTPg2qpIncfMkZ4vqbY5c/edit?usp=sharing" target="_blank" rel="noopener">Template</a>.</p></div>
+            <div class="rcard"><div class="rcard-t">Option B — Annotated TE</div><p>Hand-annotate your physical TE. Scan and submit the PDF to GROW by Wednesday. Annotations must address all required elements. Examples: <a href="https://drive.google.com/file/d/1dzdEG4o7brHR5Lj_ABqOR8wHQegpRO8W/view?usp=sharing" target="_blank" rel="noopener">8th Math</a>, <a href="https://drive.google.com/file/d/1kOsS2HEyv1eEkBNZYlaIKxWJYp0Ds7Ta/view?usp=sharing" target="_blank" rel="noopener">6th Reading</a>, <a href="https://drive.google.com/file/d/137Lj2fdyGarz4RGwnxEmgKkQSPY6gEqx/view?usp=sharing" target="_blank" rel="noopener">2nd Math</a>, <a href="https://drive.google.com/file/d/1kLF2IOB9Rx-YKGkBI5Vwu4eocaLitjF2/view?usp=sharing" target="_blank" rel="noopener">2nd Reading</a>.</p></div>
+            <div class="rcard"><div class="rcard-t"><a href="https://docs.google.com/document/d/1jPp81lYyGQe1jPhPAJQt3YMyase1pd7Gg-Crjyf5nJM/edit?usp=sharing" target="_blank" rel="noopener">Small Group Planning Template</a></div><p>One document for the whole week; format is flexible. Submit separately in GROW or in the same document as core plans. Must include: the teacher-led activity, the independent activity, and who is in each group.</p></div>
+            <div class="note"><div class="bang">!</div><p>At Matchbook, we encourage teachers to use AI tools to work more efficiently — anything that returns time to teachers is a win. But there is a slippery slope between using AI to work smarter and using AI to check a box. A lesson plan is not a deliverable for leadership; it is a tool for the teacher. If it is generated, submitted, and never internalized, it is not a lesson plan — it’s paperwork with better formatting. Your lesson is expected to be in your hands during instruction, and what is on the page is expected to live in the room. If it becomes clear a teacher has not internalized their AI-generated plans, they will complete lesson internalizations by hand until that foundation is built.</p></div>
+            <div class="note"><div class="bang">!</div><p>A PowerPoint slide deck is not a lesson plan. It is a supplementary material you may prepare to support lesson execution, but it is not required.</p></div>
+            <h4>Scanning From Your Phone</h4>
+            <p>CamScanner, Apple Notes (camera → Scan Documents), or Adobe Scan all work well. Combine all pages into one PDF before uploading.</p>
+            <h4>If You Can’t Meet the Deadline</h4>
+            <p>Reach out to your Instructional Coach and Director of Academics before 5:00 PM on Wednesday. Contacting someone after the deadline is not advance notice. Proactive communication is the Matchbook standard.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Gradual Release of Lesson Planning" data-ssec="2 · Academics & Instruction">
+          <summary>Gradual Release of Lesson Planning<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>For teachers who meet both planning and instructional outcome expectations for 9 consecutive weeks. If data reflects a need, teachers may return to some or all baseline planning expectations. Lesson-plan rigidity must start tight and strong; instructional delivery may feel awkward at first — that’s okay. As delivery becomes habitual muscle memory, planning rigidity can loosen.</p>
+            <div class="tablewrap">
+              <table class="tbl">
+                <thead><tr><th>Weeks 1–9 · Baseline</th><th>Weeks 10–15</th><th>Week 16+</th></tr></thead>
+                <tbody>
+                  <tr><td style="white-space:normal">Annotated TE scan or Matchbook Template. Submitted by Wed 5:00 PM. All Lesson Planning Waterfall components scripted.</td><td>Teacher-preference template or TE scan. Submitted by Fri 7:00 AM. Still scripted: time-stamps, MOPs, high-leverage CFUs, MLL/SpEd/504 supports, DNPG moment with exemplar for laps, exit ticket.</td><td>Submitted by Fri 7:00 AM. Teacher submits: agenda with identified objective, MLL/SpEd/504 supports, DNPG moment exemplar &amp; laps, exit ticket.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Instructional Delivery & Planning (Non-Negotiables)" data-ssec="2 · Academics & Instruction">
+          <summary>Instructional Delivery &amp; Planning (Non-Negotiables)<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Lesson-plan expectations and instructional-delivery expectations cannot be separated. What lives on the page should live in the room, and vice versa. The plan and the lesson should be mirror images of each other — planning without follow-through is not planning, it is paperwork.</p>
+            <div class="callout-strip"><strong>While some lesson-planning expectations may become loose or unnecessary, instructional practices must remain in place all year.</strong></div>
+            <div class="tablewrap">
+              <table class="tbl">
+                <thead><tr><th>Week</th><th>Expected in Plans</th><th>Expected in Instruction</th></tr></thead>
+                <tbody>
+                  <tr><td>W1</td><td>On-time GROW submission; provided template OR scanned annotated TE (no teacher-made templates); time-stamped activities; means of participation; scripted what-to-do directions for all transitions.</td><td>Timer is used; students engage in ≥3 different MOPs; lesson or TE is in hand; all transitions have clear WTD directions.</td></tr>
+                  <tr><td>W2</td><td>All W1 + scripted CFUs &amp; teacher-model look-fors; exit ticket exemplar response.</td><td>CFUs from lesson are asked; 75% answered accurately.</td></tr>
+                  <tr><td>W3</td><td>All W2 + MLL supports; SpEd / 504 supports.</td><td>100% of MLL / SpEd students use their support resources.</td></tr>
+                  <tr><td>W4</td><td>All W3 + DNPG moments labeled; assessment alignment labeled; misconception + response preparation.</td><td>Teacher circulates during DNPG moments; communicates test alignment; pauses &amp; re-teaches when a misconception arises.</td></tr>
+                  <tr><td>W5</td><td>All W4 + Active Monitoring Part 1: create exemplar, identify laps, identify tracking system.</td><td>Teacher names the laps; carries clipboard with exemplar &amp; tracking while circulating; names % mastering DNPG after circulating.</td></tr>
+                  <tr><td>W6</td><td>All W5 + Active Monitoring Part 2: identify feedback; develop / identify anchor chart.</td><td>Anchor chart posted for DNPG feedback; feedback ≤10 sec/student on average; all students receive at least written feedback for all laps; all exit tickets graded with % mastery named.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Student Engagement Norms</h4>
+            <ul><li>Track the speaker</li><li>Assigned seats that allow multiple Means of Participation (MOP)</li><li>Desks cleared except for what is needed at that moment</li></ul>
+            <h4>I Do / We Do / You Do</h4>
+            <p>Every lesson should always have a teacher/video model (I Do) with clear look-fors, guided practice (We Do), and independent practice plus an exit ticket (You Do).</p>
+            <h4>Teachers Facilitate; Students Do the Heavy Lifting — Means of Participation</h4>
+            <ul>
+              <li>Cold call (popsicle sticks, spinners, planned from prior exit tickets)</li>
+              <li>Turn &amp; Talks / Think-Pair-Share / Stop &amp; Jot</li>
+              <li>Volunteer responses</li>
+              <li>Poll the class (whiteboards, ABCD cards, Plickers, answer on hands)</li>
+              <li>Choral responses</li>
+              <li>Read alouds (control the game, popcorn reading, whole-group choral reading)</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Small Group Instruction & Planning" data-ssec="2 · Academics & Instruction">
+          <summary>Small Group Instruction &amp; Planning<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Small-group instruction must be planned, though it does not need to be as thoroughly scripted. Small-group work is in the Savvas curriculum and should begin no later than Week 3. Weeks 1–2 of K–4 planning meetings focus on preparing small-group systems and initial rollout.</p>
+            <p>Small groups take place in a rotation and are planned one week at a time. Savvas Reading provides activities for low (foundational), medium (skill), and high (challenge/comprehension) groupings; Savvas Math provides advanced, on-level, and below groups. Teachers can have multiple groups of one level doing the same activity.</p>
+            <div class="tablewrap">
+              <table class="tbl">
+                <thead><tr><th></th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead>
+                <tbody>
+                  <tr><td>Teacher-Led</td><td>Challenge A</td><td>Foundational</td><td>Challenge B</td><td>Skill</td><td>Foundational (progress monitoring)</td></tr>
+                  <tr><td>Independent</td><td>Foundational · Challenge B · Skill</td><td>Challenge A · Challenge B · Skill</td><td>Foundational · Challenge A · Skill</td><td>Foundational · Challenge A · Challenge B</td><td>Challenge A · Challenge B · Skill</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Planning includes identifying students in each group by need (flexible), preparing materials, and identifying the teacher-led and independent activities. Reach out to the instructional assistant for copy support using the copy request document. See the <a href="https://docs.google.com/document/d/1jPp81lYyGQe1jPhPAJQt3YMyase1pd7Gg-Crjyf5nJM/edit?usp=sharing" target="_blank" rel="noopener">Small Group Planning Template</a>.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Intervention & Enrichment" data-ssec="2 · Academics & Instruction">
+          <summary>Intervention &amp; Enrichment<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <div class="tile">
+              <div class="tile-lbl">Monday &amp; Friday — Teacher Choice</div>
+              <ul><li>Additional small-group time · additional progress monitoring · student conferences</li><li>Whole-class reteach · SEL · extension activities · holiday/cultural lessons · Science, Social Studies · Math PracticeBuddy</li></ul>
+            </div>
+            <div class="grid2" style="margin-top:14px">
+              <div class="mv yellow"><div class="mv-lbl">Grades K–3 Enrichment (Tue–Thu)</div><p>Walk To Intervention: My Focus / MyFoundations / UFLI / Heggerty Readers. Groupings based on Acadience progress monitoring. Resources provided &amp; distributed by the Instructional Assistant.</p></div>
+              <div class="mv dark"><div class="mv-lbl">Grades 4–8 Enrichment (Tue–Thu)</div><p>Intervention: SpEd resource/support · MTSS support · Newcomer groups/MLL · student conferencing · baseline testing.</p></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Sheltered Instruction (SIOP)" data-ssec="2 · Academics & Instruction">
+          <summary>Sheltered Instruction (SIOP)<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <ul>
+              <li>Content and language objective alignment in daily lessons</li>
+              <li>Comprehensible-input strategies for access to grade-level content</li>
+              <li>Explicit academic vocabulary instruction</li>
+              <li>Structured scaffolds (sentence frames, visuals, modeling)</li>
+              <li>Structured academic discourse (partner talk, accountable-talk routines)</li>
+              <li>Engagement strategies to support language acquisition</li>
+              <li>Assessment accommodations to ensure language access without lowering rigor</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Instructional Systems & Expectations" data-ssec="2 · Academics & Instruction">
+          <summary>Instructional Systems &amp; Expectations<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Instructional Focus Areas</h4>
+            <p>The instructional framework identifies the core teaching practices that should be consistently implemented in every classroom. These high-leverage practices are the foundation for planning, instruction, coaching, and student success:</p>
+            <ul>
+              <li>Classroom Culture &amp; Routines · Curriculum Fidelity · Lesson Internalization</li>
+              <li>Learning Targets &amp; Success Criteria · Gradual Release (I Do, We Do, You Do)</li>
+              <li>Means of Participation · Active Monitoring · Checks for Understanding</li>
+              <li>Student Engagement · Independent Practice · Exit Tickets · Small-Group Instruction</li>
+              <li>Data-Driven Instruction · Classroom Environment &amp; Whiteboard Expectations</li>
+            </ul>
+            <h4>Instructional Expectations</h4>
+            <p>Teachers are expected to consistently implement Matchbook’s instructional framework and maintain high expectations for all students:</p>
+            <ul>
+              <li>Teach the adopted curriculum with fidelity.</li>
+              <li>Internalize lessons prior to instruction.</li>
+              <li>Clearly communicate learning targets and success criteria.</li>
+              <li>Utilize the Gradual Release Model (I Do, We Do, You Do).</li>
+              <li>Incorporate multiple Means of Participation throughout every lesson.</li>
+              <li>Actively monitor student learning and provide immediate feedback.</li>
+              <li>Frequently check for understanding and adjust instruction accordingly.</li>
+              <li>Provide meaningful independent practice aligned to the lesson objective.</li>
+              <li>Utilize exit tickets to assess mastery and inform future instruction.</li>
+              <li>Use student data to plan whole-group and small-group instruction.</li>
+              <li>Maintain classroom systems and routines that maximize instructional time.</li>
+              <li>Maintain schoolwide expectations for classroom setup and whiteboard configuration.</li>
+            </ul>
+            <h4>Whiteboard Configuration</h4>
+            <p>Whiteboards are a required instructional tool used to support clarity, consistency, and student independence. See <a href="https://docs.google.com/document/d/1M8winU9FZ9qgDK17dVmzH9ft09lBqiFcXHkN8i2lWcE/edit?usp=drive_link" target="_blank" rel="noopener">Whiteboard Configuration Guidelines</a>. Whiteboards should consistently include:</p>
+            <ul><li>Learning target or objective</li><li>Task or assignment expectations</li><li>Student response format</li><li>Success criteria or exemplar when appropriate</li></ul>
+            <div class="reslinks">
+              <div class="tile-lbl">Related Resources</div>
+              <ul><li>Instructional Systems SOP · Lesson Planning Guide · Curriculum Fidelity Guide</li><li>Whiteboard Expectations · Small Group Framework · Data Meeting Protocols</li></ul>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 03 — ASSESSMENT & GRADING -->
+      <!-- ========================================================= -->
+      <section id="sec-assessment" class="sec" data-screen-label="3. Assessment & Grading">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec03">Section 03</div>
+            <h2 data-i18n="h2.assessment">Assessment &amp; Grading</h2>
+          </div>
+          <button class="readbtn" data-sec="assessment">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.assessment">How we use data to understand progress, and how grades reflect current mastery of grade-level standards.</p>
+
+        <details class="acc" open data-search data-stitle="Data & Assessment / Grading Policy" data-ssec="3 · Assessment & Grading">
+          <summary>Data &amp; Assessment · Grading Policy<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Data &amp; Assessment</h4>
+            <p>Data and assessment serve as the foundation for instructional decision-making. We use multiple sources of data to understand student progress, identify gaps, and guide intervention and enrichment in real time — formative, interim, and summative measures consistently analyzed at the classroom, grade, and school level to keep instruction responsive and targeted.</p>
+            <h4>Grades &amp; Grading Policy</h4>
+            <p>Grades represent an ongoing and accurate reflection of a student’s current level of mastery of grade-level standards. They are not a completion record, but a measure of academic understanding demonstrated through consistent performance over time. Grades must be updated frequently, with missing-assignment reports shared with families weekly to ensure transparency and partnership.</p>
+            <div class="reslinks"><div class="tile-lbl">Reference</div><ul><li><a href="https://docs.google.com/document/d/16wI6wtNYF6gC6Fp_eRysAEhdo3t53ixaANgHSSphx5s/edit?usp=sharing" target="_blank" rel="noopener">Grading Policy</a></li></ul></div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="State Assessments" data-ssec="3 · Assessment & Grading">
+          <summary>State Assessments<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Required or state-adopted measures used to evaluate student mastery of Indiana Academic Standards and English language proficiency.</p>
+            <div class="rcard"><div class="rcard-t">Acadience (K–2 Literacy)</div><p>Foundational reading assessment measuring phonemic awareness, decoding, fluency, and comprehension. Used for screening, intervention placement, and ongoing progress monitoring.</p></div>
+            <div class="rcard"><div class="rcard-t">Forefront (K–2 Math)</div><p>Standards-aligned system measuring mastery of priority standards throughout the year, providing timely data between major benchmark windows.</p></div>
+            <div class="rcard"><div class="rcard-t">IREAD (Grades 2–3)</div><p>Adaptive literacy assessment focused on phonics, vocabulary, fluency, and comprehension; supports early identification and targeted intervention.</p></div>
+            <div class="rcard"><div class="rcard-t">WIDA ACCESS (K–8 English Learners)</div><p>English language proficiency assessment measuring listening, speaking, reading, and writing; results guide language supports and scaffolding.</p></div>
+            <div class="rcard"><div class="rcard-t">I AM (Grades 3–8 Special Education)</div><p>Indiana’s alternate assessment aligned to alternate achievement standards for students with significant cognitive disabilities.</p></div>
+            <div class="rcard"><div class="rcard-t">ILEARN (Grades 3–8)</div><p>Indiana’s statewide summative assessment in ELA, Math, and Science (where applicable) — the primary accountability measure for grade-level mastery.</p></div>
+            <div class="rcard"><div class="rcard-t">ILEARN Checkpoints &amp; Retakes (Grades 3–8)</div><p>Interim assessments that measure progress toward mastery and provide actionable data to guide instruction. Retakes follow intervention and reteaching, supporting a growth-based model rather than a single-point-in-time measure.</p></div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Additional Assessments (Normed & Internal)" data-ssec="3 · Assessment & Grading">
+          <summary>Additional Assessments (Normed &amp; Internal)<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>These provide comparative growth data, cognitive insights, and ongoing progress monitoring.</p>
+            <div class="rcard"><div class="rcard-t">NWEA MAP Growth (K–8)</div><p>Nationally normed, computer-adaptive assessment measuring growth in reading and math. K–2: administered BOY, MOY, EOY. 3–8: BOY baselines and growth toward end-of-year targets.</p></div>
+            <div class="rcard"><div class="rcard-t">CogAT (typically Grades 2 &amp; 5)</div><p>Cognitive abilities assessment measuring verbal, quantitative, and nonverbal reasoning; supports identification of advanced learners and placement.</p></div>
+            <div class="rcard"><div class="rcard-t">ClearSight Progress Monitoring (K–8 as applicable)</div><p>Diagnostic and progress-monitoring tool to track skill development in real time and support instructional adjustments between benchmarks.</p></div>
+            <h4>Assessment Calendar</h4>
+            <p>The assessment calendar outlines all major district and school-level assessment windows, ensuring coordinated administration, reduced testing conflicts, and timely data-review cycles. See the <a href="https://docs.google.com/document/u/0/d/1Ogz9bz10jX1FEx8I20IlzNbTXFv0OvBv6WnTuu8QDKo/edit" target="_blank" rel="noopener">Assessment Calendar</a>.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 04 — CULTURE & BEHAVIOR SYSTEMS -->
+      <!-- ========================================================= -->
+      <section id="sec-culture" class="sec" data-screen-label="4. Culture & Behavior Systems">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec04">Section 04</div>
+            <h2 data-i18n="h2.culture">Schoolwide Culture &amp; Behavior Systems</h2>
+          </div>
+          <button class="readbtn" data-sec="culture">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.culture">How we build a safe, supportive, predictable environment through prevention, recognition, and response.</p>
+
+        <details class="acc" open data-search data-stitle="Overview: Prevention, Recognition, Response" data-ssec="4 · Culture & Behavior">
+          <summary>Overview: Prevention · Recognition · Response<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>School culture is built intentionally through proactive systems, positive recognition, and consistent responses to behavior. Our goal is a safe, supportive, and predictable environment where every student can thrive academically, socially, and emotionally. Our approach is organized into three interconnected areas:</p>
+            <ul>
+              <li><strong>Prevention</strong> — teaching and reinforcing expectations before problems occur.</li>
+              <li><strong>Recognition</strong> — celebrating and acknowledging positive behavior.</li>
+              <li><strong>Response</strong> — providing appropriate support and intervention when students need additional assistance.</li>
+            </ul>
+            <p>Together, these systems ensure students know what is expected, feel valued for meeting expectations, and receive the support necessary for success.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Culture Philosophy" data-ssec="4 · Culture & Behavior">
+          <summary>Culture Philosophy<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Safe, Respectful, Responsible</h4>
+            <p>The foundation of school culture is the expectation that all students and staff operate within a safe, respectful, and responsible environment at all times. These expectations are universal across all settings; explicitly taught, modeled, and reinforced; applied consistently by all staff; and embedded into daily routines and interactions.</p>
+            <h4>Adult Responsibility for Culture</h4>
+            <p>Creating and maintaining a positive culture is the responsibility of every staff member. Staff explicitly teach expectations, model appropriate behavior, reinforce positive choices, and respond consistently to misbehavior.</p>
+            <h4>Student Accountability</h4>
+            <p>Students are expected to meet behavior expectations in every environment. Accountability is predictable and fair, grounded in schoolwide expectations, and reinforced daily through consistent adult practices.</p>
+            <h4>Code of Conduct</h4>
+            <p>Matchbook Learning operates in alignment with the Indianapolis Public Schools (IPS) Code of Conduct, which outlines student rights and responsibilities, behaviors subject to disciplinary action, and fair, consistent procedures. Reference: <a href="https://myips.org/students-families/student-code-of-conduct/" target="_blank" rel="noopener">IPS Code of Conduct</a>.</p>
+            <h4>Consistent Schoolwide Language</h4>
+            <p>All staff use shared language when reinforcing expectations, correcting behavior, and recognizing success, so students experience the same expectations regardless of setting or staff member.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Prevention Systems" data-ssec="4 · Culture & Behavior">
+          <summary>Prevention Systems<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Prevention systems establish clear expectations and routines before behavioral concerns arise.</p>
+            <h4>Schoolwide Expectations &amp; Behavior Matrix</h4>
+            <p>Behavior matrices define what it means to be Safe, Respectful, and Responsible in every setting (classrooms, hallways, cafeteria, playground, restrooms). Expectations are explicitly taught, modeled, practiced, and revisited throughout the year. Reference: <a href="https://docs.google.com/document/u/0/d/1cUlIt5-8Uwjy7lcIm-t3B5pwJPKQPEwNI-aJTpJYnFI/edit" target="_blank" rel="noopener">Schoolwide Behavior Matrix</a>.</p>
+            <h4>Hall Pass Procedures</h4>
+            <p>Hall pass systems provide accountability and monitor movement during instructional time — requesting a pass, traveling appropriately, and returning promptly. Reference: <a href="https://drive.google.com/open?id=1-L2cjL9w-mu2r9PPvVQLLusNrNfXvon0" target="_blank" rel="noopener">Hall Pass PDF</a>.</p>
+            <h4>Dress Code &amp; Items of Non-Compliance</h4>
+            <p>Clear expectations regarding dress and personal items help maintain focused, distraction-free learning. Items of non-compliance include cell phones and personal electronics, earbuds and smartwatches, toys, trading cards, food/beverages outside designated times, blankets/pillows/purses/non-clear backpacks, and clothing that violates dress code. Students should be provided opportunities to correct concerns whenever possible, with support from the Family Engagement Coordinator, access to replacement clothing, and administrative support when necessary.</p>
+            <div class="reslinks"><div class="tile-lbl">Related Policies</div><ul>
+              <li><a href="https://docs.google.com/document/u/0/d/1nvDrdVr5JsttAGaQmVDl8ni3FlTDKVDXzIsAePjYfks/edit" target="_blank" rel="noopener">Dress Code Policy</a></li>
+              <li><a href="https://docs.google.com/document/u/0/d/1XrQT6xD6IKwCpb55Idshj_-S2lD4qluPa7UrCOBia_k/edit" target="_blank" rel="noopener">Cell Phone &amp; Personal Electronics Policy</a></li>
+              <li><a href="https://docs.google.com/document/u/0/d/14BKIrH-RF72gwiY3rwJWcbpZd89eXJBWdsCub9CLZoE/edit" target="_blank" rel="noopener">Personal Items &amp; Items of Non-Compliance Policy</a></li>
+            </ul></div>
+            <h4>Morning Meeting</h4>
+            <p>A daily Tier 1 culture-building routine that reinforces schoolwide expectations, builds relationships, strengthens community, promotes SEL, establishes readiness for learning, celebrates successes, and addresses classroom culture proactively. Considered a universal support for all students.</p>
+            <h4>Regulation Tools (Calm Down Kits)</h4>
+            <p>Tier 1 preventative supports that help students regulate emotions, reset and re-engage, and return successfully to instruction. They are not consequences or removals from instruction, are intended for brief use, and support self-regulation.</p>
+            <h4>Classroom Systems &amp; Routines</h4>
+            <p>Teachers establish procedures that maximize instructional time and promote independence: entry/dismissal, transitions, voice levels, attention signals, independent work, partner/group discussions, materials management, and technology procedures.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Celebration & Recognition Systems" data-ssec="4 · Culture & Behavior">
+          <summary>Celebration &amp; Recognition Systems<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Positive behavior is intentionally acknowledged and reinforced. Recognition should be immediate, specific, and connected to expectations.</p>
+            <h4>Individual Recognition</h4>
+            <ul>
+              <li><strong>LiveSchool</strong> — points recognize behaviors aligned to Safe, Respectful, Responsible expectations and Cardinal Character traits. Points are never deducted and may be redeemed for approved rewards throughout the year.</li>
+              <li><strong>Cardinal Character Awards</strong> — celebrate the values of <strong>CARDINALS</strong>: Character, Achievement, Resilience, Determination, Integrity, Nurturing, Acceptance, Leadership, Service. Monthly recognitions highlight one trait at a time, culminating in All-In Cardinal honors.</li>
+              <li><strong>Honor Roll</strong> — recognizes consistent academic excellence based on quarterly report card grades.</li>
+              <li><strong>Perfect Attendance</strong> — celebrates students with no absences during the quarter.</li>
+            </ul>
+            <h4>Collective Recognition</h4>
+            <ul>
+              <li><strong>Brag Boards</strong> — classes earn recognition for excellent hallway transitions, strong compliance, and consistent Safe/Respectful/Responsible behavior, working toward a class-selected reward.</li>
+              <li><strong>Attendance Celebrations</strong> — homerooms earn letters toward the word ATTENDANCE for perfect attendance.</li>
+              <li><strong>LiveSchool House Points</strong> — students belong to vertical houses (one homeroom section from every grade level); competitions promote collaboration, school pride, leadership, cross-grade relationships, and belonging.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Behavior Support Systems (Tiers 1–3)" data-ssec="4 · Culture & Behavior">
+          <summary>Behavior Support Systems (Tiers 1–3)<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Behavior support systems provide increasingly intensive levels of intervention to meet student needs.</p>
+            <div class="tier"><div class="tier-t">Tier 1 — Universal Classroom Supports</div>
+              <ul><li>Explicit teaching and reteaching · Tier 1 Toolkit · parent communication · consequence hierarchy · Tier 1 behavior tracking</li><li>Resources: <a href="https://docs.google.com/document/u/0/d/1bYy7QHxiM0TTsI7HYujk3Fj2gizvOGXPDTdo3VeeOkc/edit" target="_blank" rel="noopener">Classroom vs. Office Managed Behaviors</a>; Tier 1 Behavior Toolkit</li></ul>
+            </div>
+            <div class="tier"><div class="tier-t">Tier 2 — Targeted Supports</div>
+              <ul>
+                <li><strong>Restorative Room</strong> — reflection, reteaching, restorative dialogue, practice of replacement behaviors, structured re-entry.</li>
+                <li><strong>Restorative Referral Form</strong> — all Tier 2 interventions are documented.</li>
+                <li><strong>Daily Behavior Report Card (DBRC)</strong> — check-in/check-out, staff mentoring, daily feedback, family communication, progress monitoring.</li>
+                <li><strong>Counselor Support</strong> — individual and small-group support, emotional regulation, conflict resolution, collaboration with staff.</li>
+                <li><strong>Progress Monitoring</strong> — Culture Team reviews data to continue, adjust, fade, or intensify interventions.</li>
+              </ul>
+            </div>
+            <div class="tier"><div class="tier-t">Tier 3 — Intensive Supports</div>
+              <ul><li>Behavior contracts · Behavior Intervention Plans (BIPs) · Behavior Skills Groups · Wraparound Services</li></ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Wraparound Services" data-ssec="4 · Culture & Behavior">
+          <summary>Wraparound Services<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Wraparound Services coordinate school, family, and community resources to address barriers to student success.</p>
+            <h4>Student Identification</h4>
+            <p>Referral data may include MTSS data, DBRC trends, Restorative Room visits, attendance concerns, discipline data, counselor observations, parent concerns, and community-agency recommendations.</p>
+            <h4>Service Delivery</h4>
+            <p>Services may include counseling, social-emotional supports, Behavior Skills Groups, mentoring, family support, attendance interventions, crisis response, and mental-health referrals.</p>
+            <h4>Aspire Partnership</h4>
+            <p>Matchbook Learning partners with Aspire Indiana Health to provide eligible students additional mental-health and behavioral supports.</p>
+            <h4>Progress Monitoring</h4>
+            <p>The Culture Team regularly reviews data to continue, modify, transition to less intensive supports, or discontinue.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Exclusionary Practices" data-ssec="4 · Culture & Behavior">
+          <summary>Exclusionary Practices<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Exclusionary discipline is reserved for the most serious circumstances and is implemented in accordance with due-process requirements.</p>
+            <ul>
+              <li><strong>Suspension Protocols</strong> — procedures for assigning and documenting suspensions.</li>
+              <li><strong>Expulsion Pathways</strong> — considered only after intensive interventions are exhausted or when required by policy.</li>
+              <li><strong>Temporary Remote Instruction (TRI)</strong> — may be used during the expulsion process or pending alternative placement decisions.</li>
+              <li><strong>Alternative Placements</strong> — Options Charter School, family-initiated withdrawal, or homeschooling.</li>
+              <li><strong>Re-Entry Planning</strong> — structured plans focused on reflection, expectations, and successful reintegration.</li>
+            </ul>
+          </div>
+        </details>
+
+        <div class="gw">
+          <div class="gw-inner">
+            <div class="gw-eye">Deep Dive · Campus Staff Operating Manual</div>
+            <h3>Campus Culture Operations Manual</h3>
+            <div class="gw-vision">Adult procedures for teaching, reinforcing, repairing, protecting, and improving culture.</div>
+            <p class="gw-lede">The full 2026–27 operations manual that stands behind this section — every adult procedure for Culture Camp, Morning Meeting, LiveSchool and GiveThx, the Regulation Room, MTSS decision rules, and the weekly Culture/MTSS meeting, organized by when to use it, who owns it, and how to document it.</p>
+            <a class="gw-cta" href="campus-culture-operations.html">Open the operations manual →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 05 — STUDENT SUPPORT SYSTEMS -->
+      <!-- ========================================================= -->
+      <section id="sec-support" class="sec" data-screen-label="5. Student Support Systems">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec05">Section 05</div>
+            <h2 data-i18n="h2.support">Student Support Systems</h2>
+          </div>
+          <button class="readbtn" data-sec="support">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.support">How we identify student needs, coordinate services, and ensure every student receives academic, behavioral, and language support.</p>
+
+        <details class="acc" open data-search data-stitle="Collaboration & Student Support" data-ssec="5 · Student Support">
+          <summary>Collaboration &amp; Student Support<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Student support is built on coordinated efforts among teachers, interventionists, special education (SpEd) staff, and multilingual learner (MLL) staff.</p>
+            <ul>
+              <li>Coordinated efforts between teachers, interventionists, SpEd, and MLL staff</li>
+              <li>Co-planning and co-teaching expectations</li>
+              <li>Consistent documentation and communication</li>
+              <li>Scheduled collaboration and data-review cycles</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Academic MTSS Framework" data-ssec="5 · Student Support">
+          <summary>Academic MTSS (Multi-Tiered System of Supports)<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Every student can achieve at high levels when given access to excellent instruction and the right support at the right time. MTSS is <strong>not a program, a place, or a label</strong> — it is the instructional framework that ensures every student receives what they need to succeed.</p>
+            <p>The foundation of MTSS is high-quality Tier 1 instruction. Every teacher delivers rigorous, grade-level learning while continuously responding to student needs through differentiation, small-group instruction, and intentional scaffolds. Additional supports strengthen access to grade-level learning — they never replace it. MTSS is proactive, fluid, and responsive: students move into and out of supports based on evidence of learning, not permanent labels.</p>
+            <h4>Teacher Responsibilities</h4>
+            <p>Every teacher is an essential member of the MTSS process. Teachers:</p>
+            <ul>
+              <li>Deliver high-quality Tier 1 instruction every day.</li>
+              <li>Differentiate instruction and provide flexible small-group support during core instruction.</li>
+              <li>Use multiple sources of data to monitor student learning.</li>
+              <li>Implement and document classroom supports before requesting additional services.</li>
+              <li>Communicate with families about student progress.</li>
+              <li>Collaborate with instructional leaders and the MTSS Team to develop responsive support plans.</li>
+              <li>Monitor progress and adjust instruction based on evidence.</li>
+            </ul>
+            <p><em>The first and most important intervention always happens in the classroom.</em></p>
+            <h4>Step 1 — Identify Students Who Need Additional Support</h4>
+            <p>Teachers continuously monitor learning using universal screening, benchmark assessments, classroom formative assessments, exit tickets, student work, teacher observations, and progress-monitoring data. Consider an MTSS referral when multiple sources of evidence show a student is not making expected progress despite high-quality Tier 1 instruction and documented classroom support.</p>
+            <div class="note"><div class="bang">!</div><p><strong>Immediate Tier 3 consideration.</strong> Refer a student to the Academic MTSS Team immediately when they demonstrate one or more of: performance approximately 2 or more years below grade level; a Grade 3 student projected below IREAD-3 proficiency; a Good Cause Exemption with limited academic growth; or significant regression or stagnant growth across multiple data points despite previous supports. Identification is continuous — do not wait for a scheduled data cycle.</p></div>
+            <h4>Step 2 — Complete the Academic MTSS Referral</h4>
+            <p>The classroom teacher initiates the process by completing the Academic MTSS Referral Form, which communicates the student’s strengths; the academic concern; current assessment data; classroom evidence and work samples; Tier 1 supports implemented and the student’s response; parent communication; and questions or recommendations for the MTSS Team. The referral does not request a specific intervention — it provides a complete instructional picture that supports collaborative problem-solving.</p>
+            <h4>Step 3 — MTSS Team Review</h4>
+            <p>The Academic MTSS Team responds <strong>within 48 hours</strong> of receiving a referral. The team reviews all documentation; meets with the classroom teacher; determines whether additional diagnostic assessments are needed; develops an instructional support plan aligned to the student’s greatest area of need; and coordinates communication with the family about next steps.</p>
+            <h4>Step 4 — Implement the Support Plan</h4>
+            <p>Support plans increase access to grade-level learning while addressing foundational skill gaps.</p>
+            <div class="tier"><div class="tier-t">Tier 1</div>
+              <ul><li>Increase teacher conferencing; adjust flexible small groups; add modeling and guided practice; increase academic-language development; implement accommodations and scaffolds; reteach using alternative instructional strategies.</li></ul>
+            </div>
+            <div class="tier"><div class="tier-t">Tier 2</div>
+              <ul><li>Short-term, targeted small-group instruction (typically 6–8 week cycles); three to four sessions per week; instruction aligned to Tier 1 learning targets; frequent progress monitoring; flexible regrouping based on growth.</li></ul>
+            </div>
+            <div class="tier"><div class="tier-t">Tier 3</div>
+              <ul><li>Daily foundational instruction; individual or very small-group instruction whenever possible; progress monitoring; diagnostic-informed instructional planning; priority scheduling to protect instructional time, including during state-assessment windows whenever feasible.</li></ul>
+            </div>
+            <h4>Step 5 — Monitor Progress and Adjust Supports</h4>
+            <p>MTSS is an ongoing cycle, not a one-time event. Teachers and the MTSS Team review progress-monitoring data regularly, evaluate the student’s response, adjust supports based on evidence, regroup as needs change, and increase, decrease, or discontinue supports when appropriate. Groups remain fluid and flexible — no student is permanently assigned to a tier.</p>
+            <div class="tile">
+              <div class="tile-lbl">The Matchbook MTSS Mindset</div>
+              <ul>
+                <li>Students are not their data. Students are not their tier. MTSS is not a labeling system.</li>
+                <li>High-quality Tier 1 instruction remains the foundation of every student’s success.</li>
+                <li>Every support should move students closer to independent success with grade-level content.</li>
+                <li>Every educator shares responsibility for every student’s growth.</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="504 Plans" data-ssec="5 · Student Support">
+          <summary>504 Plans<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Section 504 of the Rehabilitation Act of 1973 prohibits discrimination on the basis of disability and ensures eligible students have equal access to educational programs and activities. A Section 504 Plan provides accommodations and supports that allow a qualified student to access and participate in the general education environment.</p>
+            <h4>Referral Process</h4>
+            <p>Referrals must be based on objective data. Sources may include MTSS academic intervention data, behavioral intervention data and progress monitoring, DBRC data, universal screening results, attendance patterns, health information, parent concerns, and staff observations of documented educational impact. <strong>Teachers do not independently recommend or determine that a student should receive a Section 504 Plan</strong> — they provide data and observations to the appropriate school team.</p>
+            <h4>Initial Team Review</h4>
+            <p>The MTSS Team and Culture Team review all available academic, behavioral, attendance, and health data. The team first verifies that appropriate Tier I supports were implemented, Tier II interventions were implemented and monitored when appropriate, and data indicate barriers that may be related to a disability rather than a lack of instruction.</p>
+            <h4>Medical Conditions</h4>
+            <p>Students with documented medical or mental-health conditions may be considered when the condition substantially limits one or more major life activities. A medical diagnosis alone does not automatically qualify a student; decisions are based on multiple data sources and educational impact.</p>
+            <h4>Evaluation &amp; Eligibility</h4>
+            <p>If warranted, parent/guardian consent is obtained when required, and relevant records, intervention data, and health information are reviewed. A student may be found eligible when the team concludes there is a physical or mental impairment that substantially limits a major life activity and requires accommodations. Decisions are made by the designated Section 504 team — not solely on teacher recommendation or a medical diagnosis.</p>
+            <h4>Plan Development, Review &amp; Documentation</h4>
+            <p>An eligible student’s plan identifies documented needs, specific accommodations and supports, staff responsible for implementation, health/safety considerations, and a monitoring plan. Plans are reviewed at least annually or when needs change. All referrals, evaluations, decisions, communications, notes, plans, and reviews are maintained per school policy and federal/state confidentiality requirements.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Counselors, Wellness, Threat Assessments & Safety Plans" data-ssec="5 · Student Support">
+          <summary>Counselors, Wellness, Threat Assessments &amp; Safety Plans<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Grade-Band Counselor Responsibilities</h4>
+            <p>Distinct expectations exist for K–4 and 5–8 counselors, with shared responsibilities across both bands (caseload management, crisis response, Aspire collaboration, documentation).</p>
+            <h4>Aspire Indiana</h4>
+            <p>Primary external mental-health partner. Referrals follow a defined process; Aspire meetings occur every other Wednesday, 2:30–3:30, between counselors and the Aspire team.</p>
+            <h4>Threat Assessments</h4>
+            <p>Conducted when statements, actions, behaviors, or concerns indicate a potential risk of harm to self or others — to assess risk, promote safety, determine intervention needs, and develop support plans. The Threat Assessment Team may include School Counselors, Dean, Assistant Principal, Tier III Administrator, and additional staff as needed. Documentation: Threat Assessment Forms, Threat Assessment Tracker, Safety Plans, and Parent Communication Documentation.</p>
+            <h4>Safety Plans</h4>
+            <p>Developed when students demonstrate significant behavioral, threat-assessment, emotional-regulation, mental-health, or safety concerns. Plans identify triggers, warning signs, prevention strategies, support staff, and parent-communication expectations. The Safety Plan Tracker is updated whenever a plan is created or revised.</p>
+            <div class="note dark"><div class="bang">!</div><p><strong>Suicide Ideation Procedures.</strong> Any statement involving self-harm, suicide, or harm to others must be treated seriously and immediately. School counselors are responsible for conducting suicide risk assessments, contacting parents immediately, developing safety plans when appropriate, connecting families to resources, and documenting interventions. The school’s Suicide Ideation Protocol must be followed for all incidents.</p></div>
+          </div>
+        </details>
+
+        <div class="gw">
+          <div class="gw-inner">
+            <div class="gw-eye">Deep Dive · Restorative Team &amp; Counseling Operating Manual</div>
+            <h3>Restorative &amp; Counseling Handbook</h3>
+            <div class="gw-vision">Prevent the preventable. Repair harm. Restore students to the community.</div>
+            <p class="gw-lede">The full role-based handbook for the Restorative Team and Counselors — role cards for the K–2/3–5/6–8 grade-band anchors, Assistant Deans, and Counselors, Tap-In/Tap-Out, the Regulation Room 3Rs, the student repair arc, and the daily coverage map that keeps the Culture Engine staffed and steady.</p>
+            <a class="gw-cta" href="restorative-counseling-handbook.html">Open the restorative handbook →</a>
+          </div>
+        </div>
+
+        <div class="gw">
+          <div class="gw-inner">
+            <div class="gw-eye">Deep Dive · Director of Student Support and Culture</div>
+            <h3>Culture &amp; Student Support Playbook</h3>
+            <div class="gw-vision">Systems-driven, relationship-driven, prevention-focused.</div>
+            <p class="gw-lede">The Director's operating playbook — the daily and weekly rhythm, Behavior MTSS and DBRC operations, the attendance intervention ladder, threat assessment and suicide-ideation protocols, Title IX, expulsion and alternative placement, and McKinney-Vento, Foster Care, and Aspire pathways.</p>
+            <a class="gw-cta" href="culture-student-support-playbook.html">Open the Director's playbook →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 06 — SPECIAL EDUCATION -->
+      <!-- ========================================================= -->
+      <section id="sec-sped" class="sec" data-screen-label="6. Special Education">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec06">Section 06</div>
+            <h2 data-i18n="h2.sped">Special Education</h2>
+          </div>
+          <button class="readbtn" data-sec="sped">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.sped">How we identify and serve students with disabilities in accordance with IDEA and Indiana Article 7.</p>
+
+        <details class="acc" open data-search data-stitle="Referral and Evaluation Process" data-ssec="6 · Special Education">
+          <summary>Referral &amp; Evaluation Process<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Matchbook Learning is committed to identifying and serving students with disabilities in accordance with the Individuals with Disabilities Education Act (IDEA) and Indiana Article 7.</p>
+            <h4>Child Find &amp; Referral</h4>
+            <ol>
+              <li>Students experiencing academic, behavioral, communication, developmental, or functional difficulties are first supported through the school’s MTSS.</li>
+              <li>General education interventions, progress-monitoring data, and parent input are documented prior to referral when appropriate. A referral is not delayed when a disability is suspected.</li>
+              <li>Referrals for an initial evaluation may be made by parents/guardians, school personnel, or outside agencies/service providers.</li>
+              <li>All referrals are submitted to the Special Education Coordinator for review.</li>
+              <li>The referral team reviews existing data and determines whether additional information is necessary to suspect a disability and proceed with an educational evaluation.</li>
+            </ol>
+            <h4>Evaluation Timelines</h4>
+            <ul>
+              <li>Within ten (10) instructional days of receiving a referral, the school provides parents written notice regarding the proposed evaluation.</li>
+              <li>Once written parental consent is obtained, the initial evaluation is completed within fifty (50) instructional days per Indiana Article 7.</li>
+              <li>Evaluation reports are completed and reviewed by the multidisciplinary team prior to the eligibility conference.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Speech/OT vs. Full Educational Evaluation" data-ssec="6 · Special Education">
+          <summary>Speech/OT vs. Full Educational Evaluation<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Speech/Language or Occupational Therapy Evaluation</h4>
+            <p>May be considered when concerns are isolated to communication, fine motor, sensory, or functional performance — e.g., articulation or language concerns; stuttering or voice concerns; fine-motor deficits impacting performance; sensory or self-regulation concerns affecting participation. The Coordinator, related-service provider, and evaluation team determine whether a related-service evaluation alone is appropriate or whether a comprehensive evaluation is warranted.</p>
+            <h4>Full Educational Evaluation</h4>
+            <p>Conducted when there is suspicion of a disability that may require specially designed instruction. May include academic achievement testing, cognitive assessment, social/emotional and behavioral assessment, adaptive behavior measures, classroom observations, parent and teacher input, and speech/language and OT assessments when appropriate. Eligibility determinations are made by the Case Conference Committee (CCC) using all available data.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="IEP Development & Case Conference Expectations" data-ssec="6 · Special Education">
+          <summary>IEP Development &amp; Case Conference Expectations<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>The Case Conference Committee (CCC) develops, reviews, and revises each student’s Individualized Education Program (IEP).</p>
+            <h4>Required Participants</h4>
+            <p>Parent/guardian; general education teacher; special education teacher/Teacher of Record (TOR); school administrator or designee; individuals able to interpret evaluation results when appropriate; and the student when transition services are discussed.</p>
+            <h4>IEP Development Expectations — Teachers of Record shall</h4>
+            <ol>
+              <li>Prepare draft IEP documents prior to meetings.</li>
+              <li>Collect and review current progress-monitoring data, classroom performance, assessment results, and teacher input.</li>
+              <li>Ensure PLAAFPs (Present Levels) are current and data-based.</li>
+              <li>Develop measurable annual goals aligned to identified needs.</li>
+              <li>Clearly document accommodations, modifications, services, and supports.</li>
+              <li>Maintain compliance with all state and federal timelines.</li>
+            </ol>
+            <h4>Case Conference Expectations</h4>
+            <ul>
+              <li>Annual case conferences occur at least once every twelve (12) months.</li>
+              <li>Reevaluations occur at least every three (3) years unless waived by the CCC.</li>
+              <li>Move-in case conferences are convened within ten (10) instructional days of enrollment when students transfer with an existing IEP.</li>
+              <li>Meeting notices are provided per procedural safeguards; staff arrive prepared with current data and actively participate in collaborative problem-solving.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Inclusion Model Expectations" data-ssec="6 · Special Education">
+          <summary>Inclusion Model Expectations<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Matchbook Learning uses an inclusive service-delivery model whenever appropriate so students with disabilities access grade-level curriculum alongside nondisabled peers.</p>
+            <h4>General Education Teachers shall</h4>
+            <ul>
+              <li>Assume shared ownership for all students, including those receiving special education services;</li>
+              <li>Implement IEP accommodations and modifications with fidelity;</li>
+              <li>Collaborate regularly with special education staff;</li>
+              <li>Provide access to grade-level instruction and classroom activities;</li>
+              <li>Differentiate using Universal Design for Learning (UDL) principles;</li>
+              <li>Participate in IEP meetings and progress-monitoring activities.</li>
+            </ul>
+            <h4>Special Education Staff shall</h4>
+            <ul>
+              <li>Collaborate with classroom teachers during planning and instruction;</li>
+              <li>Provide specially designed instruction as outlined in the IEP;</li>
+              <li>Support accommodations and instructional differentiation;</li>
+              <li>Monitor student progress and adjust interventions;</li>
+              <li>Promote student independence and self-advocacy.</li>
+            </ul>
+            <p>Removal from the general education setting occurs only when the nature or severity of the disability prevents satisfactory progress even with supplementary aids and services.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Resource Room & DREAM Program" data-ssec="6 · Special Education">
+          <summary>Resource Room &amp; DREAM Program<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Resource Room Services</h4>
+            <p>Specially designed instruction in small-group settings for students requiring intensive academic support beyond the general education classroom — explicit instruction in reading, writing, mathematics, and executive functioning; remediation of skill deficits; pre-teaching or re-teaching grade-level concepts; and progress monitoring aligned to IEP goals. Service minutes are provided per each student’s IEP.</p>
+            <h4>DREAM Program</h4>
+            <p>Serves students with significant cognitive, adaptive, communication, and/or functional needs requiring a highly specialized environment — functional academics, communication instruction, SEL, daily-living skills, behavioral supports, community-based instruction when appropriate, and individualized transition planning. Students continue to access inclusive opportunities with nondisabled peers to the maximum extent appropriate.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Accommodations & Progress Monitoring" data-ssec="6 · Special Education">
+          <summary>Accommodations &amp; Progress Monitoring<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Accommodations Implementation with Fidelity</h4>
+            <ol>
+              <li>Teachers review accommodation plans at the beginning of each year and whenever revisions occur.</li>
+              <li>Accommodations are implemented consistently across all instructional settings, assessments, extracurriculars, and school-sponsored events.</li>
+              <li>Staff document concerns and communicate with the Teacher of Record immediately if accommodations appear ineffective.</li>
+              <li>Accommodations may not be added, removed, or altered without CCC approval.</li>
+              <li>The Coordinator conducts periodic compliance reviews.</li>
+            </ol>
+            <div class="note"><div class="bang">!</div><p>Failure to implement accommodations as written may constitute a denial of a Free Appropriate Public Education (FAPE).</p></div>
+            <h4>Progress Monitoring Tied to IEP Goals</h4>
+            <ul>
+              <li>Teachers of Record collect data on every IEP goal per the IEP schedule.</li>
+              <li>Data are objective, measurable, and aligned to baseline and annual goals.</li>
+              <li>Evidence may include curriculum-based measures, work samples, assessment data, behavioral data, observation records, frequency counts, and service logs.</li>
+              <li>Progress reports are provided to parents at least as frequently as report cards for nondisabled students.</li>
+              <li>The Coordinator reviews documentation quarterly. When insufficient progress is shown, the CCC may reconvene to revise the IEP.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Functional Behavioral Assessment (FBA) & BIP" data-ssec="6 · Special Education">
+          <summary>Functional Behavioral Assessment (FBA) &amp; BIP<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>An FBA is a systematic process used to identify the function or purpose of challenging behaviors. It may be considered when a student’s behavior significantly interferes with learning, a pattern of repeated disciplinary incidents exists, behavioral interventions have been unsuccessful, or the CCC determines additional supports are necessary.</p>
+            <p>The FBA process includes review of existing data; parent and staff interviews; direct observations; collection and analysis of behavior data; and identification of antecedents, behaviors, consequences, and behavioral function. Results are used to develop or revise a Behavior Intervention Plan (BIP), which includes preventative strategies, clearly defined replacement behaviors, reinforcement systems, staff responsibilities, and data-collection procedures.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Transition Planning" data-ssec="6 · Special Education">
+          <summary>Transition Planning<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Elementary to Middle School</h4>
+            <p>The Special Education Team reviews needs, accommodations, and supports; conducts transition meetings between sending and receiving staff; shares current IEPs, behavior plans, and intervention data; provides student orientation to new settings; and communicates transition information with families.</p>
+            <h4>Middle School to High School</h4>
+            <p>Beginning no later than age fourteen (14), transition services are addressed annually within the IEP per Indiana Article 7. Planning includes student strengths, preferences, and interests; postsecondary education and career goals; employment goals; independent-living goals when appropriate; courses of study aligned to postsecondary goals; and transition services and activities needed to achieve them. Planning involves students, families, school staff, and outside agencies when appropriate.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 07 — MULTILINGUAL LEARNERS -->
+      <!-- ========================================================= -->
+      <section id="sec-mll" class="sec" data-screen-label="7. Multilingual Learners">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec07">Section 07</div>
+            <h2 data-i18n="h2.mll">Multilingual Learners</h2>
+          </div>
+          <button class="readbtn" data-sec="mll">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.mll">How we identify multilingual learners and deliver language services that provide access without lowering rigor.</p>
+
+        <details class="acc" open data-search data-stitle="The MLL Program" data-ssec="7 · Multilingual Learners">
+          <summary>The MLL Program<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>We celebrate the rich linguistic and cultural diversity of our students and families. Every student’s home language is an asset and an important part of their identity and academic success. Program contact: <a href="mailto:jventuri@matchbooklearning.com">Jennifer Venturi</a>.</p>
+            <p>The MLL Program helps students develop English language proficiency while engaging in rigorous, grade-level instruction. Multilingual learners thrive when supported within their core classroom (Tier 1) alongside their peers, so language supports are integrated into daily instruction whenever possible rather than relying solely on pull-out services. Many teachers have received professional learning in the Sheltered Instruction Observation Protocol (SIOP) framework and use research-based strategies that make grade-level content accessible while promoting English language development.</p>
+            <div class="tile">
+              <div class="tile-lbl">Identification &amp; Services</div>
+              <ul>
+                <li>Home language survey and identification process</li>
+                <li>WIDA screening, placement, and annual ACCESS testing</li>
+                <li>Individual Learning Plans (ILPs)</li>
+                <li>Service delivery models (push-in, pull-out, co-teaching)</li>
+                <li>Ongoing progress-monitoring expectations · Parent / Family Liaison</li>
+                <li>Sheltered Instruction (SIOP) — see the Academics &amp; Instruction section</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Support by Proficiency Level" data-ssec="7 · Multilingual Learners">
+          <summary>Support by Proficiency Level<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <div class="rcard"><div class="rcard-t">Levels 1–2 · Entering / Emerging</div><p>Intensive English language development through targeted instruction, strategic classroom scaffolds, and small-group support as needed. Newcomer students also receive additional support to build foundational English skills while adjusting to a new school environment.</p></div>
+            <div class="rcard"><div class="rcard-t">Levels 3–4 · Developing / Expanding</div><p>Continued targeted language support within core instruction to strengthen academic vocabulary, reading, writing, speaking, and listening — building the academic language needed to independently access grade-level content across all subject areas.</p></div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Annual Assessment & Program Exit" data-ssec="7 · Multilingual Learners">
+          <summary>Annual Assessment &amp; Program Exit<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Each year, multilingual learners take the <strong>WIDA ACCESS for ELLs®</strong> assessment, which measures English language development in listening, speaking, reading, and writing.</p>
+            <ul>
+              <li>Students earning an overall ACCESS score of <strong>5.0 or higher</strong> automatically exit the MLL program.</li>
+              <li>Students in Grade 3 and above earning an overall score between <strong>4.3 and 4.9</strong> may be eligible to exit through an Individual Learning Plan (ILP) Committee review. This team — including the student’s family and school staff — reviews classroom performance, academic achievement, and language proficiency to determine whether the student is ready to succeed without direct MLL services.</li>
+              <li>After exiting, students are monitored for <strong>two years</strong> to ensure continued academic success and any additional support needed during the transition.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 08 — ATTENDANCE & ACCOUNTABILITY -->
+      <!-- ========================================================= -->
+      <section id="sec-attendance" class="sec" data-screen-label="8. Attendance & Accountability">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec08">Section 08</div>
+            <h2 data-i18n="h2.attendance">Attendance &amp; Accountability</h2>
+          </div>
+          <button class="readbtn" data-sec="attendance">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.attendance">How we monitor attendance and ensure consistent student responsibility and participation.</p>
+
+        <details class="acc" open data-search data-stitle="Daily Expectations (Every School Day)" data-ssec="8 · Attendance & Accountability">
+          <summary>Daily Expectations (Every School Day)<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <ul>
+              <li>Attendance rate emailed by 10:30 AM. If delayed, email requesting team support with tardies.</li>
+              <li>All excused and unexcused absences entered in PowerSchool.</li>
+              <li>All attendance actions documented with a clear PowerSchool log note.</li>
+              <li>Total attendance entered in the spreadsheet at the end of the day.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Attendance Protocol — Monday" data-ssec="8 · Attendance & Accountability">
+          <summary>Attendance Protocol — Monday<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <div class="tablewrap">
+              <table class="tbl">
+                <thead><tr><th>Time</th><th>Owner</th><th>Tasks</th></tr></thead>
+                <tbody>
+                  <tr><td>7:35–8:15</td><td>Attendance Team Member</td><td>SafeVisitor tardy duty in the Door 1 foyer; pass out tardy slips to all students.</td></tr>
+                  <tr><td>8:15–8:30</td><td>Attendance Team Member</td><td>Begin logging tardies through Door 1; ensure all teachers have submitted attendance.</td></tr>
+                  <tr><td>8:30–9:30</td><td>Full Team</td><td>Add all tardies / bus tardies in PowerSchool for students arriving after 8:15. One member: tardies 7:35–8:15; one member: all tardies after 8:15 through the front office.</td></tr>
+                  <tr><td>9:30–10:25</td><td>Attendance Team Member</td><td>Update all excused absences called in via call log or ParentSquare; continue updating tardy students entering through Door 1.</td></tr>
+                  <tr><td>10:30</td><td>Attendance Team Member</td><td>Email attendance rate to the Tier 3 Administrator &amp; Mr. Tuttle. If the rate is not available by 10:30 due to incomplete tardies, email them and the attendance team requesting support and stating clearly what is needed.</td></tr>
+                  <tr><td>10:30–12:00</td><td>Attendance Team Member</td><td>Continue updating excused absences via ParentSquare and call logs.</td></tr>
+                  <tr><td>12:00–12:30</td><td>Attendance Team Member</td><td>Lunch.</td></tr>
+                  <tr><td>12:30–1:30</td><td>Attendance Team Member</td><td>Prepare and send 5-day letters, 7-day emails, and 10-day letters; send the chronic absentee list to Dr. Tolliver for review. A second member may assist with unexcused-absence outreach.</td></tr>
+                  <tr><td>1:30–2:45</td><td>Attendance Team Member</td><td>Contact all families for unexcused absences and log outcomes (left voicemail; phone disconnected/incorrect — confer with team; spoke with parent → student home sick, change U to EX).</td></tr>
+                  <tr><td>2:45</td><td>Attendance Team Member</td><td>Send Dr. Tolliver a digital list of unexcused absences not contacted.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Attendance Protocol — Tuesday–Friday" data-ssec="8 · Attendance & Accountability">
+          <summary>Attendance Protocol — Tuesday–Friday<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <div class="tablewrap">
+              <table class="tbl">
+                <thead><tr><th>Time</th><th>Owner</th><th>Tasks</th></tr></thead>
+                <tbody>
+                  <tr><td>12:30–2:45</td><td>Attendance Team Member</td><td>Contact all families for unexcused absences and log outcomes (left voicemail; phone disconnected/incorrect; spoke with parent → student home sick, change U to EX).</td></tr>
+                  <tr><td>2:45</td><td>Attendance Team Member</td><td>Send Dr. Tolliver a digital list of unexcused absences not contacted.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Attendance Systems & Tardies" data-ssec="8 · Attendance & Accountability">
+          <summary>Attendance Systems &amp; Tardies<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Program contact: <a href="mailto:ctolliver@matchbooklearning.com">Dr. Camille Tolliver</a>. Attendance tracking and the chronic-absenteeism response follow the protocol above and the Chronic Absenteeism Response guide.</p>
+            <div class="reslinks"><div class="tile-lbl">Related Resources</div><ul><li><a href="https://docs.google.com/document/d/1-ezat_Ad5wldE1D4DB1YtoAC8pjnlpdvbr5l3Ziz3XA/edit?tab=t.0" target="_blank" rel="noopener">Chronic Absenteeism Response</a></li></ul></div>
+            <div class="note"><div class="bang">!</div><p><strong>Tardies &amp; Prevention.</strong> Tardy procedures, family communication expectations, and attendance intervention systems — detailed procedures for this section are in development for 2026–27 and will be added when finalized.</p></div>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 09 — SAFETY -->
+      <!-- ========================================================= -->
+      <section id="sec-safety" class="sec" data-screen-label="9. Safety">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec09">Section 09</div>
+            <h2 data-i18n="h2.safety">Safety</h2>
+          </div>
+          <button class="readbtn" data-sec="safety">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.safety">How we maintain safety, respond to concerns, and follow procedures during emergencies.</p>
+
+        <details class="acc" open data-search data-stitle="Preventing the Preventable" data-ssec="9 · Safety">
+          <summary>Preventing the Preventable<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Program contacts: <a href="mailto:ntuttle@matchbooklearning.com">Nathan Tuttle</a>, <a href="mailto:lgarrett@matchbooklearning.com">Lanea Garrett</a>.</p>
+            <ul>
+              <li>Student supervision</li>
+              <li>Incident escalation</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Mandated Reporting" data-ssec="9 · Safety">
+          <summary>Mandated Reporting<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <ul>
+              <li>Mandated reporting expectations</li>
+              <li>Incident documentation requirements</li>
+              <li>Confidentiality requirements</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Emergency Procedures & Drills" data-ssec="9 · Safety">
+          <summary>Emergency Procedures &amp; Drills<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Take Action — All Classrooms</h4>
+            <p>Every classroom should have a visible Take Action poster (English and Spanish) covering Hold, Secure, Lockdown, Evacuate, Shelter, and a visible map of the classroom exit plan.</p>
+            <h4>Emergency Bag</h4>
+            <ul>
+              <li>First aid kit</li>
+              <li>Flashlight</li>
+              <li>Communication sign</li>
+              <li>Class roster</li>
+              <li>Take Action poster</li>
+              <li>Shelter and evacuation location</li>
+            </ul>
+            <h4>Expectations</h4>
+            <p>Staff and student expectations and communication norms are established for every drill and emergency. Additional detail, including maps, is maintained in the <a href="https://drive.google.com/drive/folders/1bOiSsiC2xM0MnSjnZx_82Vizb5QwEFP-?usp=drive_link" target="_blank" rel="noopener">Safety resources folder</a>.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 10 — FAMILY & COMMUNITY ENGAGEMENT -->
+      <!-- ========================================================= -->
+      <section id="sec-family" class="sec" data-screen-label="10. Family & Community Engagement">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec10">Section 10</div>
+            <h2 data-i18n="h2.family">Family &amp; Community Engagement</h2>
+          </div>
+          <button class="readbtn" data-sec="family">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.family">How we communicate and partner with families and the community to support student success.</p>
+
+        <details class="acc" open data-search data-stitle="Communication & Conferences" data-ssec="10 · Family & Community">
+          <summary>Communication &amp; Conferences<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Communication Expectations</h4>
+            <p>Contact: <a href="mailto:ntuttle@matchbooklearning.com">Nathan Tuttle</a>.</p>
+            <ul>
+              <li>Parent communication frequency</li>
+              <li>Response-time expectations</li>
+              <li>Approved communication platforms</li>
+            </ul>
+            <h4>Conferences</h4>
+            <p>Contact: <a href="mailto:khigh@matchbooklearning.com">Kelsey High</a>.</p>
+            <ul>
+              <li>Parent-teacher conferences</li>
+              <li>Student-led conferences</li>
+              <li>Conference documentation requirements</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Family Events" data-ssec="10 · Family & Community">
+          <summary>Family Events<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Contact: <a href="mailto:mornelas@matchbooklearning.com">M. Ornelas</a>. Matchbook hosts on average one schoolwide event per month. <strong>All staff members are required to assist in the planning and execution of at least one event per semester</strong>, choosing from the following:</p>
+            <ul>
+              <li>Summer Bash · Orientation · Curriculum Night (Aug 26)</li>
+              <li>Latino Heritage Month Celebration (Sep 30) · Trunk or Treat (Oct 30)</li>
+              <li>21st Century Scholars (Nov) · Thanksgiving Dinner (Nov 19) · Toys for Tots (week of Dec 18–19)</li>
+              <li>WIDA Night (Jan 6) · Black History Month Celebration (Feb 24) · Egg Hunt (Apr 3) · 8th Grade Dance (May 19)</li>
+            </ul>
+            <div class="note"><div class="bang">!</div><p>The all-staff events — Summer Bash (July 24), Orientation (July 28), and Celebration of Learning (December 17 &amp; May 21) — do <strong>not</strong> count toward the one-per-semester requirement.</p></div>
+            <h4>Event Planning Expectations</h4>
+            <p>Events are planned, on average, six weeks in advance — most are schoolwide, with multiple aspects to coordinate and align. All events, including dates and roles needed, are published at the beginning of each semester; event schedules are also published at the beginning of each month. The sign-up spreadsheet and event schedules are always available on the daily update, so staff have information well in advance to plan.</p>
+            <p>If something prevents a staff member from participating in an event they signed up for, they are responsible for reaching out to colleagues for coverage and then informing the Community Engagement and Event Coordinator.</p>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Engagement Systems & Volunteers" data-ssec="10 · Family & Community">
+          <summary>Engagement Systems &amp; Volunteers<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Contact: <a href="mailto:mornelas@matchbooklearning.com">M. Ornelas</a>.</p>
+            <h4>Volunteer Procedures</h4>
+            <p>Parent and community volunteers are always welcome. The Community Engagement and Event Coordinator reaches out via ParentSquare when a project or event requires volunteers. All potential volunteers must:</p>
+            <ul>
+              <li>Connect with the Coordinator (directly or via Main Office) to schedule a time, date, and project.</li>
+              <li>Enter through Door 1 on the day of volunteering and complete the SafeVisitor check-in.</li>
+              <li>Be met at the Main Office and escorted to the target project.</li>
+              <li>Wear a provided volunteer badge, visible at all times.</li>
+              <li>Check in at the end to return the badge and be escorted back to the Main Office.</li>
+            </ul>
+            <p>Community partners are contacted directly by the Coordinator. Project suggestions from partners, parents, or staff go directly to the Coordinator.</p>
+            <h4>Community Partnerships</h4>
+            <p>Matchbook Learning maintains over 40 active relationships with community organizations, many continuing to develop. Partners are often invited to events throughout the year. Current partners include:</p>
+            <ul>
+              <li>Marion County Health Department · Aspire · Ben Carson Reading Fund · Brightlane · Butler University</li>
+              <li>Center for Leadership Development · Community &amp; Faith Outreach Initiative · Dental Safari · Firefly Children and Family Alliance · Girls Inc.</li>
+              <li>Haughville Library · Indianapolis Motor Speedway · KDO · Marian University · Near West Free Clinic · The Villages</li>
+              <li>Indy Hygiene Club · Wayne Township Adult Education · Eduardo Luna – Arte Mexicano de Indiana · Centro Cultural Hispano · E.M.P.O.W.E.R · D.R.I.V.E.</li>
+              <li>Redeemer Presbyterian Church · Eagle Church · Society of St. Vincent de Paul · Indy Latinx Pride · Marian University SHPE · New Shoe Day</li>
+              <li>GIT – Girls in Training · Mitzvah Stitchers (Indianapolis Hebrew Congregation) · Cummins Inc. · Continental Connect · Safe Routes to School Cohort</li>
+              <li>Hawthorne Community Center · New Day Pentecostal Church · Hope Church of Haughville · Indiana Health Centers · Indiana Immunization Clinic · Hispanic Cultural Hub · Department of Natural Resources</li>
+            </ul>
+            <p>If a staff member has a suggestion for a community partnership, reach out to the Community Engagement and Event Coordinator directly.</p>
+          </div>
+        </details>
+
+        <div class="gw">
+          <div class="gw-inner">
+            <div class="gw-eye">Deep Dive · The Family-Facing Handbook</div>
+            <h3>Parent &amp; Student Handbook 2026–2027</h3>
+            <div class="gw-vision">Every child is known, loved, and flourishing.</div>
+            <p class="gw-lede">The full family-facing handbook — welcome and daily quick-start, the communication map, daily operations and transportation, attendance and MTSS in plain language, the Student Code of Conduct, health and safety, the 2026–27 calendar, and the forms and family agreements families sign each fall.</p>
+            <a class="gw-cta" href="parent-student-handbook.html">Open the family handbook →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 11 — TECHNOLOGY & DIGITAL SYSTEMS -->
+      <!-- ========================================================= -->
+      <section id="sec-tech" class="sec" data-screen-label="11. Technology & Digital Systems">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec11">Section 11</div>
+            <h2 data-i18n="h2.tech">Technology &amp; Digital Systems</h2>
+          </div>
+          <button class="readbtn" data-sec="tech">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.tech">How we use, manage, and protect technology systems to support instruction, communication, and student learning.</p>
+
+        <details class="acc" open data-search data-stitle="Device Use & Platforms" data-ssec="11 · Technology & Digital Systems">
+          <summary>Device Use &amp; Platforms<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Contacts: <a href="mailto:ntuttle@matchbooklearning.com">Nathan Tuttle</a>, <a href="mailto:lgarrett@matchbooklearning.com">Lanea Garrett</a>, <a href="mailto:mmolina@matchbooklearning.com">Maria Molina</a>.</p>
+            <h4>Device Use</h4>
+            <ul>
+              <li>Device care and instructional-use expectations</li>
+              <li>Classroom routines for storage, charging, and management</li>
+              <li>Loss, damage, and responsibility procedures</li>
+            </ul>
+            <h4>Technology Platforms &amp; Account Access</h4>
+            <ul>
+              <li>Approved platforms and instructional tools</li>
+              <li>Login, password, and account-management expectations</li>
+              <li>Teacher monitoring and platform-usage expectations</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Digital Citizenship & Support" data-ssec="11 · Technology & Digital Systems">
+          <summary>Digital Citizenship &amp; Support<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <h4>Digital Citizenship</h4>
+            <ul>
+              <li>Appropriate digital behavior and communication expectations</li>
+              <li>Academic integrity and misuse of technology expectations</li>
+              <li>Cyberbullying prevention and reporting procedures</li>
+            </ul>
+            <h4>Support</h4>
+            <ul>
+              <li>Basic troubleshooting expectations in classrooms</li>
+              <li>Support-request and escalation procedures</li>
+              <li>Device repair and replacement process</li>
+            </ul>
+            <div class="note"><div class="bang">!</div><p>Detailed procedures for this section are in development for 2026–27 and will be added when finalized.</p></div>
+          </div>
+        </details>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- SECTION 12 — PERSONALIZED & COMPETENCY-BASED LEARNING -->
+      <!-- ========================================================= -->
+      <section id="sec-cbl" class="sec" data-screen-label="12. Personalized & Competency-Based Learning">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.sec12">Section 12</div>
+            <h2 data-i18n="h2.cbl">Personalized &amp; Competency-Based Learning</h2>
+          </div>
+          <button class="readbtn" data-sec="cbl">Mark as read</button>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.cbl">How we develop the whole student through a competency-based model aligned to our Portrait of a Graduate.</p>
+
+        <div class="gw">
+          <div class="gw-inner">
+            <div class="gw-eye" data-i18n="gw.eye">A Guided Experience · The Matchbook Way</div>
+            <h3 data-i18n="gw.h3">How personalized learning comes together</h3>
+            <div class="gw-vision" data-i18n="gw.vision">Every child known, loved, and flourishing.</div>
+            <p class="gw-lede" data-i18n="gw.lede">Personalized and Competency-Based Learning is not a program we implement — it is how we live our mission every day. Rather than a list of documents, step through a guided walkthrough that shows how strong instruction, student agency, MLL support, competencies, conferences, and coaching connect as one coherent system.</p>
+            <a class="gw-cta" data-i18n="gw.cta" href="personalized-learning.html">Enter the guided experience →</a>
+          </div>
+        </div>
+
+        <div class="gw-facts">
+          <div class="gw-fact"><div class="k" data-i18n="gw.f1k">Data Conferencing</div><div class="v" data-i18n="gw.f1v">Every student · Monthly</div><div class="s" data-i18n="gw.f1s">Tied to the progress tracker; feeds Student-Led Conferences.</div></div>
+          <div class="gw-fact"><div class="k" data-i18n="gw.f2k">Student-Led Conferences</div><div class="v" data-i18n="gw.f2v">Oct 8–9 · Mar 18–19</div><div class="s" data-i18n="gw.f2s">Students present competency growth to family, twice a year.</div></div>
+          <div class="gw-fact"><div class="k" data-i18n="gw.f3k">Family Materials</div><div class="v" data-i18n="gw.f3v">English &amp; Spanish</div><div class="s" data-i18n="gw.f3s">Brand-aligned; at least one written update per semester.</div></div>
+        </div>
+
+        <div class="gw-inside">
+          <div class="k" data-i18n="gw.inside_l">What&rsquo;s inside the walkthrough</div>
+          <ol>
+            <li data-i18n="gw.in1">The North Star — vision &amp; mission</li>
+            <li data-i18n="gw.in2">What it is, and is not</li>
+            <li data-i18n="gw.in3">The CBL engine &amp; key terms</li>
+            <li data-i18n="gw.in4">11 connected classroom elements</li>
+            <li data-i18n="gw.in5">Measuring the work (domain rubric)</li>
+            <li data-i18n="gw.in6">What every student experiences weekly</li>
+            <li data-i18n="gw.in7">The operating rhythm (dates, roles, portfolios)</li>
+            <li data-i18n="gw.in8">Living the mission &amp; full resource library</li>
+          </ol>
+        </div>
+
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- GLOSSARY & ACRONYMS (reference) -->
+      <!-- ========================================================= -->
+      <section id="sec-glossary" class="sec" data-screen-label="Glossary & Acronyms">
+        <div class="sec-top">
+          <div>
+            <div class="kicker" data-i18n="k.glossary">Reference</div>
+            <h2 data-i18n="h2.glossary">Glossary &amp; Acronyms</h2>
+          </div>
+        </div>
+        <div class="rule"></div>
+        <p class="sec-sub" data-i18n="sub.glossary">Definitions for the terms, frameworks, and acronyms used throughout this handbook.</p>
+
+        <details class="acc" open data-search data-stitle="Instructional Framework & Coaching" data-ssec="Glossary">
+          <summary>Instructional Framework &amp; Coaching<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>Teach Like a Champion (TLaC)</dt><dd>A set of concrete, high-leverage teaching techniques (Doug Lemov, Uncommon Schools) that Matchbook uses as shared instructional language.</dd>
+              <dt>Get Better Faster (GBF)</dt><dd>A coaching scope-and-sequence (Paul Bambrick-Santoyo, Uncommon Schools) that orders the highest-priority teaching skills; the source of the coaching Waterfall.</dd>
+              <dt>Get Better Faster Waterfall</dt><dd>The prioritized sequence of instructional skills from Get Better Faster. Coaches draw each teacher’s next action step from it.</dd>
+              <dt>Glows &amp; Grows</dt><dd>Matchbook’s feedback structure: a Glow (a specific instructional strength to keep building) and a Grow (one high-leverage next step).</dd>
+              <dt>RELAY GSE (RELAY Graduate School of Education)</dt><dd>A teacher- and leader-preparation institution whose common instructional language coaches use for consistency.</dd>
+              <dt>Gradual Release (I Do / We Do / You Do)</dt><dd>The lesson structure that moves from teacher model (I Do) to guided practice (We Do) to independent practice and an exit ticket (You Do).</dd>
+              <dt>Means of Participation (MOP)</dt><dd>The planned ways students respond and engage — cold call, turn &amp; talk, choral response, whiteboards, and more.</dd>
+              <dt>Check for Understanding (CFU)</dt><dd>A planned question or task used to gauge whether students have learned the material and to adjust instruction in the moment.</dd>
+              <dt>Active Monitoring</dt><dd>Circulating with an exemplar and a tracking system to check student work in real time, name mastery percentages, and give fast feedback.</dd>
+              <dt>Laps</dt><dd>The specific student responses a teacher checks on each pass while Active Monitoring.</dd>
+              <dt>DNPG</dt><dd><span class="ph">[Internal term — full expansion to be confirmed.]</span> A designated in-lesson moment teachers monitor and give feedback on during Active Monitoring.</dd>
+              <dt>WTD Directions</dt><dd>“What-To-Do” directions: specific, scripted directions for transitional moments so expectations are clear.</dd>
+              <dt>Lesson Internalization</dt><dd>Studying and preparing a lesson thoroughly enough to deliver it while holding the content, the students, and the room at once.</dd>
+              <dt>Exit Ticket</dt><dd>A brief end-of-lesson task used to measure mastery of the objective and inform the next day’s instruction.</dd>
+              <dt>Walk to Intervention (WTI)</dt><dd>The Tuesday–Thursday enrichment/intervention block where students move to targeted groups.</dd>
+              <dt>Teacher’s Edition (TE)</dt><dd>The curriculum teacher’s guide that lessons are planned and annotated from.</dd>
+              <dt>GROW</dt><dd>The platform where lesson plans are submitted (due Wednesdays by 5:00 PM).</dd>
+            </dl>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Assessment & Data" data-ssec="Glossary">
+          <summary>Assessment &amp; Data<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>ILEARN</dt><dd>Indiana’s statewide summative assessment (Grades 3–8) in ELA, Math, and Science where applicable.</dd>
+              <dt>ILEARN Checkpoints</dt><dd>Interim assessments during the year that measure progress toward mastery of state standards.</dd>
+              <dt>BWA (Bi-Weekly Assessment)</dt><dd>ELA curriculum progress check-ups given every two weeks, alternating with Math Topic assessments.</dd>
+              <dt>IREAD / IREAD-3</dt><dd>Indiana’s Grade 3 reading proficiency assessment (also administered in Grade 2).</dd>
+              <dt>Acadience</dt><dd>K–2 literacy screening and progress-monitoring assessment (phonemic awareness, decoding, fluency, comprehension).</dd>
+              <dt>Forefront</dt><dd>K–2 math assessment system aligned to priority standards.</dd>
+              <dt>WIDA ACCESS</dt><dd>Annual English language proficiency assessment for multilingual learners (listening, speaking, reading, writing).</dd>
+              <dt>NWEA MAP (MAP Growth)</dt><dd>Nationally normed, computer-adaptive assessment of reading and math growth.</dd>
+              <dt>CogAT</dt><dd>Cognitive Abilities Test measuring verbal, quantitative, and nonverbal reasoning; typically Grades 2 &amp; 5.</dd>
+              <dt>ClearSight</dt><dd>Diagnostic and progress-monitoring tool used between benchmark windows.</dd>
+              <dt>BOY / MOY / EOY</dt><dd>Beginning-, Middle-, and End-of-Year assessment administration windows.</dd>
+              <dt>Good Cause Exemption</dt><dd>A state provision allowing a Grade 3 student who does not pass IREAD-3 to be promoted under specific conditions.</dd>
+            </dl>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Student Support, Special Education & MLL" data-ssec="Glossary">
+          <summary>Student Support, Special Education &amp; MLL<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>MTSS</dt><dd>Multi-Tiered System of Supports: the framework of tiered academic and behavioral support.</dd>
+              <dt>Section 504</dt><dd>A 504 Plan under the Rehabilitation Act of 1973 providing accommodations for a qualifying disability.</dd>
+              <dt>IDEA</dt><dd>Individuals with Disabilities Education Act — the federal law governing special education.</dd>
+              <dt>Article 7</dt><dd>Indiana’s special-education rule implementing IDEA.</dd>
+              <dt>IEP</dt><dd>Individualized Education Program: the legal plan of services for a student with a disability.</dd>
+              <dt>CCC (Case Conference Committee)</dt><dd>The team that develops, reviews, and revises each student’s IEP.</dd>
+              <dt>TOR (Teacher of Record)</dt><dd>The special-education teacher responsible for a student’s IEP.</dd>
+              <dt>PLAAFP</dt><dd>Present Levels of Academic Achievement and Functional Performance — the data-based baseline in an IEP.</dd>
+              <dt>FBA</dt><dd>Functional Behavioral Assessment: a process to identify the function of a challenging behavior.</dd>
+              <dt>BIP</dt><dd>Behavior Intervention Plan: preventative strategies and replacement behaviors developed from an FBA.</dd>
+              <dt>UDL</dt><dd>Universal Design for Learning: designing instruction for learner variability so all students can access it.</dd>
+              <dt>DREAM</dt><dd>Matchbook’s specialized program for students with significant cognitive, adaptive, communication, or functional needs.</dd>
+              <dt>DBRC</dt><dd>Daily Behavior Report Card: a Tier 2 check-in/check-out and daily feedback tool.</dd>
+              <dt>MLL</dt><dd>Multilingual Learner: a student developing English while learning grade-level content.</dd>
+              <dt>ILP (Individual Learning Plan)</dt><dd>Plan used for MLL support and for the WIDA ACCESS exit-review committee.</dd>
+              <dt>SIOP</dt><dd>Sheltered Instruction Observation Protocol: strategies that make grade-level content accessible to multilingual learners.</dd>
+              <dt>Restorative Room</dt><dd>A Tier 2 space for reflection, restorative dialogue, replacement-behavior practice, and structured re-entry.</dd>
+            </dl>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Competency-Based Learning & Pathways" data-ssec="Glossary">
+          <summary>Competency-Based Learning &amp; Pathways<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>CBL</dt><dd>Competency-Based Learning: measuring growth and mastery against defined competencies rather than seat time.</dd>
+              <dt>Portrait of a Graduate</dt><dd>Matchbook’s five competencies: Academic Ownership, Collaboration, Communication, Honor, and Resilience.</dd>
+              <dt>SLC (Student-Led Conference)</dt><dd>The twice-yearly, family-facing conference students lead to present their competency growth.</dd>
+              <dt>CCR</dt><dd>College &amp; Career Readiness: dedicated K–8 instruction building awareness, identity, and pathways.</dd>
+              <dt>STEAM</dt><dd>Science, Technology, Engineering, Arts, and Mathematics — career-connected programming.</dd>
+              <dt>PLTW (Project Lead the Way)</dt><dd>A hands-on STEAM / project-based program, offered in place of visual arts.</dd>
+              <dt>UNRULR</dt><dd>The digital portfolio platform used for grades 7–8, aligned with The Match High School.</dd>
+            </dl>
+          </div>
+        </details>
+
+        <details class="acc" data-search data-stitle="Culture & Systems" data-ssec="Glossary">
+          <summary>Culture &amp; Systems<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <dl class="gloss">
+              <dt>Safe, Respectful, Responsible</dt><dd>The three universal schoolwide behavior expectations.</dd>
+              <dt>CARDINALS</dt><dd>The Cardinal Character values: Character, Achievement, Resilience, Determination, Integrity, Nurturing, Acceptance, Leadership, Service.</dd>
+              <dt>LiveSchool</dt><dd>The positive-behavior points and rewards platform.</dd>
+              <dt>TRI</dt><dd>Temporary Remote Instruction: used during the expulsion process or pending an alternative-placement decision.</dd>
+              <dt>PowerSchool</dt><dd>The student information system used for attendance and records.</dd>
+              <dt>ParentSquare</dt><dd>The family communication platform.</dd>
+              <dt>SafeVisitor</dt><dd>The visitor check-in and screening system.</dd>
+            </dl>
+          </div>
+        </details>
+      </section>
+
+    </div><!-- /wrap -->
+
+    <footer>
+      <div class="foot-inner">
+        <div>
+          <div class="foot-word">Matchbook Learning</div>
+          <div class="foot-sub" data-i18n="foot.tag">SOP Handbook 2026–27 · Dreams Made Here.</div>
+        </div>
+        <button class="printbtn" id="printBtn" data-i18n="ui.print">Print / Save as PDF →</button>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script src="i18n.js"></script>
+<script>
+(function(){
+  "use strict";
+  var STORAGE_KEY = 'mbl-sop-read-2627';
+  var SECTIONS = [
+    { id:'intro',      num:'01',  title:'Introduction' },
+    { id:'practice',   num:'1.5', title:'Professional Practice & Staff Development' },
+    { id:'academics',  num:'02',  title:'Academics & Instruction' },
+    { id:'assessment', num:'03',  title:'Assessment & Grading' },
+    { id:'culture',    num:'04',  title:'Culture & Behavior Systems' },
+    { id:'support',    num:'05',  title:'Student Support Systems' },
+    { id:'sped',       num:'06',  title:'Special Education' },
+    { id:'mll',        num:'07',  title:'Multilingual Learners' },
+    { id:'attendance', num:'08',  title:'Attendance & Accountability' },
+    { id:'safety',     num:'09',  title:'Safety' },
+    { id:'family',     num:'10',  title:'Family & Community Engagement' },
+    { id:'tech',       num:'11',  title:'Technology & Digital Systems' },
+    { id:'cbl',        num:'12',  title:'Personalized & Competency-Based Learning' }
+  ];
+
+  var read = {};
+  try { var r = JSON.parse(localStorage.getItem(STORAGE_KEY)); if (r && typeof r === 'object') read = r; } catch(e){}
+  function persist(){ try { localStorage.setItem(STORAGE_KEY, JSON.stringify(read)); } catch(e){} }
+
+  // ---- Build search index ----
+  var index = [].slice.call(document.querySelectorAll('[data-search]')).map(function(el){
+    return {
+      id: el.id,
+      title: el.getAttribute('data-stitle') || '',
+      sec: el.getAttribute('data-ssec') || '',
+      text: (el.textContent || '').replace(/\s+/g,' ').trim()
+    };
+  });
+
+  // ---- Navigation ----
+  var nav = document.getElementById('nav');
+  SECTIONS.forEach(function(s){
+    var a = document.createElement('a');
+    a.className = 'nav-item';
+    a.href = '#sec-' + s.id;
+    a.setAttribute('data-target', 'sec-' + s.id);
+    a.innerHTML = '<span class="nav-num">' + s.num + '</span>' +
+                  '<span class="nav-title">' + MBLI18N.t('nav.' + s.id) + '</span>' +
+                  '<span class="nav-check">✓</span>';
+    a.addEventListener('click', function(e){ e.preventDefault(); jump('sec-' + s.id); closeMobileNav(); });
+    nav.appendChild(a);
+  });
+  // Reference: Glossary (not numbered, not part of read progress)
+  var refLbl = document.createElement('div');
+  refLbl.className = 'nav-ref-lbl';
+  refLbl.textContent = MBLI18N.t('nav.reference');
+  nav.appendChild(refLbl);
+  var glossLink = document.createElement('a');
+  glossLink.className = 'nav-item nav-ref';
+  glossLink.href = '#sec-glossary';
+  glossLink.setAttribute('data-target', 'sec-glossary');
+  glossLink.innerHTML = '<span class="nav-num">§</span>' +
+                        '<span class="nav-title">' + MBLI18N.t('nav.glossary') + '</span>';
+  glossLink.addEventListener('click', function(e){ e.preventDefault(); jump('sec-glossary'); closeMobileNav(); });
+  nav.appendChild(glossLink);
+
+  function jump(id){
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (el.tagName === 'DETAILS') el.open = true;
+    var d = el.closest ? el.closest('details') : null;
+    while (d){ d.open = true; d = d.parentElement && d.parentElement.closest ? d.parentElement.closest('details') : null; }
+    var y = el.getBoundingClientRect().top + window.scrollY - 20;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+  // ---- Mark as read ----
+  function refreshRead(){
+    SECTIONS.forEach(function(s){
+      var item = nav.querySelector('[data-target="sec-' + s.id + '"]');
+      if (item) item.classList.toggle('read', !!read[s.id]);
+      var btn = document.querySelector('.readbtn[data-sec="' + s.id + '"]');
+      if (btn){
+        btn.classList.toggle('on', !!read[s.id]);
+        btn.textContent = read[s.id] ? MBLI18N.t('ui.marked_read') : MBLI18N.t('ui.mark_read');
+      }
+    });
+    var count = SECTIONS.filter(function(s){ return read[s.id]; }).length;
+    document.getElementById('progressLabel').textContent = MBLI18N.t('ui.progress', { n: count, total: SECTIONS.length });
+    document.getElementById('progressBar').style.width = Math.round((count / SECTIONS.length) * 100) + '%';
+  }
+  [].slice.call(document.querySelectorAll('.readbtn')).forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-sec');
+      read[id] = !read[id];
+      persist();
+      refreshRead();
+    });
+  });
+
+  // ---- Search ----
+  var qInput = document.getElementById('q');
+  var resultsEl = document.getElementById('results');
+  function escapeHtml(s){ return s.replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function runSearch(){
+    var qRaw = qInput.value.trim();
+    var q = qRaw.toLowerCase();
+    if (q.length < 2){ resultsEl.innerHTML = ''; return; }
+    var matches = index.filter(function(it){
+      return it.text.toLowerCase().indexOf(q) >= 0 || it.title.toLowerCase().indexOf(q) >= 0;
+    }).slice(0, 10);
+
+    if (!matches.length){
+      resultsEl.innerHTML = '<div class="res-head">' + MBLI18N.t('ui.no_results') + '</div>';
+      return;
+    }
+    var html = '<div class="res-head">' + matches.length + ' ' + (matches.length === 1 ? MBLI18N.t('ui.result') : MBLI18N.t('ui.results')) + '</div>';
+    matches.forEach(function(it){
+      var lower = it.text.toLowerCase();
+      var pos = lower.indexOf(q);
+      var snippet = '';
+      if (pos >= 0){
+        var start = Math.max(0, pos - 40);
+        var raw = (start > 0 ? '…' : '') + it.text.slice(start, pos + q.length + 60) + '…';
+        var rel = escapeHtml(raw);
+        // highlight (case-insensitive) the query in the escaped snippet
+        var idx = rel.toLowerCase().indexOf(q);
+        if (idx >= 0){
+          rel = rel.slice(0, idx) + '<mark>' + rel.slice(idx, idx + q.length) + '</mark>' + rel.slice(idx + q.length);
+        }
+        snippet = rel;
+      }
+      html += '<div class="res" data-target="' + it.id + '">' +
+                '<div class="res-title">' + escapeHtml(it.title) + '</div>' +
+                '<div class="res-sec">' + escapeHtml(it.sec) + '</div>' +
+                (snippet ? '<div class="res-snip">' + snippet + '</div>' : '') +
+              '</div>';
+    });
+    resultsEl.innerHTML = html;
+    [].slice.call(resultsEl.querySelectorAll('.res')).forEach(function(node){
+      node.addEventListener('click', function(){ jump(node.getAttribute('data-target')); closeMobileNav(); });
+    });
+  }
+  qInput.addEventListener('input', runSearch);
+
+  // ---- Mobile nav ----
+  var body = document.body;
+  var toggle = document.getElementById('menuToggle');
+  var scrim = document.getElementById('scrim');
+  function closeMobileNav(){ body.classList.remove('nav-open'); }
+  if (toggle) toggle.addEventListener('click', function(){ body.classList.toggle('nav-open'); });
+  if (scrim) scrim.addEventListener('click', closeMobileNav);
+
+  // ---- Print ----
+  document.getElementById('printBtn').addEventListener('click', function(){
+    document.querySelectorAll('details.acc').forEach(function(d){ d.open = true; });
+    window.print();
+  });
+
+  // ---------- i18n wiring ----------
+  function applyI18nDynamic(){
+    SECTIONS.forEach(function(s){
+      var el = nav.querySelector('[data-target="sec-' + s.id + '"] .nav-title');
+      if (el) el.textContent = MBLI18N.t('nav.' + s.id);
+    });
+    var rl = nav.querySelector('.nav-ref-lbl'); if (rl) rl.textContent = MBLI18N.t('nav.reference');
+    var gl = nav.querySelector('.nav-ref .nav-title'); if (gl) gl.textContent = MBLI18N.t('nav.glossary');
+    qInput.placeholder = MBLI18N.t('ui.search_ph');
+    refreshRead();
+    if (qInput.value.trim().length >= 2) runSearch();
+  }
+  MBLI18N.onChange(applyI18nDynamic);
+  MBLI18N.init();
+  MBLI18N.mountSwitcher(document.getElementById('langMount'), { short: true });
+  applyI18nDynamic();
+
+  refreshRead();
+
+  // Deep-link support
+  if (location.hash && location.hash.length > 1){
+    setTimeout(function(){ jump(location.hash.slice(1)); }, 60);
+  }
+})();
+</script>
+</body>
+</html>

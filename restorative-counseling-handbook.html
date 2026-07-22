@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restorative &amp; Counseling Handbook · The Matchbook Way</title>
+<meta name="description" content="Restorative Team &amp; Counseling operating manual — roles, adult regulation, the proactive engine, Tap-In/Tap-Out, the Regulation Room, repair, coverage, and the tier map at Matchbook Learning.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap');
+
+:root{
+  --spark-red:#E21C24; --spark-red-press:#B5151A; --ember:#C8161D;
+  --dream-yellow:#F9DC7C; --gold:#F7B23C; --ink:#1A1A1A; --charcoal:#232323;
+  --slate:#4A4A4A; --muted:#8A8A8A; --hairline:#E4E2DE; --paper:#F6F6F4;
+  --cloud:#EDEDEB; --white:#FFFFFF;
+  --font-display:'Anton','Arial Narrow',sans-serif;
+  --font-cond:'Oswald','Arial Narrow',sans-serif;
+  --font-body:'Mulish',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--spark-red);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.scroll-top{position:fixed;top:0;left:0;height:4px;background:var(--spark-red);width:0;z-index:60;transition:width .1s linear}
+.topbar{position:fixed;top:0;left:0;right:0;height:56px;z-index:55;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 24px;background:rgba(35,35,35,.92);backdrop-filter:blur(8px);color:#fff}
+.topbar .back{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#EDEDEB;display:inline-flex;align-items:center;gap:8px}
+.topbar .back:hover{color:var(--dream-yellow);text-decoration:none}
+.topbar .brand{font-family:var(--font-display);font-size:15px;text-transform:uppercase;color:var(--spark-red);letter-spacing:.02em}
+.topbar .print{font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal);background:var(--dream-yellow);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+
+.layout{display:grid;grid-template-columns:236px 1fr;gap:0;max-width:1240px;margin:0 auto;padding-top:56px}
+.rail{position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);overflow-y:auto;padding:28px 18px 28px 24px}
+.rail-lbl{font-family:var(--font-cond);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.rail a{display:flex;align-items:center;gap:11px;padding:7px 0;color:var(--slate);font-family:var(--font-cond);font-weight:500;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;line-height:1.2}
+.rail a:hover{color:var(--ink);text-decoration:none}
+.rail a .dot{width:9px;height:9px;border-radius:999px;border:2px solid var(--hairline);background:transparent;flex:0 0 9px;transition:all .2s}
+.rail a.active{color:var(--spark-red)}
+.rail a.active .dot{background:var(--spark-red);border-color:var(--spark-red);box-shadow:0 0 0 3px rgba(226,28,36,.15)}
+
+.flow{min-width:0;padding:0 0 120px}
+.chap{padding:56px 56px;max-width:900px;scroll-margin-top:64px}
+@media(max-width:1080px){.chap{padding:48px 28px}}
+
+.kicker{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--spark-red)}
+.chap h2{font-family:var(--font-display);font-weight:400;font-size:clamp(30px,4vw,46px);line-height:.98;text-transform:uppercase;color:var(--ink);margin:10px 0 0}
+.lead{font-family:var(--font-body);font-size:17px;line-height:1.6;color:var(--slate);margin:16px 0 0}
+.chap p{font-family:var(--font-body);font-size:15.5px;line-height:1.7;color:var(--slate)}
+.rule{height:5px;width:64px;background:var(--spark-red);margin:14px 0 20px}
+
+.hero{background:var(--spark-red);color:#fff;padding:88px 56px 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;bottom:-140px;width:420px;height:420px;border-radius:999px;background:rgba(255,255,255,.08)}
+.hero-inner{max-width:860px;position:relative;z-index:1}
+.hero .eyebrow{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--dream-yellow)}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(36px,5.4vw,66px);line-height:.94;text-transform:uppercase;margin:14px 0 0}
+.hero .sub{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--dream-yellow);margin-top:10px}
+.hero p{font-family:var(--font-body);font-size:16px;line-height:1.65;color:#fff;margin:18px 0 0;max-width:640px;opacity:.95}
+.hero .northstar{margin:26px 0 0;padding:16px 20px;background:rgba(0,0,0,.18);border-left:4px solid var(--dream-yellow);max-width:620px;font-size:15.5px;line-height:1.6}
+
+.standard{margin:18px 0;padding:14px 18px;background:var(--dream-yellow);border-left:4px solid var(--spark-red);font-size:14.5px;line-height:1.6;color:var(--ink)}
+.standard b{font-family:var(--font-cond);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:11.5px;display:block;margin-bottom:4px;color:var(--spark-red-press)}
+
+.rolegrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media(max-width:760px){.rolegrid{grid-template-columns:1fr}}
+.role{background:#fff;border:1px solid var(--hairline);border-top:5px solid var(--spark-red)}
+.role .rh{padding:16px 18px 0}
+.role h4{font-family:var(--font-cond);font-weight:700;font-size:16px;letter-spacing:.02em;text-transform:uppercase;margin:0 0 6px;color:var(--ink)}
+.role .purpose{font-size:13.5px;line-height:1.55;color:var(--slate);margin:0 0 10px}
+.role dl{margin:0;padding:0 18px 16px}
+.role dt{font-family:var(--font-cond);font-weight:600;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--spark-red);margin-top:10px}
+.role dd{margin:2px 0 0;font-size:13px;line-height:1.5;color:var(--slate)}
+
+.procgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+@media(max-width:760px){.procgrid{grid-template-columns:1fr}}
+.proc{background:#fff;border:1px solid var(--hairline);border-left:5px solid var(--charcoal);padding:16px 18px}
+.proc .pn{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;color:var(--spark-red);text-transform:uppercase}
+.proc h4{font-family:var(--font-cond);font-weight:600;font-size:14.5px;letter-spacing:.02em;text-transform:uppercase;margin:4px 0 8px;color:var(--ink)}
+.proc p{font-size:13.5px;line-height:1.6;color:var(--slate);margin:0}
+.proc ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;color:var(--slate)}
+
+.seq3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+@media(max-width:760px){.seq3{grid-template-columns:1fr}}
+.seq3 .s{background:var(--charcoal);color:#fff;padding:18px 18px}
+.seq3 .s .num{font-family:var(--font-display);font-size:32px;color:var(--dream-yellow);line-height:.8}
+.seq3 .s h5{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin:8px 0 6px;color:#fff}
+.seq3 .s p{color:#DcDcDc;font-size:13px;line-height:1.55;margin:0}
+
+.tbl{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.tbl caption{caption-side:top;text-align:left;font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--spark-red);padding-bottom:6px}
+.tbl th{background:var(--charcoal);color:#fff;font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;text-align:left;padding:8px 10px;border:1px solid var(--charcoal)}
+.tbl td{padding:8px 10px;border:1px solid var(--hairline);vertical-align:top;color:var(--slate);line-height:1.45}
+.tbl tr:nth-child(even) td{background:#fff}
+.tbl tr:nth-child(odd) td{background:var(--paper)}
+
+.qbox{background:var(--charcoal);color:#fff;padding:18px 22px;margin:16px 0}
+.qbox .lbl{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dream-yellow);margin-bottom:8px}
+.qbox p{color:#EDEDEB;margin:0;font-size:14px;line-height:1.6}
+.qbox.gold{background:var(--dream-yellow)}
+.qbox.gold .lbl{color:var(--spark-red-press)}
+.qbox.gold p{color:var(--ink)}
+
+.chips2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+@media(max-width:640px){.chips2{grid-template-columns:1fr}}
+.rchip{background:#fff;border:1px solid var(--hairline);padding:12px 14px;font-size:13px;line-height:1.5;color:var(--slate)}
+.rchip b{display:block;color:var(--ink);font-family:var(--font-cond);font-weight:600;letter-spacing:.02em;text-transform:uppercase;font-size:12.5px;margin-bottom:3px}
+
+.gw-cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--spark-red);color:#fff;padding:14px 26px;border-radius:999px}
+.gw-cta:hover{background:var(--spark-red-press);color:#fff;text-decoration:none}
+
+@media print{.topbar,.rail,.scroll-top{display:none!important}.layout{grid-template-columns:1fr;padding-top:0}.chap{padding:20px 8px;max-width:none}}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.rail{display:none}}
+</style>
+</head>
+<body>
+<div class="scroll-top" id="scrollTop"></div>
+<div class="topbar">
+  <a class="back" href="index.html#sec-support">← Back to Handbook</a>
+  <span class="brand">Matchbook Learning</span>
+  <button class="print" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="layout">
+  <nav class="rail" id="rail" aria-label="Chapters">
+    <div class="rail-lbl">The Handbook</div>
+    <a href="#c-roles" data-chap="c-roles"><span class="dot"></span><span>1 · The Roles</span></a>
+    <a href="#c-adult" data-chap="c-adult"><span class="dot"></span><span>2 · Adult Regulation</span></a>
+    <a href="#c-proactive" data-chap="c-proactive"><span class="dot"></span><span>3 · Proactive Engine</span></a>
+    <a href="#c-tapin" data-chap="c-tapin"><span class="dot"></span><span>4 · Tap-In / Tap-Out</span></a>
+    <a href="#c-3rs" data-chap="c-3rs"><span class="dot"></span><span>5 · Regulation Room</span></a>
+    <a href="#c-repair" data-chap="c-repair"><span class="dot"></span><span>6 · Repair &amp; Re-Entry</span></a>
+    <a href="#c-coverage" data-chap="c-coverage"><span class="dot"></span><span>7–8 · Coverage &amp; Safety</span></a>
+    <a href="#c-data" data-chap="c-data"><span class="dot"></span><span>9–10 · Data &amp; Tiers</span></a>
+    <a href="#c-tools" data-chap="c-tools"><span class="dot"></span><span>Swap-In Tools</span></a>
+  </nav>
+
+  <main class="flow">
+    <section class="hero" id="c-top">
+      <div class="hero-inner">
+        <div class="eyebrow">Restorative Team &amp; Counseling Operating Manual · 2026–27</div>
+        <h1>Restorative &amp; Counseling Handbook</h1>
+        <div class="sub">Culture Engine · Wendell Phillips School 63</div>
+        <p>A role-based handbook for the Restorative Team and Counselors. Roles, responsibilities, and operating routines are defined here so the culture system holds steady across people, schedules, and daily pressure. All positions are full-time to these roles.</p>
+        <div class="northstar"><b>The one test:</b> Does it prevent something that was preventable, or does it repair harm and restore a student to the community? If yes, it belongs in the Culture Engine.<br><br><b>Mission:</b> Prevent the preventable. Build the conditions — regulation, relationship, belonging, and skill — that keep students in learning. When something breaks, repair quickly, restore dignity, and get students back where they belong.</p>
+      </div>
+    </section>
+
+    <section class="chap" id="c-commit">
+      <div class="kicker">The Non-Negotiables</div>
+      <h2>The Commitments We Hold</h2>
+      <div class="rule"></div>
+      <p class="lead">These are not bullet points to memorize. They are what the team comes back to when the day gets hard.</p>
+      <div class="chips2">
+        <div class="rchip"><b>Prevention first, least-invasive</b>Removal is not the intervention; it is the rare last step, never the reflex.</div>
+        <div class="rchip"><b>Regulate before reason</b>No teaching, reflection, or repair happens while a student is still in a threat state. Body first. Words second.</div>
+        <div class="rchip"><b>Repair, do not exclude</b>A student's place in this community is never the thing taken away.</div>
+        <div class="rchip"><b>Authentic, never performed</b>No forced apologies — a repair only counts when it is real.</div>
+        <div class="rchip"><b>Reach all students through systems</b>Seven adults cannot relationally hold a whole school one-by-one — build shared systems every adult can run.</div>
+        <div class="rchip"><b>Equity by default</b>Monitor who is referred, recognized, repaired, and excluded by group. Pause before any subjective referral.</div>
+      </div>
+    </section>
+
+    <!-- PART 1 -->
+    <section class="chap" id="c-roles">
+      <div class="kicker">Part 1</div>
+      <h2>The Roles</h2>
+      <div class="rule"></div>
+      <p class="lead">The team is one Culture Engine with four interlocking roles. Each role protects the same adult stance — regulation, dignity, consistency, relationship, repair, and equity — while holding a distinct lane in the system.</p>
+      <div class="rolegrid">
+        <div class="role">
+          <div class="rh"><h4>Restorative Team Member <span style="color:var(--spark-red);font-weight:400">— K–2, 3–5, 6–8</span></h4><p class="purpose">Proactive culture anchor and lead co-regulator for an assigned grade band.</p></div>
+          <dl>
+            <dt>Primary · Prevention</dt><dd>Morning Meeting rotation, proactive circles, Lunch Culture Loop, mentorship through Houses, recognition, daily CICO, Students-of-Concern list.</dd>
+            <dt>Secondary · Response</dt><dd>Runs the Regulation Room 3Rs for their band; Tap-In / Tap-Out support; escorts and confirms re-entry.</dd>
+            <dt>Stops Doing</dt><dd>Sitting in one room supervising all of K–8; operating as a disciplinary post.</dd>
+            <dt>Reports To</dt><dd>Assistant Dean.</dd>
+          </dl>
+        </div>
+        <div class="role">
+          <div class="rh"><h4>Assistant Dean <span style="color:var(--spark-red);font-weight:400">— Response-System Lead</span></h4><p class="purpose">Owns the response system and its consistency; leads, coaches, and develops the restorative pod.</p></div>
+          <dl>
+            <dt>Primary · Prevention</dt><dd>Owns referral threshold, room capacity, equity of application; coaches teachers; holds Incident Command / Rapid Response.</dd>
+            <dt>Secondary · Response</dt><dd>Regulation Room Lead in rotation; anchors proactive presence (e.g., a House).</dd>
+            <dt>Stops Doing</dt><dd>Being the default adult who "handles" students ad hoc.</dd>
+            <dt>Reports To</dt><dd>Head of School; escalates Tier 3 to the Director.</dd>
+          </dl>
+        </div>
+        <div class="role">
+          <div class="rh"><h4>Counselor <span style="color:var(--spark-red);font-weight:400">— K–4, 5–8</span></h4><p class="purpose">Clinical care, SEL system design, and family/community partnership.</p></div>
+          <dl>
+            <dt>Primary · Prevention</dt><dd>SEL-informed Morning Meeting contributions after the first 90 days, clinical Tier 2/3 groups, attendance outreach, Aspire liaison.</dd>
+            <dt>Secondary · Response</dt><dd>Clinical lead for crisis, threat assessment, and suicide-ideation response; safety planning.</dd>
+            <dt>Stops Doing</dt><dd>Being pulled into general supervision or crowd control.</dd>
+            <dt>Reports To</dt><dd>Director of Culture &amp; Student Support.</dd>
+          </dl>
+        </div>
+        <div class="role">
+          <div class="rh"><h4>Director of Culture &amp; Student Support <span style="color:var(--spark-red);font-weight:400">— Oversight</span></h4><p class="purpose">Culture architecture, prevention system, Tier 3 decisions, Title IX and compliance, final escalation.</p></div>
+          <dl>
+            <dt>Handoffs</dt><dd>Assistant Deans escalate Tier 3; Counselors route clinical/threat/safety matters; Restorative staff surface patterns through the Students-of-Concern review.</dd>
+            <dt>Cadence</dt><dd>Leads the weekly prevention-first review before response data dominates the conversation.</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="standard"><b>Escalation path</b>Teacher needs support → band anchor Tap-In/Tap-Out → in-class reset not enough → Regulation Room 3Rs → pattern or clinical need → Counselor + Assistant Dean coordinate → Tier 3, safety, or compliance → Director of Culture &amp; Student Support. Proactive belonging, recognition, and mentorship run continuously through Houses, not only through referrals.</div>
+    </section>
+
+    <!-- PART 2 -->
+    <section class="chap" id="c-adult">
+      <div class="kicker">Part 2</div>
+      <h2>Adult Regulation First</h2>
+      <div class="rule"></div>
+      <p class="lead">Restorative work begins with the adult. Before this team can help students regulate, repair, and re-enter the community, adults must be able to enter difficult moments with steadiness, dignity, and control over their own response. "Body first. Words second" applies to adults too.</p>
+      <div class="procgrid">
+        <div class="proc"><h4>Protected Adult Reset</h4><p>A genuine, off-the-floor, duty-free period every day — protected, staggered, and non-negotiable. Skipping restoration is not proof of dedication; it weakens the capacity this work depends on.</p></div>
+        <div class="proc"><h4>Compassion Fatigue &amp; Secondary Trauma</h4><p>Staff use a brief weekly self-check on fatigue, dread, irritability, and depletion, and flag early. A daily team touch-base and standing check-in with the Director surface what is accumulating.</p></div>
+      </div>
+      <div class="standard"><b>The Personal Pause (before responding)</b>Stop at the threshold. Breathe — two or three slow, exhale-led breaths. Set the tone — soften face and voice, drop the shoulders. Check — "Am I regulated enough to regulate them?" If not, send the regulated colleague in first. Calm is contagious. So is alarm.</div>
+    </section>
+
+    <!-- PART 3 -->
+    <section class="chap" id="c-proactive">
+      <div class="kicker">Part 3</div>
+      <h2>The Proactive Engine</h2>
+      <div class="rule"></div>
+      <p class="lead">Prevention is where the Culture Engine does its deepest work — reaching students through systems every adult can run, so belonging is not limited to the students who generate referrals.</p>
+      <div class="procgrid">
+        <div class="proc"><h4>3.1 Connection Teams &amp; Students-of-Concern</h4><ul><li>Build the list continuously from attendance, CICO trends, incident/repair data, and referral — updated weekly, not built once.</li><li>Every flagged student gets a sponsor / co-regulator adult.</li><li>Equity check: scan for over- or under-representation by group.</li></ul></div>
+        <div class="proc"><h4>3.2 Check-In / Check-Out (CICO)</h4><ul><li>Morning check-in reads baseline window of tolerance and sets a simple goal.</li><li>Afternoon check-out celebrates what worked and sets tomorrow's target.</li><li>Progress tracked against clear entry/exit criteria.</li></ul></div>
+        <div class="proc"><h4>3.3 Morning Meeting Participation</h4><ul><li>Teachers lead the routine; Restorative Team rotates through to model proactive presence.</li><li>Counselors contribute topic ideas after the first 90 days of onboarding — not a counseling-owned product.</li></ul></div>
+        <div class="proc"><h4>3.4–3.6 Houses, Lunch Culture Loop &amp; Adult Capacity</h4><ul><li>Houses deliver belonging: one owned recognition catalog (LiveSchool, Cardinal Character, Friday Cypher).</li><li>Lunch is Tier 1 prevention, not patrol — Regulate → Relate → Round.</li><li>Team rotates into classrooms to build adult capacity, not replace teacher routines.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- PART 4 -->
+    <section class="chap" id="c-tapin">
+      <div class="kicker">Part 4</div>
+      <h2>Live Classroom Intervention: Tap-In / Tap-Out</h2>
+      <div class="rule"></div>
+      <p class="lead">When a student is dysregulated, the default is not removal. The restorative member's job is to make the teacher's intervention possible — and to take the student out only when the moment requires a different adult first.</p>
+      <div class="seq3">
+        <div class="s"><div class="num">→</div><h5>Tap-In · The Default (~5 min)</h5><p>Restorative member pushes in and holds the class as a Warm Demander so the teacher steps into the hallway for a brief, private repair conversation, then both return. The teacher stays the intervener.</p></div>
+        <div class="s"><div class="num">⇥</div><h5>Tap-Out · The Exception</h5><p>Used only when Tap-In is not in the student's or teacher's best interest — a safety concern, or the teacher is not regulated enough to engage. Bridges into the Regulation Room.</p></div>
+        <div class="s"><div class="num">✓</div><h5>Why the Teacher Leads</h5><p>The rupture is usually between teacher and student; the relationship heals through the teacher, not around them. The restorative member holds the room so repair can happen with privacy and dignity.</p></div>
+      </div>
+    </section>
+
+    <!-- PART 5 -->
+    <section class="chap" id="c-3rs">
+      <div class="kicker">Part 5</div>
+      <h2>The Regulation Room — The 3Rs</h2>
+      <div class="rule"></div>
+      <p class="lead">One room, three zones. The work follows the order students need: regulate the body before relating, relate before reasoning. Framed explicitly as the Regulation Room to emphasize positive skill-building — never a punishment destination.</p>
+      <div class="seq3">
+        <div class="s"><div class="num">1</div><h5>Regulate</h5><p>Welcome neutrally, minimal words, flat tone, L-stance. Bottom-up sensory tools — water, weighted pads, breathing. No talking or demands until the body settles.</p></div>
+        <div class="s"><div class="num">2</div><h5>Relate</h5><p>Once agitation settles, validate the student's emotional reality without validating the behavior. Adult connection creates felt safety.</p></div>
+        <div class="s"><div class="num">3</div><h5>Reason</h5><p>Only after the prefrontal cortex is back online: who was harmed, what do they need, how do we make it right — co-create a matched-repair plan.</p></div>
+      </div>
+      <div class="qbox"><div class="lbl">What It Is Not</div><p>The Regulation Room is not ISS, not a holding pen, not a punishment, and not an untracked space. Removal is not the intervention. The sequence is.</p></div>
+    </section>
+
+    <!-- PART 6 -->
+    <section class="chap" id="c-repair">
+      <div class="kicker">Part 6</div>
+      <h2>Student Repair Process &amp; Re-Entry</h2>
+      <div class="rule"></div>
+      <p class="lead">The purpose of "Reason" is real repair. The team scaffolds and arranges it; the student does it. The Student Repair Arc: <strong>Regulate → Reflect → Own it → Repair the impact → Re-enter → Follow through / close the loop.</strong></p>
+      <table class="tbl">
+        <caption>Matched Repair — Student Action &amp; Team Support</caption>
+        <thead><tr><th style="width:32%">What Happened</th><th style="width:38%">Student Action</th><th>Team Support</th></tr></thead>
+        <tbody>
+          <tr><td>Hurt or disrespected a person</td><td>Private restorative conversation; authentic apology only if real.</td><td>Coach the dialogue; protect against a performed apology.</td></tr>
+          <tr><td>Made a mess / damaged materials</td><td>Cleans up, restores, or repairs the space.</td><td>Arrange time and supplies; supervise.</td></tr>
+          <tr><td>Interrupted learning</td><td>Redoes the routine, returns to task, completes missed work.</td><td>Scaffold practice; coordinate with the teacher.</td></tr>
+          <tr><td>Refused, avoided, or escalated</td><td>Reflects after regulation; builds a replacement-skill plan.</td><td>Run the reflection; co-build the skill plan.</td></tr>
+          <tr><td>Harmed a peer relationship</td><td>Mediated problem-solving and peer-repair routine.</td><td>Facilitate the mediation.</td></tr>
+          <tr><td>Broke trust with a teacher</td><td>Repair conversation and re-entry sentence.</td><td>Set up and hold space (consistent with Tap-Out).</td></tr>
+          <tr><td>Repeated pattern</td><td>Repair plus a support plan and family communication.</td><td>Convene support; escalate toward support, never only consequence.</td></tr>
+        </tbody>
+      </table>
+      <div class="standard"><b>Guardrails</b>No forced apologies. Repair must be completable and proportional. Repair is never public shaming. A repeated pattern always escalates to support, never only to a heavier consequence.</div>
+    </section>
+
+    <!-- PART 7-8 -->
+    <section class="chap" id="c-coverage">
+      <div class="kicker">Parts 7 – 8</div>
+      <h2>Daily Operations, Coverage &amp; Contingencies</h2>
+      <div class="rule"></div>
+      <p class="lead">Coverage protects two things at once: student safety and adult readiness. Two posts are never empty — a Room Lead and a Rapid Response post (★). Proactive work flexes only long enough to protect the spine, then is rebuilt.</p>
+      <table class="tbl">
+        <caption>Coverage Legend</caption>
+        <thead><tr><th style="width:18%">Code</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>D1, D2</td><td>Assistant Deans</td></tr>
+          <tr><td>R1 / R2 / R3</td><td>Restorative Team Member — K–2 / 3–5 / 6–8</td></tr>
+          <tr><td>C1 / C2</td><td>Counselor — K–4 / 5–8</td></tr>
+          <tr><td>★</td><td>Always-on safety post — never empty</td></tr>
+          <tr><td>RR / IC</td><td>Regulation Room / Incident Command · Rapid Response</td></tr>
+          <tr><td>Loop</td><td>Lunch Culture Loop + reflection/bunch</td></tr>
+        </tbody>
+      </table>
+      <div class="standard"><b>Coverage decision ladder</b>1) Is anyone unsafe? 2) Is the Regulation Room covered? 3) Are CICO/DBRC and repair loops protected? 4) Which proactive routine can flex and be rebuilt later? 5) Has the loop been closed? This prevents the team from solving the loudest problem while leaving the most important post uncovered.</div>
+      <div class="procgrid">
+        <div class="proc"><h4>Down a Dean</h4><p>A senior restorative staffer assumes a spine post; proactive routines run with fewer people that day.</p></div>
+        <div class="proc"><h4>Down a Restorative Staffer</h4><p>That band's room visits route to the Room Lead; the other two split proactive coverage.</p></div>
+        <div class="proc"><h4>Down a Counselor</h4><p>Remaining counselor covers crisis for both bands; clinical groups compress.</p></div>
+        <div class="proc"><h4>Emergency — Restorative Response Code</h4><p>Rapid Response (★) responds immediately; available Dean or Director acts as Incident Commander. The band counselor handles the clinical lane in parallel, separate from physical-safety responders.</p></div>
+      </div>
+    </section>
+
+    <!-- PART 9-10 -->
+    <section class="chap" id="c-data">
+      <div class="kicker">Parts 9 – 10</div>
+      <h2>Data, Documentation &amp; the Tier Map</h2>
+      <div class="rule"></div>
+      <p class="lead">Repair-conversation completion, CICO data, Regulation Room visits, recognition reach, attendance, belonging signals, and Students-of-Concern movement are tracked as carefully as incidents. Documentation uses observable language, enters within 24 hours, and stays open until repair is completed and logged.</p>
+      <table class="tbl">
+        <caption>Tier &amp; Escalation Map</caption>
+        <thead><tr><th style="width:16%">Tier</th><th>What It Includes</th></tr></thead>
+        <tbody>
+          <tr><td>Tier 1 — Universal</td><td>Morning Meetings, Lunch Culture Loop, recognition and Houses, regulation tools, taught expectations. Owned by teachers with Restorative Team participation.</td></tr>
+          <tr><td>Tier 2 — Targeted</td><td>CICO/DBRC, Connection Teams, small SEL/Behavior Skills groups, and the Regulation Room. Deans own consistency.</td></tr>
+          <tr><td>Tier 3 — Intensive</td><td>BIPs, FBAs, individualized plans, wraparound and Aspire, manifestation determinations. Clinical work led by counselors; decisions owned by the Director.</td></tr>
+        </tbody>
+      </table>
+      <div class="qbox gold"><div class="lbl">On ISS</div><p>The automatic "three Regulation Room referrals → ISS" rule is replaced by a Culture-Team decision based on data and an equity pause. If used, ISS is an exclusionary-coded last resort that follows the restorative sequence — never a Tier 2 entry point.</p></div>
+    </section>
+
+    <!-- APPENDIX -->
+    <section class="chap" id="c-tools">
+      <div class="kicker">Appendix</div>
+      <h2>Swap-In Tools</h2>
+      <div class="rule"></div>
+      <p class="lead">Short, printable tools referenced throughout the handbook — meant to live on a card, clipboard, or shared tracker.</p>
+      <div class="procgrid">
+        <div class="proc"><h4>Regulate · Entry</h4><p>"I'm glad you're here. You don't have to talk. Have some water and take the time you need." — minimal words, flat tone, L-stance, sensory tools offered.</p></div>
+        <div class="proc"><h4>Relate · Validation Stems</h4><p>"That makes sense that you felt ___." / "Anyone might feel ___ in that moment." — validate the feeling without endorsing the behavior.</p></div>
+        <div class="proc"><h4>Reason · Restorative Questions</h4><p>What happened? Who was affected, and how? What were you needing? What would make it right? What will you do differently next time?</p></div>
+        <div class="proc"><h4>Re-Entry Sentence</h4><p>"I'm ready to rejoin. I'm going to ___, and I've made it right by ___." Path: Correct → Repair → Rejoin.</p></div>
+      </div>
+      <div class="qbox"><div class="lbl">Final Commitment</div><p>This handbook will shift as we learn. What will not shift: we prevent what is preventable, we regulate before we reason, and we never take away a student's place in this community. That is the work.</p></div>
+      <a class="gw-cta" href="index.html#sec-support">← Back to Student Support Systems</a>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var bar = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  });
+  var chaps = document.querySelectorAll('.chap[id]');
+  var links = document.querySelectorAll('.rail a[data-chap]');
+  if ('IntersectionObserver' in window && chaps.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-chap') === e.target.id); });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    chaps.forEach(function(c){ io.observe(c); });
+  }
+})();
+</script>
+</body>
+</html>

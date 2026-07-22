@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Culture Operations Manual · The Matchbook Way</title>
+<meta name="description" content="Adult procedures for teaching, reinforcing, repairing, protecting, and improving Safe · Respectful · Responsible culture at Matchbook Learning, 2026–2027.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap');
+
+:root{
+  --spark-red:#E21C24; --spark-red-press:#B5151A; --ember:#C8161D;
+  --dream-yellow:#F9DC7C; --gold:#F7B23C; --ink:#1A1A1A; --charcoal:#232323;
+  --slate:#4A4A4A; --muted:#8A8A8A; --hairline:#E4E2DE; --paper:#F6F6F4;
+  --cloud:#EDEDEB; --white:#FFFFFF;
+  --font-display:'Anton','Arial Narrow',sans-serif;
+  --font-cond:'Oswald','Arial Narrow',sans-serif;
+  --font-body:'Mulish',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--spark-red);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.scroll-top{position:fixed;top:0;left:0;height:4px;background:var(--spark-red);width:0;z-index:60;transition:width .1s linear}
+.topbar{position:fixed;top:0;left:0;right:0;height:56px;z-index:55;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 24px;background:rgba(35,35,35,.92);backdrop-filter:blur(8px);color:#fff}
+.topbar .back{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#EDEDEB;display:inline-flex;align-items:center;gap:8px}
+.topbar .back:hover{color:var(--dream-yellow);text-decoration:none}
+.topbar .brand{font-family:var(--font-display);font-size:15px;text-transform:uppercase;color:var(--spark-red);letter-spacing:.02em}
+.topbar .print{font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal);background:var(--dream-yellow);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+
+.layout{display:grid;grid-template-columns:236px 1fr;gap:0;max-width:1240px;margin:0 auto;padding-top:56px}
+.rail{position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);overflow-y:auto;padding:28px 18px 28px 24px}
+.rail-lbl{font-family:var(--font-cond);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.rail a{display:flex;align-items:center;gap:11px;padding:7px 0;color:var(--slate);font-family:var(--font-cond);font-weight:500;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;line-height:1.2}
+.rail a:hover{color:var(--ink);text-decoration:none}
+.rail a .dot{width:9px;height:9px;border-radius:999px;border:2px solid var(--hairline);background:transparent;flex:0 0 9px;transition:all .2s}
+.rail a.active{color:var(--spark-red)}
+.rail a.active .dot{background:var(--spark-red);border-color:var(--spark-red);box-shadow:0 0 0 3px rgba(226,28,36,.15)}
+
+.flow{min-width:0;padding:0 0 120px}
+.chap{padding:56px 56px;max-width:900px;scroll-margin-top:64px}
+@media(max-width:1080px){.chap{padding:48px 28px}}
+
+.kicker{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--spark-red)}
+.chap h2{font-family:var(--font-display);font-weight:400;font-size:clamp(30px,4vw,46px);line-height:.98;text-transform:uppercase;color:var(--ink);margin:10px 0 0}
+.lead{font-family:var(--font-body);font-size:17px;line-height:1.6;color:var(--slate);margin:16px 0 0}
+.chap p{font-family:var(--font-body);font-size:15.5px;line-height:1.7;color:var(--slate)}
+.rule{height:5px;width:64px;background:var(--spark-red);margin:14px 0 20px}
+
+.hero{background:var(--charcoal);color:#fff;padding:88px 56px 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;bottom:-140px;width:420px;height:420px;border-radius:999px;background:rgba(226,28,36,.14)}
+.hero-inner{max-width:860px;position:relative;z-index:1}
+.hero .eyebrow{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--dream-yellow)}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(38px,5.6vw,72px);line-height:.92;text-transform:uppercase;margin:14px 0 0}
+.hero .sub{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--dream-yellow);margin-top:10px}
+.hero p{font-family:var(--font-body);font-size:16px;line-height:1.65;color:#EDEDEB;margin:18px 0 0;max-width:640px}
+.hero .northstar{margin:26px 0 0;padding:16px 20px;background:rgba(0,0,0,.24);border-left:4px solid var(--spark-red);max-width:620px;font-size:15.5px;line-height:1.6;color:#fff}
+
+.opmap{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:6px}
+@media(max-width:900px){.opmap{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.opmap{grid-template-columns:1fr}}
+.opmap-cell{background:#fff;border:1px solid var(--hairline);border-top:4px solid var(--spark-red);padding:14px 14px}
+.opmap-cell b{display:block;font-family:var(--font-cond);font-weight:600;font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
+.opmap-cell span{font-size:12.5px;line-height:1.5;color:var(--slate)}
+
+.standard{margin:18px 0;padding:14px 18px;background:var(--dream-yellow);border-left:4px solid var(--spark-red);font-size:14.5px;line-height:1.6;color:var(--ink)}
+.standard b{font-family:var(--font-cond);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:11.5px;display:block;margin-bottom:4px;color:var(--spark-red-press)}
+
+.procgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+@media(max-width:760px){.procgrid{grid-template-columns:1fr}}
+.proc{background:#fff;border:1px solid var(--hairline);border-left:5px solid var(--charcoal);padding:16px 18px}
+.proc .pn{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;color:var(--spark-red);text-transform:uppercase}
+.proc h4{font-family:var(--font-cond);font-weight:600;font-size:14.5px;letter-spacing:.02em;text-transform:uppercase;margin:4px 0 8px;color:var(--ink)}
+.proc .meta{font-size:12.5px;color:var(--slate);margin:0 0 8px;line-height:1.5}
+.proc .meta b{color:var(--ink)}
+.proc ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;color:var(--slate)}
+.proc .eq{margin-top:10px;padding-top:8px;border-top:1px dashed var(--hairline);font-size:12.5px;color:var(--slate);font-style:italic}
+.proc .eq b{font-style:normal;font-family:var(--font-cond);font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);font-size:10.5px;display:block;margin-bottom:3px;font-style:normal}
+
+.tbl{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.tbl caption{caption-side:top;text-align:left;font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--spark-red);padding-bottom:6px}
+.tbl th{background:var(--charcoal);color:#fff;font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;text-align:left;padding:8px 10px;border:1px solid var(--charcoal)}
+.tbl td{padding:8px 10px;border:1px solid var(--hairline);vertical-align:top;color:var(--slate);line-height:1.45}
+.tbl tr:nth-child(even) td{background:#fff}
+.tbl tr:nth-child(odd) td{background:var(--paper)}
+
+.qbox{background:var(--charcoal);color:#fff;padding:18px 22px;margin:16px 0}
+.qbox .lbl{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dream-yellow);margin-bottom:8px}
+.qbox p{color:#EDEDEB;margin:0;font-size:14px;line-height:1.6}
+
+.glossary{margin-top:8px;background:#fff;border:1px solid var(--hairline)}
+.glossary dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0}
+@media(max-width:720px){.glossary dl{grid-template-columns:1fr}}
+.glossary div{padding:12px 16px;border-bottom:1px solid var(--cloud);border-right:1px solid var(--cloud)}
+.glossary dt{font-family:var(--font-cond);font-weight:600;font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--spark-red)}
+.glossary dd{margin:3px 0 0;font-size:13px;line-height:1.5;color:var(--slate)}
+
+.gw-cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--spark-red);color:#fff;padding:14px 26px;border-radius:999px}
+.gw-cta:hover{background:var(--spark-red-press);color:#fff;text-decoration:none}
+
+@media print{.topbar,.rail,.scroll-top{display:none!important}.layout{grid-template-columns:1fr;padding-top:0}.chap{padding:20px 8px;max-width:none}}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.rail{display:none}}
+</style>
+</head>
+<body>
+<div class="scroll-top" id="scrollTop"></div>
+<div class="topbar">
+  <a class="back" href="index.html#sec-culture">← Back to Handbook</a>
+  <span class="brand">Matchbook Learning</span>
+  <button class="print" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="layout">
+  <nav class="rail" id="rail" aria-label="Chapters">
+    <div class="rail-lbl">The Manual</div>
+    <a href="#c-promise" data-chap="c-promise"><span class="dot"></span><span>1 · Culture Promise</span></a>
+    <a href="#c-teach" data-chap="c-teach"><span class="dot"></span><span>2 · Teach the Culture</span></a>
+    <a href="#c-reinforce" data-chap="c-reinforce"><span class="dot"></span><span>3 · Reinforce Belonging</span></a>
+    <a href="#c-respond" data-chap="c-respond"><span class="dot"></span><span>4 · Respond & Repair</span></a>
+    <a href="#c-intensify" data-chap="c-intensify"><span class="dot"></span><span>5 · Intensify & Protect</span></a>
+    <a href="#c-govern" data-chap="c-govern"><span class="dot"></span><span>6 · Govern & Improve</span></a>
+    <a href="#c-tools" data-chap="c-tools"><span class="dot"></span><span>Quick-Reference Tools</span></a>
+  </nav>
+
+  <main class="flow">
+    <section class="hero" id="c-top">
+      <div class="hero-inner">
+        <div class="eyebrow">Campus Staff Operating Manual · 2026–2027</div>
+        <h1>Campus Culture Operations Manual</h1>
+        <div class="sub">Safe · Respectful · Responsible</div>
+        <p>Adult procedures for teaching, reinforcing, repairing, protecting, and improving Safe · Respectful · Responsible culture at Matchbook Learning. This is the operating manual for the daily adult moves that make culture visible and reliable — not a philosophy statement, not a file inventory.</p>
+        <div class="northstar"><b>Core operating question:</b> How does Matchbook teach, reinforce, repair, protect, and improve culture every day?<br><br><b>Culture commitment:</b> Students do not experience adult intentions. They experience adult routines, language, recognition, correction, repair, documentation, and follow-through.</div>
+      </div>
+    </section>
+
+    <section class="chap" id="c-map">
+      <div class="kicker">Campus Operating Map</div>
+      <h2>How Culture Actually Runs</h2>
+      <div class="rule"></div>
+      <p class="lead">Matchbook culture is taught through daily practice, reinforced through belonging and recognition, repaired through restorative response, protected through student support and required procedures, and improved through adult coaching and data review.</p>
+      <div class="opmap">
+        <div class="opmap-cell"><b>Teach</b><span>Model, practice, rehearse, and reteach expectations in the setting where students must use them.</span></div>
+        <div class="opmap-cell"><b>Reinforce</b><span>Recognize behavior tied to Safe, Respectful, Responsible and belonging.</span></div>
+        <div class="opmap-cell"><b>Repair</b><span>Respond to harm or disruption with dignity, regulation, accountability, and return-to-learning.</span></div>
+        <div class="opmap-cell"><b>Protect</b><span>Escalate supports when students need more; preserve rights, safety, and access.</span></div>
+        <div class="opmap-cell"><b>Improve</b><span>Review adult practice and student experience data to strengthen implementation.</span></div>
+      </div>
+      <div class="standard"><b>Restorative anchor</b>Removal is not the intervention. The intervention is the sequence: notice, adult regulation, least-invasive prompt, reteach or reset, supported reset if needed, repair after regulation, re-entry, documentation, and pattern review.</div>
+      <div class="standard"><b>Manual standard</b>Use the least intensive effective support first. Escalate only when student need, safety, or instructional access requires a stronger response. Escalation is never a shortcut around teaching, relationship, regulation, family partnership, documentation, or repair.</div>
+    </section>
+
+    <!-- PART 1 -->
+    <section class="chap" id="c-promise">
+      <div class="kicker">Part 1</div>
+      <h2>The Culture Promise</h2>
+      <div class="rule"></div>
+      <p class="lead">Define the adult standard that makes Safe, Respectful, and Responsible culture visible in every classroom, hallway, common space, family communication, and support decision. Culture at Matchbook is the shared adult operating system that helps students belong, learn, repair harm, lead, and remain connected to instruction.</p>
+      <div class="standard"><b>Operating standard</b>Adults are responsible for the conditions students experience. When a pattern emerges, adults review the routine, adult response, setting, access, and relationship conditions before concluding the student is unwilling to meet expectations.</div>
+      <div class="procgrid">
+        <div class="proc"><div class="pn">1.1</div><h4>Apply the Culture Promise to Adult Decisions</h4><p class="meta"><b>Owner:</b> Every campus adult; leaders coach and monitor consistency.</p><ul><li>Name the expectation using Safe, Respectful, or Responsible language.</li><li>Teach or reteach the replacement behavior before relying on consequence.</li><li>Use the least intensive effective response first.</li><li>Protect the student from public shame or power struggles.</li><li>Document significant patterns; review for adult practice, not just student behavior.</li></ul><div class="eq"><b>Equity check</b>Adults do not treat dialect, processing time, disability-related behavior, trauma response, cultural communication style, or language acquisition as automatic disrespect.</div></div>
+        <div class="proc"><div class="pn">1.2</div><h4>Protect Dignity During Correction</h4><p class="meta"><b>Owner:</b> The adult closest to the moment.</p><ul><li>Regulate face, posture, voice, and pace before speaking.</li><li>Use proximity or a private cue before public correction.</li><li>Name the routine, not the student.</li><li>Give one clear next step; walk away when the student has a path back.</li></ul><div class="eq"><b>Equity check</b>Monitor whether certain students receive public correction more often than peers, and adjust adult practice accordingly.</div></div>
+        <div class="proc"><div class="pn">1.3</div><h4>Use Equity as an Operating Practice</h4><p class="meta"><b>Owner:</b> Every adult owns daily equity; leaders own monitoring of patterns.</p><ul><li>Teach expectations with visuals, examples, and grade-band language.</li><li>Check understanding before assigning intent.</li><li>Separate behavior impact from assumptions about motivation.</li><li>Review recognition, correction, referral, and exclusion patterns by group.</li></ul><div class="eq"><b>Equity check</b>Recognition cannot privilege only loud, compliant, already-visible students — it must notice growth, repair, self-regulation, and help-seeking.</div></div>
+        <div class="proc"><div class="pn">1.4</div><h4>Use the Shared Adult Language</h4><p class="meta"><b>Owner:</b> All adults; leaders calibrate during coaching.</p><ul><li>Use Safe, Respectful, Responsible as the main vocabulary.</li><li>Frame expectations as observable actions.</li><li>Avoid coded or vague phrases (attitude, disrespectful, defiant, lazy) unless paired with observable facts.</li><li>Use the same language in family communication.</li></ul><div class="eq"><b>Equity check</b>Check whether language patterns differ across race, gender, disability, language, or grade band.</div></div>
+      </div>
+    </section>
+
+    <!-- PART 2 -->
+    <section class="chap" id="c-teach">
+      <div class="kicker">Part 2</div>
+      <h2>Teach the Culture</h2>
+      <div class="rule"></div>
+      <p class="lead">Students should not have to guess what success looks like. Adults teach culture the same way they teach academics — models, practice, feedback, reteaching, and repeated opportunities to succeed in the real setting.</p>
+      <div class="standard"><b>Operating standard</b>Correction should not be the first time a student learns the expectation. When a routine is not visible, adults reteach the routine before treating the behavior as refusal.</div>
+      <div class="procgrid">
+        <div class="proc"><div class="pn">2.1</div><h4>Launch Expectations Through Culture Camp</h4><p class="meta"><b>When:</b> Start of year, new cohort entry, after breaks, or a campus reset.</p><ul><li>Teach Safe, Respectful, Responsible as observable behaviors in each setting.</li><li>Model each routine before asking students to perform it independently.</li><li>Practice routines in the actual spaces where they occur.</li><li>Introduce LiveSchool, Houses, GiveThx, reset tools, and repair language.</li></ul></div>
+        <div class="proc"><div class="pn">2.2</div><h4>Run the First Five</h4><p class="meta"><b>Owner:</b> Classroom teacher.</p><ul><li>Greet students at the threshold or meeting area.</li><li>Direct students to the first task or readiness routine.</li><li>Scan for access, regulation, and belonging needs before instruction begins.</li><li>Begin instruction on time once the room is ready.</li></ul></div>
+        <div class="proc"><div class="pn">2.3</div><h4>Use Morning Meeting Culture Lab</h4><p class="meta"><b>Owner:</b> Classroom teacher; grade leads calibrate.</p><ul><li>Open with a brief regulation or grounding practice.</li><li>Preview the value, routine, or relationship skill for the day.</li><li>Use a role-play, gratitude move, or repair phrase.</li><li>Close with a clear transition into academics.</li></ul></div>
+        <div class="proc"><div class="pn">2.4</div><h4>Teach and Reteach Schoolwide Routines</h4><p class="meta"><b>When:</b> Launch, after breaks, or when data shows slippage.</p><ul><li>Name the setting and expectation.</li><li>Show a model in the actual space; name a non-example without using a student.</li><li>Let students practice immediately; give brief feedback.</li><li>Reteach when the routine is not yet secure.</li></ul></div>
+        <div class="proc"><div class="pn">2.5</div><h4>Use the Reteach as the Immediate Consequence</h4><p class="meta"><b>Owner:</b> The adult responsible for the setting.</p><ul><li>Pause the routine without sarcasm or public blame.</li><li>Reset the group; model or narrate the expected action.</li><li>Practice again immediately; recognize evidence once it improves.</li></ul></div>
+        <div class="proc"><div class="pn">2.6</div><h4>Calibrate Grade-Band Expectations</h4><p class="meta"><b>Owner:</b> Grade teams with culture leadership.</p><ul><li>Translate Safe, Respectful, Responsible into grade-appropriate language.</li><li>Use visuals for younger students, explicit rationale for older students.</li><li>Agree on shared replacement-behavior language across adults.</li></ul></div>
+        <div class="proc"><div class="pn">2.7</div><h4>Teach Common-Space Culture</h4><p class="meta"><b>When:</b> Arrival, hallway, restroom, cafeteria, recess, assembly, dismissal.</p><ul><li>Teach the routine in the actual space; post visible cues.</li><li>Position adults where behavior is most likely to drift.</li><li>Recognize evidence before correcting missteps.</li><li>Report repeated patterns to the culture team.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- PART 3 -->
+    <section class="chap" id="c-reinforce">
+      <div class="kicker">Part 3</div>
+      <h2>Reinforce Belonging &amp; Identity</h2>
+      <div class="rule"></div>
+      <p class="lead">Recognition should not reward only quiet compliance. It should make visible belonging, effort, repair, leadership, help-seeking, self-regulation, gratitude, growth, and contribution.</p>
+      <div class="standard"><b>Operating standard</b>Recognition is evidence, not decoration. Adults should be able to tell students what behavior was recognized and why it matters to the community.</div>
+      <div class="procgrid">
+        <div class="proc"><div class="pn">3.1</div><h4>Use LiveSchool for the Behavior Economy</h4><p class="meta"><b>Owner:</b> All adults award points; leadership calibrates categories.</p><ul><li>Award points for observed evidence tied to a taught expectation.</li><li>Use House points to strengthen collective identity.</li><li>Enter behavior evidence after stabilization, not during escalation.</li><li>Review data for disproportionality and invisibility.</li></ul></div>
+        <div class="proc"><div class="pn">3.2</div><h4>Use GiveThx for Gratitude &amp; Belonging</h4><p class="meta"><b>Owner:</b> Teachers facilitate; staff model adult-to-adult gratitude.</p><ul><li>Teach what meaningful appreciation sounds like, with sentence stems.</li><li>Review who is giving and receiving appreciation.</li><li>Use data to identify students who need intentional connection.</li></ul></div>
+        <div class="proc"><div class="pn">3.3</div><h4>Operate Houses &amp; Cardinal Cash</h4><p class="meta"><b>Owner:</b> Culture leadership owns design; all staff reinforce.</p><ul><li>Connect House identity to values, not competition alone.</li><li>Award points for values-based evidence.</li><li>Use rewards to amplify intrinsic identity, not replace it.</li></ul></div>
+        <div class="proc"><div class="pn">3.4</div><h4>Prepare &amp; Run Friday Cypher</h4><p class="meta"><b>Owner:</b> Culture leadership plans; teachers nominate.</p><ul><li>Identify the week's culture focus and evidence to notice.</li><li>Include evidence of growth, repair, and leadership — not only frequent standouts.</li><li>Keep the celebration tight, joyful, and values-aligned.</li></ul></div>
+        <div class="proc"><div class="pn">3.5</div><h4>Select VIP &amp; Student of the Week</h4><p class="meta"><b>Owner:</b> Teachers nominate; culture leadership calibrates.</p><ul><li>Use value-based evidence, not adult preference or popularity.</li><li>Consider growth, repair, leadership, effort, and community support.</li><li>Review whether nominations reflect the full student body.</li></ul></div>
+        <div class="proc"><div class="pn">3.6</div><h4>Use Recognition Data to Improve Adult Practice</h4><p class="meta"><b>Owner:</b> Culture leadership, grade leads, administrators.</p><ul><li>Review who receives positive recognition and who does not.</li><li>Compare recognition with correction and referral patterns.</li><li>Set one adult practice adjustment for the next cycle.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- PART 4 -->
+    <section class="chap" id="c-respond">
+      <div class="kicker">Part 4</div>
+      <h2>Respond &amp; Repair</h2>
+      <div class="rule"></div>
+      <p class="lead">When behavior interrupts learning or harms the community, adults protect instruction without severing belonging. The response is not a place — it is a sequence of adult moves that begins with regulation and ends with return-to-learning, documentation, and pattern review.</p>
+      <div class="standard"><b>Operating standard</b>A student may leave the classroom temporarily only when the student or learning environment needs support that cannot safely or effectively happen in the room. The purpose is regulation, repair, return-to-learning, and pattern review — never exclusion.</div>
+      <div class="procgrid">
+        <div class="proc"><div class="pn">4.1</div><h4>Use the Least-Invasive Classroom Response</h4><ul><li>Regulate yourself before correcting the student.</li><li>Nonverbal cue, proximity, or quiet prompt first.</li><li>Offer a choice between two safe next steps.</li><li>Return attention to instruction quickly.</li></ul></div>
+        <div class="proc"><div class="pn">4.2</div><h4>Run the Live Intervention Diagnostic</h4><p class="meta">Check <b>rigor</b> (under-challenged?), <b>access</b> (missing materials/scaffolds?), <b>regulation</b> (outside window of tolerance?), <b>safety</b> (immediate risk?) — then match the response to the need instead of defaulting to removal.</p></div>
+        <div class="proc"><div class="pn">4.3</div><h4>Use In-Class Reset</h4><ul><li>Teach reset options before students need them.</li><li>Offer quietly and neutrally with a short time limit.</li><li>Provide simple tools: breathing card, sensory object, quiet seat.</li><li>Invite the student back with a clear next action.</li></ul></div>
+        <div class="proc"><div class="pn">4.4</div><h4>Request Restorative Team Push-In</h4><ul><li>Teacher gives brief, factual information only.</li><li>Support adult diagnoses access, rigor, regulation, or safety need.</li><li>If the student can remain in class, support in place.</li><li>Return the student with a clear re-entry step.</li></ul></div>
+        <div class="proc"><div class="pn">4.5</div><h4>Use Supported Reset Outside the Classroom</h4><ul><li>Calm, low-word transition language — do not process in the hallway.</li><li>Begin with regulation, not interrogation.</li><li>Return the student with a clear entry sentence or teacher handoff.</li></ul></div>
+        <div class="proc"><div class="pn">4.6</div><h4>Operate the Regulation Station &amp; Restorative Room</h4><ul><li>Receive the student with calm, neutral language.</li><li>Prioritize regulation before reasoning or reflection.</li><li>Guide reflection: what happened, who was affected, what repair is needed.</li><li>Coordinate with the teacher for re-entry.</li></ul></div>
+        <div class="proc"><div class="pn">4.7</div><h4>Conduct Teacher-Led Repair</h4><ul><li>Wait until both student and adult are regulated.</li><li>Ask what happened, who was affected, what next step repairs the harm.</li><li>Agree on the re-entry sentence or plan.</li></ul></div>
+        <div class="proc"><div class="pn">4.8</div><h4>Create the Re-Entry Plan</h4><ul><li>Confirm the student is regulated enough to return.</li><li>Name the next expected behavior; plan the teacher greeting.</li><li>Identify the check-in adult and time.</li></ul></div>
+        <div class="proc"><div class="pn">4.9</div><h4>Use Restorative Re-Entry Center</h4><p class="meta">For extended support: ISS-coded response or when the team determines supervised support is needed to protect safety and learning.</p><ul><li>Begin with regulation; ensure academic access.</li><li>Provide restorative reflection only after regulation.</li><li>Complete re-entry planning before the student returns.</li></ul></div>
+        <div class="proc"><div class="pn">4.10</div><h4>Move From Live Card to LiveSchool &amp; Official Documentation</h4><ul><li>Manage the moment first — do not stop dysregulation to write a long record.</li><li>After stabilization, enter evidence in LiveSchool or official systems as required.</li><li>Write observable facts; avoid labels, motives, and diagnoses.</li></ul></div>
+        <div class="proc"><div class="pn">4.11</div><h4>Review Patterns After Repeated Response</h4><ul><li>Review setting, time, task, adult, peer dynamics, and prior support.</li><li>Determine whether the pattern needs Tier 1 reteach, Tier 2/3 support, or safety procedure.</li><li>Assign an owner and review date.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- PART 5 -->
+    <section class="chap" id="c-intensify">
+      <div class="kicker">Part 5</div>
+      <h2>Intensify Support &amp; Protect Rights</h2>
+      <div class="rule"></div>
+      <p class="lead">Some students need more than universal culture supports. Intensifying support should make the system more precise, not more punitive — understand need, teach replacement skills, coordinate adult response, involve families, document accurately, protect rights, and return students to the least restrictive successful support as soon as appropriate.</p>
+      <div class="standard"><b>Operating standard</b>A higher tier is not a label. It is a coordinated set of adult actions, progress measures, family communication, documentation, and review dates.</div>
+      <table class="tbl">
+        <caption>Behavior MTSS at a Glance</caption>
+        <thead><tr><th style="width:12%">Tier</th><th style="width:38%">Focus</th><th>Movement Rule</th></tr></thead>
+        <tbody>
+          <tr><td>Tier 1</td><td>Universal teaching, reteach, gatekeeper checklist before any Tier 2 consideration.</td><td>Complete Tier 1 fidelity before escalation — safety/special-entry criteria may fast-track review.</td></tr>
+          <tr><td>Tier 2</td><td>CICO / DBRC, mentor check-ins, weekly progress review.</td><td>Team decision — continue, revise, fade, exit, or intensify — never one adult's frustration.</td></tr>
+          <tr><td>Tier 3</td><td>Behavior contracts, BSP, FBA/BIP, safety plans, Aspire referral.</td><td>Least intensive effective tool first; reviewed at least weekly for active high-risk students.</td></tr>
+        </tbody>
+      </table>
+      <div class="procgrid">
+        <div class="proc"><div class="pn">5.1–5.2</div><h4>MTSS Decision Rules &amp; Tier 1 Gatekeeping</h4><ul><li>Define the concern in observable terms; review multiple data sources.</li><li>Confirm Tier 1 was taught, retaught, documented, and communicated to family.</li><li>Select the least intensive support likely to work; name owner and review date.</li></ul></div>
+        <div class="proc"><div class="pn">5.3</div><h4>Implement Tier 2 CICO &amp; DBRC</h4><ul><li>Family partnership meeting required before support begins.</li><li>Define 1–3 positively stated goals; assign a mentor.</li><li>Review weekly data — continue, revise, fade, exit, or intensify.</li></ul></div>
+        <div class="proc"><div class="pn">5.4–5.6</div><h4>Tier 3, Behavior Contracts &amp; FBA/BIP</h4><ul><li>Select the least intensive effective intensive tool.</li><li>Write expectations in observable, positive language; name adult supports.</li><li>FBA/BIP only after Tier 1/2 fidelity — never to delay safety support.</li></ul></div>
+        <div class="proc"><div class="pn">5.7</div><h4>Attendance Support Pathway</h4><ul><li>Review absence data daily; ask willful vs. barrier-based.</li><li>Route transportation, housing, medical, or safety barriers to the correct support.</li><li>Create Attendance Success Agreements when a formal plan is needed.</li></ul></div>
+        <div class="proc"><div class="pn">5.8–5.9</div><h4>Wellness, Safety &amp; DCS Reporting</h4><ul><li>Keep the student supervised and calm; never leave alone if self-harm is suspected.</li><li>Notify counselor and administrator immediately.</li><li>Follow required screening, safety plan, or reporting process; document within required timeline.</li></ul></div>
+        <div class="proc"><div class="pn">5.10</div><h4>Title IX / Protected-Status Concerns</h4><ul><li>Receive the report without promising an outcome; keep students safe and separate.</li><li>Notify the designated coordinator immediately; avoid informal investigation.</li><li>Follow required notice, investigation, outcome, and recordkeeping.</li></ul></div>
+        <div class="proc"><div class="pn">5.11–5.12</div><h4>McKinney-Vento, Foster Care &amp; Aspire</h4><ul><li>Enroll or maintain access without unnecessary delay.</li><li>Notify the designated liaison within the required timeframe.</li><li>Coordinate community-partner referrals with family consent.</li></ul></div>
+        <div class="proc"><div class="pn">5.13–5.14</div><h4>OSS, Due Process, Expulsion &amp; Missing/Withdrawn Students</h4><ul><li>Check disability, IEP, 504 status before formal action proceeds.</li><li>Provide required notice and due-process steps; plan re-entry before return.</li><li>Missing student: in-building sweep, then parent + law enforcement per procedure within the required window.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- PART 6 -->
+    <section class="chap" id="c-govern">
+      <div class="kicker">Part 6</div>
+      <h2>Govern, Coach &amp; Improve</h2>
+      <div class="rule"></div>
+      <p class="lead">Culture systems fail when adults improvise independently. Governance means a predictable rhythm for noticing patterns, making decisions, assigning owners, coaching adult practice, protecting records, and improving implementation over time.</p>
+      <div class="standard"><b>Operating standard</b>A meeting that does not produce an owner, action, due date, and review date is a discussion, not an operating decision.</div>
+      <div class="procgrid">
+        <div class="proc"><div class="pn">6.1</div><h4>Daily Culture Operating Rhythm</h4><ul><li>Morning: attendance, prior-day incidents, safety/wellness concerns, proactive check-ins.</li><li>Midday: DBRC completion, restorative patterns, urgent needs.</li><li>Before dismissal: close urgent documentation, assign next-day follow-up.</li></ul></div>
+        <div class="proc"><div class="pn">6.2</div><h4>Weekly Culture/MTSS Meeting</h4><ul><li>Open with the clearest data truth of the week; name patterns before solutions.</li><li>Decide continue, revise, intensify, fade, or close for every reviewed student.</li><li>Assign one owner, due date, and review date per action.</li></ul></div>
+        <div class="proc"><div class="pn">6.3–6.4</div><h4>Culture Deep-Dive &amp; SRR/R3 Coaching</h4><ul><li>Select one focus area monthly: routine, space, grade band, or adult practice.</li><li>Observe the adult move, not only student behavior.</li><li>Name one high-leverage action step; follow up on a set date.</li></ul></div>
+        <div class="proc"><div class="pn">6.5–6.6</div><h4>Data Review &amp; Documentation Quality</h4><ul><li>Review LiveSchool, GiveThx, restorative, and attendance data by setting, adult, and student group.</li><li>Identify adult practice changes before adding student consequences.</li><li>Audit documentation weekly for observable, bias-free language.</li></ul></div>
+        <div class="proc"><div class="pn">6.7–6.8</div><h4>Privacy &amp; Annual System Maintenance</h4><ul><li>Share only what the receiving adult needs to know.</li><li>Store sensitive records in restricted, approved locations.</li><li>Refresh roles, platforms, and training before school starts each year.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- APPENDICES -->
+    <section class="chap" id="c-tools">
+      <div class="kicker">Appendices A–I</div>
+      <h2>Quick-Reference Tools</h2>
+      <div class="rule"></div>
+      <p class="lead">Short, printable tools for real-time use: Teacher Quick Guides, Student Support Tools, Family Communication Language, Administrator &amp; MTSS Tools, Platform Use Guide, Documentation Standard, Restorative Response Quick Reference, Annual Culture System Checklist, and Glossary of Operating Terms.</p>
+      <table class="tbl">
+        <caption>10-Second Correction (Appendix A)</caption>
+        <thead><tr><th style="width:22%">Moment</th><th style="width:34%">Adult Move</th><th>Language Example</th></tr></thead>
+        <tbody>
+          <tr><td>Off task</td><td>Use proximity or a quiet cue.</td><td>"Your next step is question two."</td></tr>
+          <tr><td>Routine drift</td><td>Name the routine, not the child.</td><td>"Hallway is silent and forward-facing. Reset at the line."</td></tr>
+          <tr><td>Escalation beginning</td><td>Shorten language and lower intensity.</td><td>"Pause. Breathe. Choose seat or reset."</td></tr>
+          <tr><td>Return from reset</td><td>Give a clean re-entry.</td><td>"Welcome back. Start with the first problem. I will check in two minutes."</td></tr>
+          <tr><td>Repair needed</td><td>Wait for regulation first.</td><td>"We will talk privately after both of us are ready."</td></tr>
+        </tbody>
+      </table>
+      <div class="qbox"><div class="lbl">Closing Standard</div><p>Use the least intensive effective support first. A meeting without an owner, action, due date, and review date is a discussion, not a decision. Documentation is the evidence of care — if it is not documented, it did not happen.</p></div>
+      <div class="glossary">
+        <dl>
+          <div><dt>DBRC</dt><dd>Daily Behavior Report Card — frequent feedback tool, not a punishment.</dd></div>
+          <div><dt>CICO</dt><dd>Check-In / Check-Out — a daily adult connection routine.</dd></div>
+          <div><dt>FBA / BIP</dt><dd>Functional Behavior Assessment / Behavior Intervention Plan.</dd></div>
+          <div><dt>MTSS</dt><dd>Multi-Tiered System of Supports for academics and behavior.</dd></div>
+          <div><dt>Regulation Station / Restorative Room</dt><dd>Supervised space for regulation, reflection, and re-entry — never a holding pen.</dd></div>
+          <div><dt>Restorative Re-Entry Center</dt><dd>Extended, supervised restorative response with academic access and re-entry planning.</dd></div>
+        </dl>
+      </div>
+      <a class="gw-cta" href="index.html#sec-culture">← Back to Culture &amp; Behavior Systems</a>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var bar = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  });
+  var chaps = document.querySelectorAll('.chap[id]');
+  var links = document.querySelectorAll('.rail a[data-chap]');
+  if ('IntersectionObserver' in window && chaps.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-chap') === e.target.id); });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    chaps.forEach(function(c){ io.observe(c); });
+  }
+})();
+</script>
+</body>
+</html>

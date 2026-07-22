@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Culture &amp; Student Support Playbook · The Matchbook Way</title>
+<meta name="description" content="Director of Student Support and Culture playbook — role architecture, operating rhythm, Behavior MTSS, attendance, wellness &amp; safety, Title IX, special populations, and documentation standards at Matchbook Learning.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap');
+
+:root{
+  --spark-red:#E21C24; --spark-red-press:#B5151A; --ember:#C8161D;
+  --dream-yellow:#F9DC7C; --gold:#F7B23C; --ink:#1A1A1A; --charcoal:#232323;
+  --slate:#4A4A4A; --muted:#8A8A8A; --hairline:#E4E2DE; --paper:#F6F6F4;
+  --cloud:#EDEDEB; --white:#FFFFFF;
+  --font-display:'Anton','Arial Narrow',sans-serif;
+  --font-cond:'Oswald','Arial Narrow',sans-serif;
+  --font-body:'Mulish',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--spark-red);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.scroll-top{position:fixed;top:0;left:0;height:4px;background:var(--spark-red);width:0;z-index:60;transition:width .1s linear}
+.topbar{position:fixed;top:0;left:0;right:0;height:56px;z-index:55;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 24px;background:rgba(35,35,35,.92);backdrop-filter:blur(8px);color:#fff}
+.topbar .back{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#EDEDEB;display:inline-flex;align-items:center;gap:8px}
+.topbar .back:hover{color:var(--dream-yellow);text-decoration:none}
+.topbar .brand{font-family:var(--font-display);font-size:15px;text-transform:uppercase;color:var(--spark-red);letter-spacing:.02em}
+.topbar .print{font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal);background:var(--dream-yellow);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+
+.layout{display:grid;grid-template-columns:236px 1fr;gap:0;max-width:1240px;margin:0 auto;padding-top:56px}
+.rail{position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);overflow-y:auto;padding:28px 18px 28px 24px}
+.rail-lbl{font-family:var(--font-cond);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.rail a{display:flex;align-items:center;gap:11px;padding:7px 0;color:var(--slate);font-family:var(--font-cond);font-weight:500;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;line-height:1.2}
+.rail a:hover{color:var(--ink);text-decoration:none}
+.rail a .dot{width:9px;height:9px;border-radius:999px;border:2px solid var(--hairline);background:transparent;flex:0 0 9px;transition:all .2s}
+.rail a.active{color:var(--spark-red)}
+.rail a.active .dot{background:var(--spark-red);border-color:var(--spark-red);box-shadow:0 0 0 3px rgba(226,28,36,.15)}
+
+.flow{min-width:0;padding:0 0 120px}
+.chap{padding:56px 56px;max-width:900px;scroll-margin-top:64px}
+@media(max-width:1080px){.chap{padding:48px 28px}}
+
+.kicker{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--spark-red)}
+.chap h2{font-family:var(--font-display);font-weight:400;font-size:clamp(28px,3.8vw,44px);line-height:.98;text-transform:uppercase;color:var(--ink);margin:10px 0 0}
+.lead{font-family:var(--font-body);font-size:17px;line-height:1.6;color:var(--slate);margin:16px 0 0}
+.chap p{font-family:var(--font-body);font-size:15.5px;line-height:1.7;color:var(--slate)}
+.rule{height:5px;width:64px;background:var(--spark-red);margin:14px 0 20px}
+
+.hero{background:var(--charcoal);color:#fff;padding:88px 56px 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;bottom:-140px;width:420px;height:420px;border-radius:999px;background:rgba(226,28,36,.14)}
+.hero-inner{max-width:860px;position:relative;z-index:1}
+.hero .eyebrow{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--dream-yellow)}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(34px,4.8vw,60px);line-height:.96;text-transform:uppercase;margin:14px 0 0}
+.hero .sub{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--dream-yellow);margin-top:10px}
+.hero p{font-family:var(--font-body);font-size:16px;line-height:1.65;color:#EDEDEB;margin:18px 0 0;max-width:640px}
+.hero .northstar{margin:26px 0 0;padding:16px 20px;background:rgba(0,0,0,.24);border-left:4px solid var(--spark-red);max-width:620px;font-size:15.5px;line-height:1.6;color:#fff}
+
+.standard{margin:18px 0;padding:14px 18px;background:var(--dream-yellow);border-left:4px solid var(--spark-red);font-size:14.5px;line-height:1.6;color:var(--ink)}
+.standard b{font-family:var(--font-cond);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:11.5px;display:block;margin-bottom:4px;color:var(--spark-red-press)}
+
+.procgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+@media(max-width:760px){.procgrid{grid-template-columns:1fr}}
+.proc{background:#fff;border:1px solid var(--hairline);border-left:5px solid var(--charcoal);padding:16px 18px}
+.proc h4{font-family:var(--font-cond);font-weight:600;font-size:14.5px;letter-spacing:.02em;text-transform:uppercase;margin:0 0 8px;color:var(--ink)}
+.proc p{font-size:13.5px;line-height:1.6;color:var(--slate);margin:0}
+.proc ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;color:var(--slate)}
+
+.tbl{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.tbl caption{caption-side:top;text-align:left;font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--spark-red);padding-bottom:6px}
+.tbl th{background:var(--charcoal);color:#fff;font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;text-align:left;padding:8px 10px;border:1px solid var(--charcoal)}
+.tbl td{padding:8px 10px;border:1px solid var(--hairline);vertical-align:top;color:var(--slate);line-height:1.45}
+.tbl tr:nth-child(even) td{background:#fff}
+.tbl tr:nth-child(odd) td{background:var(--paper)}
+
+.qbox{background:var(--charcoal);color:#fff;padding:18px 22px;margin:16px 0}
+.qbox .lbl{font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dream-yellow);margin-bottom:8px}
+.qbox p{color:#EDEDEB;margin:0;font-size:14px;line-height:1.6}
+
+.ladder{margin-top:10px}
+.lstep{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--hairline)}
+.lstep:last-child{border-bottom:0}
+.lstep .th{font-family:var(--font-cond);font-weight:600;font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--spark-red)}
+.lstep .td{font-size:13.5px;color:var(--slate);line-height:1.55}
+.lstep .td b{color:var(--ink)}
+
+.glossary{margin-top:8px;background:#fff;border:1px solid var(--hairline)}
+.glossary dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0}
+@media(max-width:720px){.glossary dl{grid-template-columns:1fr}}
+.glossary div{padding:12px 16px;border-bottom:1px solid var(--cloud);border-right:1px solid var(--cloud)}
+.glossary dt{font-family:var(--font-cond);font-weight:600;font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--spark-red)}
+.glossary dd{margin:3px 0 0;font-size:13px;line-height:1.5;color:var(--slate)}
+
+.gw-cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--spark-red);color:#fff;padding:14px 26px;border-radius:999px}
+.gw-cta:hover{background:var(--spark-red-press);color:#fff;text-decoration:none}
+
+@media print{.topbar,.rail,.scroll-top{display:none!important}.layout{grid-template-columns:1fr;padding-top:0}.chap{padding:20px 8px;max-width:none}}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.rail{display:none}}
+</style>
+</head>
+<body>
+<div class="scroll-top" id="scrollTop"></div>
+<div class="topbar">
+  <a class="back" href="index.html#sec-support">← Back to Handbook</a>
+  <span class="brand">Matchbook Learning</span>
+  <button class="print" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="layout">
+  <nav class="rail" id="rail" aria-label="Chapters">
+    <div class="rail-lbl">The Playbook</div>
+    <a href="#c-role" data-chap="c-role"><span class="dot"></span><span>1 · Role Architecture</span></a>
+    <a href="#c-rhythm" data-chap="c-rhythm"><span class="dot"></span><span>2 · Operating Rhythm</span></a>
+    <a href="#c-mtss" data-chap="c-mtss"><span class="dot"></span><span>3 · Behavior MTSS</span></a>
+    <a href="#c-attendance" data-chap="c-attendance"><span class="dot"></span><span>4 · Attendance</span></a>
+    <a href="#c-wellness" data-chap="c-wellness"><span class="dot"></span><span>5 · Wellness &amp; Safety</span></a>
+    <a href="#c-titleix" data-chap="c-titleix"><span class="dot"></span><span>6 · Title IX</span></a>
+    <a href="#c-expulsion" data-chap="c-expulsion"><span class="dot"></span><span>7 · Expulsion &amp; Placement</span></a>
+    <a href="#c-special" data-chap="c-special"><span class="dot"></span><span>8 · Special Populations</span></a>
+    <a href="#c-community" data-chap="c-community"><span class="dot"></span><span>10 · Community &amp; Family</span></a>
+    <a href="#c-doc" data-chap="c-doc"><span class="dot"></span><span>11 · Documentation</span></a>
+    <a href="#c-glossary" data-chap="c-glossary"><span class="dot"></span><span>Quick Reference</span></a>
+  </nav>
+
+  <main class="flow">
+    <section class="hero" id="c-top">
+      <div class="hero-inner">
+        <div class="eyebrow">Director of Student Support and Culture · K–8 · SY 2026–2027</div>
+        <h1>Culture &amp; Student Support Playbook</h1>
+        <div class="sub">Living Document — Review Annually</div>
+        <p>This playbook is organized the way the work actually flows — from the daily operational rhythm outward to the systems that govern each domain. Use it as a reference, a training tool for the team, and a compliance anchor.</p>
+        <div class="northstar"><b>North Star:</b> This role is not discipline-driven. It is systems-driven, relationship-driven, and prevention-focused — removing barriers to learning so every student has the behavioral, social-emotional, attendance, safety, and family supports necessary to remain engaged in instruction and thrive.</div>
+      </div>
+    </section>
+
+    <!-- PART 1 -->
+    <section class="chap" id="c-role">
+      <div class="kicker">Part One</div>
+      <h2>Role Architecture</h2>
+      <div class="rule"></div>
+      <p class="lead">The Director of Student Support and Culture is the systems architect and people champion for every student who needs more than the classroom can give — sitting at the intersection of behavior/culture, attendance/family, safety/compliance, special populations, student wellness, and team leadership.</p>
+      <table class="tbl">
+        <caption>Systems Map — How Everything Connects</caption>
+        <thead><tr><th style="width:30%">Layer</th><th>What It Covers</th></tr></thead>
+        <tbody>
+          <tr><td>Prevention</td><td>Tier 1 culture — schoolwide expectations and universal supports.</td></tr>
+          <tr><td>Early Intervention</td><td>Tier 2 — DBRC, mentor, attendance outreach.</td></tr>
+          <tr><td>Intensive Support</td><td>Tier 3 — contracts, safety plans, Aspire, attendance agreements.</td></tr>
+          <tr><td>Compliance &amp; Special Populations</td><td>Title IX, DCS, McKinney-Vento, Foster Care, expulsion pathways.</td></tr>
+        </tbody>
+      </table>
+      <p>No system operates in isolation — attendance concerns trigger wellness checks, behavior patterns surface DCS questions, and housing instability connects to McKinney-Vento. The Director holds all four layers simultaneously, partnering with the Dean, K–4 and 5–8 School Counselors, Restorative Team Mentors, the Family Services Coordinator, Social Worker, District McKinney-Vento Liaison, Aspire Indiana, IPS Police, and the Emergent Tree DBRC platform.</p>
+    </section>
+
+    <!-- PART 2 -->
+    <section class="chap" id="c-rhythm">
+      <div class="kicker">Part Two</div>
+      <h2>Daily &amp; Weekly Operating Rhythm</h2>
+      <div class="rule"></div>
+      <p class="lead">The day is structured around prevention, not reaction.</p>
+      <table class="tbl">
+        <caption>Daily Schedule Framework</caption>
+        <thead><tr><th style="width:20%">Block</th><th>Focus</th></tr></thead>
+        <tbody>
+          <tr><td>6:30–7:15 AM</td><td>Preparation &amp; review — overnight concerns, attendance pulls, flagged students.</td></tr>
+          <tr><td>7:15–8:00 AM</td><td>Arrival &amp; climate — visible presence; prevent discipline before it occurs.</td></tr>
+          <tr><td>8:00–10:00 AM</td><td>High-leverage support block — classroom removals, restorative conversations, threat assessments.</td></tr>
+          <tr><td>10:00–11:00 AM</td><td>Attendance systems — daily absence data and targeted outreach.</td></tr>
+          <tr><td>11:00 AM–12:00 PM</td><td>Meetings &amp; coordination — every meeting ends with owner, action, and follow-up date.</td></tr>
+          <tr><td>12:00–1:00 PM</td><td>Lunch supervision — relationship-building, not break time.</td></tr>
+          <tr><td>1:00–2:30 PM</td><td>Investigations &amp; compliance — Title IX intake, witness interviews, documentation.</td></tr>
+          <tr><td>2:30–3:30 PM</td><td>Tier III data review — continue, intensify, fade, or return to Tier 2.</td></tr>
+          <tr><td>3:30–5:30 PM</td><td>Family communication, staff support, and strategic systems planning.</td></tr>
+        </tbody>
+      </table>
+      <div class="procgrid">
+        <div class="proc"><h4>Weekly Standing Focus</h4><ul><li><b>Mon</b> — Attendance review; mentor dashboards due 3:00 PM.</li><li><b>Tue</b> — MTSS / culture meeting (DBRC, tier decisions, restorative data).</li><li><b>Wed</b> — Investigations catch-up; parent communication sweep.</li><li><b>Thu</b> — Community partner coordination; McKinney-Vento/Foster Care/Aspire updates.</li><li><b>Fri</b> — End-of-week data review; documentation audit.</li></ul></div>
+        <div class="proc"><h4>Monthly &amp; Quarterly</h4><ul><li>Monthly community resource event; monthly Title IX documentation review.</li><li>Quarterly McKinney-Vento coordination meeting.</li><li>Emergent Tree Universal Behavior Screener — September &amp; January.</li><li>Annually — full SOP review, tracker maintenance, staff training.</li></ul></div>
+      </div>
+    </section>
+
+    <!-- PART 3 -->
+    <section class="chap" id="c-mtss">
+      <div class="kicker">Part Three</div>
+      <h2>Behavior MTSS System</h2>
+      <div class="rule"></div>
+      <p class="lead">Matchbook's structured continuum is preventative, restorative, data-driven, and family-partnered.</p>
+      <div class="standard"><b>Critical rule</b>A tier is only complete when it is documented. An undocumented intervention is not an intervention.</div>
+      <div class="procgrid">
+        <div class="proc"><h4>Tier 1 — Universal (4 weeks)</h4><p>Gatekeeper checklist before any Tier 2 consideration: taught expectations, documented classroom redirection, PowerSchool logs, teacher-initiated parent contact. Gatekeeper: the designated administrator verifies and signs off.</p></div>
+        <div class="proc"><h4>Tier 2 — Targeted (6 weeks)</h4><p>DBRC implemented for 6 weeks minimum with an assigned mentor and weekly data review. A parent meeting must occur before initiating a DBRC — it is never a default escalation shortcut. Exit: averages a 4 consistently for 6–8 weeks.</p></div>
+        <div class="proc"><h4>Tier 3 — Intensive (6-week cycles)</h4><p>Continued DBRC with skills component, Behavior Contract or Critical Behavior Contract, Aspire behavior planning, individualized BSP, BIP if warranted. FBA only after Tier 1/2 fidelity is documented — a team decision, not administrative.</p></div>
+        <div class="proc"><h4>DBRC Daily Workflow</h4><p>Teacher rates each period → brief conference → electronic entry before leaving the building → mentor reviews with the student → dashboard updated by 3:00 PM Monday → Dean enters ISS/OSS data.</p></div>
+      </div>
+      <table class="tbl">
+        <caption>In-School Suspension (ISS) Time Guidelines</caption>
+        <thead><tr><th style="width:30%">Grade</th><th>Maximum Duration</th></tr></thead>
+        <tbody>
+          <tr><td>K–2</td><td>1.5 hours maximum</td></tr>
+          <tr><td>Grade 3</td><td>2 hours maximum</td></tr>
+          <tr><td>Grades 4–8</td><td>Half-day maximum</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Re-entry after OSS or extended absence:</strong> Director reviews status before return → re-entry meeting with the student → parent communication before return → mentor and teachers notified → first-day check-in scheduled → documented in PowerSchool within 24 hours.</p>
+    </section>
+
+    <!-- PART 4 -->
+    <section class="chap" id="c-attendance">
+      <div class="kicker">Part Four</div>
+      <h2>Attendance System</h2>
+      <div class="rule"></div>
+      <p class="lead">Attendance is a wellness indicator, not just compliance. Chronic absenteeism is missing 10% or more of school days. Every absence prompts one question: <strong>Is this willful or barrier-based?</strong></p>
+      <div class="ladder">
+        <div class="lstep"><div class="th">5 days</div><div class="td"><b>Letter sent home</b> — attendance clerk / Director, logged in PowerSchool.</div></div>
+        <div class="lstep"><div class="th">7 days</div><div class="td"><b>Email + ParentSquare message</b> from the Director.</div></div>
+        <div class="lstep"><div class="th">7–8 days</div><div class="td"><b>Parent phone call</b> from the Director, with call summary logged.</div></div>
+        <div class="lstep"><div class="th">9–10 days</div><div class="td"><b>Parent home visit</b> coordinated by Director + counselor.</div></div>
+        <div class="lstep"><div class="th">10+ days</div><div class="td"><b>Certified letter</b> sent home, copy retained in file.</div></div>
+        <div class="lstep"><div class="th">No response</div><div class="td"><b>DCS referral</b> for educational neglect, led by the School Counselor with Director support.</div></div>
+      </div>
+      <p>Transportation and housing barriers route to McKinney-Vento; medical concerns route to wellness support; willful avoidance routes to the MTSS behavior framework. Attendance Success Agreements are formal written commitments — developed collaboratively, reviewed on a set interval, and linked to identified barriers and specific school support commitments.</p>
+    </section>
+
+    <!-- PART 5 -->
+    <section class="chap" id="c-wellness">
+      <div class="kicker">Part Five</div>
+      <h2>Student Wellness &amp; Safety</h2>
+      <div class="rule"></div>
+      <div class="procgrid">
+        <div class="proc"><h4>Threat Assessment Protocol</h4><ul><li>Remove the student to a supervised, calm space; gather facts without interrogating.</li><li>Convene the team (Director, Counselor, Dean, IPS Police as warranted) the same day.</li><li>Determine threat level; develop a Safety Plan if warranted; document within 24 hours.</li></ul></div>
+        <div class="proc"><h4>Suicide Ideation Protocol</h4><ul><li>Immediately notify the counselor and Director; never leave the student alone.</li><li>Counselor conducts a screening (Columbia Protocol); same-day parent notification required.</li><li>If imminent risk, call 911 and IPS Police; Safety Plan and re-entry meeting required before return.</li></ul></div>
+        <div class="proc"><h4>DCS Reporting</h4><p>Any employee who suspects abuse or neglect notifies a school counselor immediately — the counselor makes the formal report. The Director coordinates and supports; does not independently file.</p></div>
+        <div class="proc"><h4>BrightLane Check-In System</h4><p>A structured social-emotional check-in tool. The Director oversees enrollment, ensures check-ins are documented, and reviews data as part of the weekly wellness review.</p></div>
+      </div>
+    </section>
+
+    <!-- PART 6 -->
+    <section class="chap" id="c-titleix">
+      <div class="kicker">Part Six</div>
+      <h2>Title IX</h2>
+      <div class="rule"></div>
+      <p class="lead">The Director of Student Support and Culture serves as the Title IX Coordinator — responsible for procedural compliance, documentation integrity, and outcome communication.</p>
+      <div class="ladder">
+        <div class="lstep"><div class="th">Intake</div><div class="td">Receive the complaint, document immediately, notify the Head of School, determine whether a formal investigation is triggered.</div></div>
+        <div class="lstep"><div class="th">Investigation</div><div class="td">Notify both parties of the process and their rights; gather witness statements one at a time; remain neutral throughout.</div></div>
+        <div class="lstep"><div class="th">Documentation</div><div class="td">Maintain an investigation report for every case; ensure record retention requirements are met.</div></div>
+        <div class="lstep"><div class="th">Outcome</div><div class="td">Draft outcome letters, identify safety measures, document resolution in the Title IX Tracker.</div></div>
+      </div>
+      <div class="standard"><b>Non-negotiable</b>Every step must be documented. Title IX investigations with incomplete records create compliance exposure. If it is not documented, it did not happen.</div>
+    </section>
+
+    <!-- PART 7 -->
+    <section class="chap" id="c-expulsion">
+      <div class="kicker">Part Seven</div>
+      <h2>Expulsion &amp; Alternative Placement</h2>
+      <div class="rule"></div>
+      <p class="lead">Expulsion is a last resort — considered only when a student's behavior poses an ongoing safety risk that cannot be managed through MTSS, Critical Behavior Contracts have been exhausted, or a violation requires mandatory consideration under policy or law.</p>
+      <p>The Director reviews all MTSS documentation for fidelity, the Head of School must agree to proceed, families are notified in writing with hearing rights, and — for a student with an IEP — a Manifestation Determination Review must occur before any expulsion proceeds. While a student is on expulsion status, the Director coordinates temporary remote instruction, continued Aspire services, a parent communication schedule, and a re-entry plan.</p>
+    </section>
+
+    <!-- PART 8 -->
+    <section class="chap" id="c-special">
+      <div class="kicker">Part Eight</div>
+      <h2>Special Populations</h2>
+      <div class="rule"></div>
+      <div class="procgrid">
+        <div class="proc"><h4>McKinney-Vento</h4><p>Immediate enrollment, services, and transportation for students lacking a fixed, regular, adequate nighttime residence. Any staff member who suspects a student qualifies notifies the Director and Social Worker within 24 hours; the District Liaison responds within 24–48 hours. Do not delay enrollment for missing documents.</p></div>
+        <div class="proc"><h4>Foster Care</h4><p>Records transfer is expedited; a support meeting is scheduled within the first 2 weeks of enrollment; attendance is monitored closely and flagged immediately to the District Liaison.</p></div>
+        <div class="proc"><h4>Aspire Indiana</h4><p>Behavioral planning and mental-health counseling for Tier 3 students. Parent consent is obtained before referral; collaboration meetings occur at least monthly for active Aspire students.</p></div>
+        <div class="proc"><h4>Missing / Withdrawn Students</h4><p>Missing: notify leadership immediately, in-building sweep, then parent + IPS Police if not located within 10 minutes. Withdrawal: confirm the enrollment destination within 24 hours; escalate to the Head of School if unconfirmed after 5 school days.</p></div>
+      </div>
+    </section>
+
+    <!-- PART 10 -->
+    <section class="chap" id="c-community">
+      <div class="kicker">Part Ten</div>
+      <h2>Community Partnerships &amp; Family Engagement</h2>
+      <div class="rule"></div>
+      <p class="lead">Partnerships strengthen — they do not replace — school-based supports. ParentSquare is the primary school-to-home platform; all significant communications are documented in PowerSchool within 24 hours, in a tone that is warm, direct, and solutions-oriented.</p>
+      <table class="tbl">
+        <caption>Community Partner Quick Reference</caption>
+        <thead><tr><th style="width:30%">Partner</th><th>Primary Function</th></tr></thead>
+        <tbody>
+          <tr><td>Aspire Indiana</td><td>Behavioral planning, mental-health counseling (Tier 3).</td></tr>
+          <tr><td>McKinney-Vento / Foster Care</td><td>Homeless student identification, services, transportation, educational stability.</td></tr>
+          <tr><td>DCS</td><td>Child abuse/neglect reporting — school counselor–led.</td></tr>
+          <tr><td>IPS Police</td><td>Safety threats, criminal allegations, emergency response.</td></tr>
+          <tr><td>211 Indiana / Trustees Office</td><td>Community resource directory; emergency financial assistance for families.</td></tr>
+        </tbody>
+      </table>
+      <p>A monthly Community Resource Night, led by the Director and Family Services Coordinator, is open to all families with partners representing housing, food, health, legal aid, and academic support.</p>
+    </section>
+
+    <!-- PART 11 -->
+    <section class="chap" id="c-doc">
+      <div class="kicker">Part Eleven</div>
+      <h2>Documentation Standards</h2>
+      <div class="rule"></div>
+      <div class="standard"><b>The non-negotiable</b>PowerSchool is the official system of record. Documentation is not bureaucracy — it is the evidence of care. If it is not documented, it did not happen.</div>
+      <p>Every entry is accurate, objective, timely (within 24 hours), professional, and student-focused — observable behavior, actions taken, communication provided, intervention efforts, outcomes, and next steps. Never personal opinions, emotional language, labels, diagnoses, or speculation about family situations.</p>
+      <table class="tbl">
+        <caption>Documentation Timeline (Selected)</caption>
+        <thead><tr><th style="width:44%">Event Type</th><th>Deadline</th></tr></thead>
+        <tbody>
+          <tr><td>Parent / attendance / behavior meetings, home visits</td><td>Within 24 hours</td></tr>
+          <tr><td>Threat assessments, DCS communication</td><td>Within 24 hours</td></tr>
+          <tr><td>Safety concerns</td><td>Same day when possible; 24 hours maximum</td></tr>
+          <tr><td>Behavior contracts, Title IX events</td><td>Same day — signed copy retained</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- QUICK REFERENCE -->
+    <section class="chap" id="c-glossary">
+      <div class="kicker">Appendix</div>
+      <h2>Quick Reference &amp; Glossary</h2>
+      <div class="rule"></div>
+      <table class="tbl">
+        <caption>Who to Call</caption>
+        <thead><tr><th style="width:38%">Situation</th><th>First Call</th></tr></thead>
+        <tbody>
+          <tr><td>Student in immediate danger</td><td>911 → IPS Police → Head of School</td></tr>
+          <tr><td>Suicide ideation / self-harm</td><td>School Counselor → Director → Parent</td></tr>
+          <tr><td>Title IX complaint</td><td>Director (Coordinator) → Head of School</td></tr>
+          <tr><td>McKinney-Vento identification</td><td>Social Worker → District Liaison within 24 hrs</td></tr>
+          <tr><td>Student missing on campus</td><td>Head of School + IPS Police (10-minute rule)</td></tr>
+        </tbody>
+      </table>
+      <div class="glossary">
+        <dl>
+          <div><dt>BSP / BIP</dt><dd>Behavior Support Plan / Behavior Intervention Plan — individualized Tier 3 planning.</dd></div>
+          <div><dt>DBRC</dt><dd>Daily Behavior Report Card — evidence-based progress-monitoring tool.</dd></div>
+          <div><dt>FBA</dt><dd>Functional Behavior Assessment — precedes a BIP.</dd></div>
+          <div><dt>MDR</dt><dd>Manifestation Determination Review — IEP team meeting before exclusionary action.</dd></div>
+          <div><dt>McKinney-Vento</dt><dd>Federal law protecting educational rights of students experiencing homelessness.</dd></div>
+          <div><dt>MTSS</dt><dd>Multi-Tiered System of Supports — academic, behavioral, and social-emotional.</dd></div>
+        </dl>
+      </div>
+      <a class="gw-cta" href="index.html#sec-support">← Back to Student Support Systems</a>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var bar = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  });
+  var chaps = document.querySelectorAll('.chap[id]');
+  var links = document.querySelectorAll('.rail a[data-chap]');
+  if ('IntersectionObserver' in window && chaps.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-chap') === e.target.id); });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    chaps.forEach(function(c){ io.observe(c); });
+  }
+})();
+</script>
+</body>
+</html>

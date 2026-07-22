@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parent &amp; Student Handbook 2026–2027 · The Matchbook Way</title>
+<meta name="description" content="Matchbook Learning Parent &amp; Student Handbook 2026–2027 — welcome, communication, daily operations, academics, attendance, culture, MTSS, conduct, health, calendar, and family agreements.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Caveat:wght@600;700&display=swap');
+
+:root{
+  --spark-red:#E21C24; --spark-red-press:#B5151A; --ember:#C8161D;
+  --dream-yellow:#F9DC7C; --gold:#F7B23C; --ink:#1A1A1A; --charcoal:#232323;
+  --slate:#4A4A4A; --muted:#8A8A8A; --hairline:#E4E2DE; --paper:#F6F6F4;
+  --cloud:#EDEDEB; --white:#FFFFFF;
+  --font-display:'Anton','Arial Narrow',sans-serif;
+  --font-cond:'Oswald','Arial Narrow',sans-serif;
+  --font-body:'Mulish',system-ui,-apple-system,sans-serif;
+  --font-script:'Caveat','Comic Sans MS',cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--spark-red);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.scroll-top{position:fixed;top:0;left:0;height:4px;background:var(--spark-red);width:0;z-index:60;transition:width .1s linear}
+.topbar{position:fixed;top:0;left:0;right:0;height:56px;z-index:55;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 24px;background:rgba(35,35,35,.92);backdrop-filter:blur(8px);color:#fff}
+.topbar .back{font-family:var(--font-cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#EDEDEB;display:inline-flex;align-items:center;gap:8px}
+.topbar .back:hover{color:var(--dream-yellow);text-decoration:none}
+.topbar .brand{font-family:var(--font-display);font-size:15px;text-transform:uppercase;color:var(--spark-red);letter-spacing:.02em}
+.topbar .print{font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal);background:var(--dream-yellow);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+
+.layout{display:grid;grid-template-columns:236px 1fr;gap:0;max-width:1240px;margin:0 auto;padding-top:56px}
+.rail{position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);overflow-y:auto;padding:28px 18px 28px 24px}
+.rail-lbl{font-family:var(--font-cond);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.rail a{display:flex;align-items:center;gap:11px;padding:6px 0;color:var(--slate);font-family:var(--font-cond);font-weight:500;font-size:12px;letter-spacing:.02em;text-transform:uppercase;line-height:1.2}
+.rail a:hover{color:var(--ink);text-decoration:none}
+.rail a .dot{width:9px;height:9px;border-radius:999px;border:2px solid var(--hairline);background:transparent;flex:0 0 9px;transition:all .2s}
+.rail a.active{color:var(--spark-red)}
+.rail a.active .dot{background:var(--spark-red);border-color:var(--spark-red);box-shadow:0 0 0 3px rgba(226,28,36,.15)}
+
+.flow{min-width:0;padding:0 0 120px}
+.chap{padding:52px 56px;max-width:900px;scroll-margin-top:64px}
+@media(max-width:1080px){.chap{padding:44px 26px}}
+
+.kicker{font-family:var(--font-cond);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--spark-red)}
+.chap h2{font-family:var(--font-display);font-weight:400;font-size:clamp(28px,3.8vw,44px);line-height:.98;text-transform:uppercase;color:var(--ink);margin:10px 0 0}
+.lead{font-family:var(--font-body);font-size:17px;line-height:1.6;color:var(--slate);margin:16px 0 0}
+.chap p{font-family:var(--font-body);font-size:15.5px;line-height:1.7;color:var(--slate)}
+.chap h3{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:16px;color:var(--ink);margin:22px 0 8px;border-left:4px solid var(--spark-red);padding-left:10px}
+.rule{height:5px;width:64px;background:var(--spark-red);margin:14px 0 20px}
+
+.hero{background:var(--spark-red);color:#fff;padding:88px 56px 64px;position:relative;overflow:hidden;text-align:center}
+.hero::after{content:"";position:absolute;right:-120px;bottom:-140px;width:420px;height:420px;border-radius:999px;background:rgba(255,255,255,.08)}
+.hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.hero .mark{font-family:var(--font-display);font-size:16px;text-transform:uppercase;letter-spacing:.02em;color:var(--dream-yellow)}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(38px,6.2vw,78px);line-height:.9;text-transform:uppercase;margin:16px 0 0}
+.hero .yr{font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--dream-yellow);margin-top:12px}
+.hero .meta{font-size:13.5px;color:#fff;opacity:.9;margin-top:18px;line-height:1.7}
+.hero .promise{max-width:560px;margin:24px auto 0;font-size:16px;line-height:1.6}
+
+.affirm{background:var(--charcoal);color:#fff;padding:26px 28px;margin:0 0 8px;text-align:center}
+.affirm .k{font-family:var(--font-cond);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--dream-yellow);opacity:.9}
+.affirm .big{font-family:var(--font-display);text-transform:uppercase;font-size:24px;line-height:1.1;margin:8px 0 10px;color:#fff}
+.affirm p{color:#EDEDEB;font-size:14px;line-height:1.6;margin:0;max-width:640px;margin:0 auto}
+
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+@media(max-width:720px){.cols2{grid-template-columns:1fr}}
+
+.gridvals{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid var(--hairline);margin-top:8px}
+@media(max-width:720px){.gridvals{grid-template-columns:1fr 1fr}}
+.gridvals .v{padding:12px 14px;border:1px solid var(--hairline);font-size:13px;line-height:1.5;color:var(--slate)}
+.gridvals .v b{display:block;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.02em;font-size:12.5px;color:var(--ink);margin-bottom:2px}
+
+.ck{list-style:none;padding:0;margin:8px 0}
+.ck li{position:relative;padding:6px 0 6px 20px;color:var(--slate);line-height:1.5;border-bottom:1px solid var(--hairline);font-size:14.5px}
+.ck li:last-child{border-bottom:0}
+.ck li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:8px;background:var(--spark-red);transform:rotate(45deg)}
+.ck b{color:var(--ink)}
+
+.tbl{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.tbl caption{caption-side:top;text-align:left;font-family:var(--font-cond);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--spark-red);padding-bottom:6px}
+.tbl th{background:var(--charcoal);color:#fff;font-family:var(--font-cond);font-weight:600;font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;text-align:left;padding:8px 10px;border:1px solid var(--charcoal)}
+.tbl td{padding:8px 10px;border:1px solid var(--hairline);vertical-align:top;color:var(--slate);line-height:1.45}
+.tbl tr:nth-child(even) td{background:#fff}
+.tbl tr:nth-child(odd) td{background:var(--paper)}
+.tbl tr.hl td{background:var(--dream-yellow)!important;color:var(--ink)}
+
+.box{background:#fff;border-top:4px solid var(--spark-red);padding:14px 18px;margin:14px 0;font-size:14px;line-height:1.6}
+.box.dark{background:var(--charcoal);border-top-color:var(--gold);color:#EDEDEB}
+.box.dark h4{color:#fff}
+.box h4{margin:0 0 6px;font-family:var(--font-cond);font-weight:600;text-transform:uppercase;letter-spacing:.03em;font-size:13.5px;color:var(--ink)}
+
+.letter p{margin:0 0 10px;font-size:14.5px;line-height:1.7;color:var(--slate)}
+.sig-script{font-family:var(--font-script);font-size:26px;color:var(--ink);line-height:1;margin:8px 0 2px}
+
+.agree{border:1.5px solid var(--ink);padding:18px 20px;margin:16px 0;background:#fff}
+.agree h3{border:0;padding:0;margin:0 0 6px;font-family:var(--font-display);font-size:20px;color:var(--ink);text-transform:uppercase}
+.commit{list-style:none;padding:0;margin:8px 0 6px}
+.commit li{position:relative;padding:4px 0 4px 20px;color:var(--slate);line-height:1.5;border-bottom:1px solid var(--hairline);font-size:13.5px}
+.commit li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:4px;border-left:2px solid var(--spark-red);border-bottom:2px solid var(--spark-red);transform:rotate(-45deg)}
+
+.gw-cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-family:var(--font-cond);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--spark-red);color:#fff;padding:14px 26px;border-radius:999px}
+.gw-cta:hover{background:var(--spark-red-press);color:#fff;text-decoration:none}
+
+@media print{.topbar,.rail,.scroll-top{display:none!important}.layout{grid-template-columns:1fr;padding-top:0}.chap{padding:20px 8px;max-width:none}}
+@media(max-width:960px){.layout{grid-template-columns:1fr}.rail{display:none}}
+</style>
+</head>
+<body>
+<div class="scroll-top" id="scrollTop"></div>
+<div class="topbar">
+  <a class="back" href="index.html#sec-family">← Back to Handbook</a>
+  <span class="brand">Matchbook Learning</span>
+  <button class="print" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="layout">
+  <nav class="rail" id="rail" aria-label="Sections">
+    <div class="rail-lbl">The Handbook</div>
+    <a href="#c-welcome" data-chap="c-welcome"><span class="dot"></span><span>01 · Welcome</span></a>
+    <a href="#c-comm" data-chap="c-comm"><span class="dot"></span><span>02 · Communication</span></a>
+    <a href="#c-daily" data-chap="c-daily"><span class="dot"></span><span>03 · Daily Ops</span></a>
+    <a href="#c-academics" data-chap="c-academics"><span class="dot"></span><span>04 · Academics</span></a>
+    <a href="#c-attendance" data-chap="c-attendance"><span class="dot"></span><span>05 · Attendance</span></a>
+    <a href="#c-culture" data-chap="c-culture"><span class="dot"></span><span>06 · Culture</span></a>
+    <a href="#c-mtss" data-chap="c-mtss"><span class="dot"></span><span>07 · MTSS &amp; Repair</span></a>
+    <a href="#c-conduct" data-chap="c-conduct"><span class="dot"></span><span>08 · Conduct &amp; Dress</span></a>
+    <a href="#c-code" data-chap="c-code"><span class="dot"></span><span>09 · Code of Conduct</span></a>
+    <a href="#c-health" data-chap="c-health"><span class="dot"></span><span>10 · Health &amp; Safety</span></a>
+    <a href="#c-calendar" data-chap="c-calendar"><span class="dot"></span><span>11 · Calendar &amp; Glossary</span></a>
+    <a href="#c-forms" data-chap="c-forms"><span class="dot"></span><span>12 · Forms &amp; Agreements</span></a>
+  </nav>
+
+  <main class="flow">
+    <section class="hero" id="c-top">
+      <div class="hero-inner">
+        <div class="mark">Matchbook Learning</div>
+        <h1>Parent &amp; Student Handbook</h1>
+        <div class="yr">2026 – 2027</div>
+        <div class="meta">Schools of Indiana · at Wendell Phillips School 63<br>1163 N. Belmont Ave, Indianapolis, IN 46222 · (317) 226-4263 · Go Cardinals</div>
+        <p class="promise"><b>Every child is known, loved, and flourishing.</b> We personalize learning within a restorative community, fostering resilience and excellence while preparing students for real-world opportunities.</p>
+      </div>
+    </section>
+
+    <!-- 01 -->
+    <section class="chap" id="c-welcome">
+      <div class="kicker">Section 01</div>
+      <h2>Welcome, Identity &amp; Quick Start</h2>
+      <div class="rule"></div>
+      <div class="affirm"><div class="k">Our Daily Affirmation</div><div class="big">I am a Matchbook Learning Cardinal.</div><p>I take pride in my home, my school, and my community. Learning is my top priority. I respect my families, my teachers, my classmates, and myself. I am smart, talented, and peaceful — therefore, I will achieve.</p></div>
+      <div class="cols2">
+        <div><h3>Vision</h3><p>Every child is known, loved, and flourishing.</p></div>
+        <div><h3>Mission</h3><p>We personalize learning, within a restorative community, fostering resilience and excellence while preparing students for real-world opportunities.</p></div>
+      </div>
+      <h3>Our Values</h3>
+      <div class="gridvals">
+        <div class="v"><b>Student Achievement</b>Our students always come first.</div>
+        <div class="v"><b>Innovation</b>We seek new ways to improve our work.</div>
+        <div class="v"><b>Excellence</b>Highest possible standards.</div>
+        <div class="v"><b>Teamwork</b>Two minds are better than one.</div>
+        <div class="v"><b>Urgency</b>Not a moment to lose.</div>
+        <div class="v"><b>Integrity</b>Never miss a chance to do right.</div>
+      </div>
+      <h3>Everything Comes Back To Three</h3>
+      <p><strong>Be Safe. Be Respectful. Be Responsible.</strong> These three expectations guide how we treat each other, how we use our space, and how we show up every day.</p>
+      <div class="box"><h4>A Letter From Our Head of School</h4><div class="letter"><p>Welcome to Matchbook Learning at Wendell Phillips School 63! We are deeply committed to providing a safe, supportive, and rigorous environment where every student is known by name, by strength, and by need. Parents and guardians are our most important partners — stay engaged, check PowerSchool regularly, attend conferences, and reach out any time.</p><div class="sig-script">Nathan Tuttle</div><p style="margin:0"><b>Nathan Tuttle</b> · Head of School</p></div></div>
+      <h3>A Personalized, Competency-Based Education</h3>
+      <p>Core subjects are taught with high-quality, standards-aligned materials (Savvas MyView, enVision Math, MyPerspectives). Students advance by demonstrating mastery, not a fixed pace. Five competencies shape the proficiency scale and each student's monthly conference:</p>
+      <ul class="ck">
+        <li><b>Academic Ownership</b> — I take charge of my own learning.</li>
+        <li><b>Collaboration</b> — I work well with others toward a shared goal.</li>
+        <li><b>Communication</b> — I share my ideas clearly and listen to others.</li>
+        <li><b>Honor</b> — I take responsibility and treat my community with respect.</li>
+        <li><b>Resilience</b> — I keep trying and use feedback to get better.</li>
+      </ul>
+      <div class="box"><h4>Quick Family Reference</h4><p>Attendance help → call the main office by 9:00 AM. Academic progress → PowerSchool + classroom teacher. Behavior/support question → start with the teacher. Counseling or wellness → counselor, social worker, or main office. Title IX/harassment concern → main office or titleix@matchbooklearning.com. Emergency pickup → call the main office immediately.</p></div>
+    </section>
+
+    <!-- 02 -->
+    <section class="chap" id="c-comm">
+      <div class="kicker">Section 02</div>
+      <h2>Communication &amp; Family Partnership</h2>
+      <div class="rule"></div>
+      <table class="tbl">
+        <caption>Family Communication Map</caption>
+        <thead><tr><th style="width:24%">Channel</th><th>Use For</th></tr></thead>
+        <tbody>
+          <tr><td>PowerSchool</td><td>Grades, progress, missing assignments — check weekly.</td></tr>
+          <tr><td>LiveSchool</td><td>Positive recognition, concern messages, culture trends.</td></tr>
+          <tr><td>ParentSquare</td><td>Schoolwide messages, attendance, emergency/weather updates.</td></tr>
+          <tr><td>Phone call</td><td>Urgent attendance, behavior, safety, or same-day concerns.</td></tr>
+          <tr><td>Family meeting</td><td>Attendance, MTSS, DBRC/CICO, behavior support, re-entry.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Tracking progress:</strong> PowerSchool grades are always available; Weekly Missing Assignment Reports go home every week; Midquarter Grades and Quarterly Report Cards follow the marking-period schedule.</p>
+      <div class="cols2">
+        <div><h3>Non-Custodial Parents</h3><p>Indiana law presumes non-custodial parents retain parental rights unless a current court order on file limits access.</p></div>
+        <div><h3>Emergency Closing</h3><p>Communicated via ParentSquare, social media, and local news. Keep contact information current.</p></div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="chap" id="c-daily">
+      <div class="kicker">Section 03</div>
+      <h2>Daily Operations &amp; Transportation</h2>
+      <div class="rule"></div>
+      <table class="tbl">
+        <caption>Daily Schedule</caption>
+        <thead><tr><th style="width:24%">Time</th><th>What's Happening</th></tr></thead>
+        <tbody>
+          <tr><td>7:15 AM</td><td>Doors open — breakfast served</td></tr>
+          <tr><td>7:35 AM</td><td>School officially begins</td></tr>
+          <tr><td>2:15 PM</td><td>Dismissal</td></tr>
+        </tbody>
+      </table>
+      <div class="box"><h4>Tardy Reminder</h4><p>Students arriving after 7:35 AM must sign in at the main office. Every minute of learning counts.</p></div>
+      <h3>Transportation &amp; Bus Expectations</h3>
+      <p>Matchbook students are transported via IPS / First Student. Riding the bus is a privilege: obey the driver, stay seated, keep hands and feet to yourself, no food or drinks, and arrive about 10 minutes early for pickup.</p>
+      <div class="box dark"><h4>Building Security</h4><p>All visitors present a state-issued photo ID upon entry. Approved volunteers check in at the main office and wear a name badge at all times.</p></div>
+    </section>
+
+    <!-- 04 -->
+    <section class="chap" id="c-academics">
+      <div class="kicker">Section 04</div>
+      <h2>Academics, Progress &amp; Ownership</h2>
+      <div class="rule"></div>
+      <p>Every student participates in <strong>all four</strong> Related Arts weekly — Music, Physical Education, STEAM (via PLTW), and College &amp; Career Readiness. All K–8 students apply skills to a real-world Celebration of Learning showcase.</p>
+      <table class="tbl">
+        <caption>Competency-Based Grading Scale</caption>
+        <thead><tr><th style="width:36%">Score</th><th>What It Means</th></tr></thead>
+        <tbody>
+          <tr><td>4 — Advanced</td><td>Exceeds the standard; independent application.</td></tr>
+          <tr><td>3 — Proficient</td><td>Meets the standard consistently.</td></tr>
+          <tr><td>2 — Developing</td><td>Approaching the standard; needs support.</td></tr>
+          <tr><td>1 — Beginning</td><td>Needs significant support.</td></tr>
+        </tbody>
+      </table>
+      <table class="tbl">
+        <caption>Marking Periods 2026–27</caption>
+        <thead><tr><th style="width:36%">Quarter</th><th>Dates</th></tr></thead>
+        <tbody>
+          <tr><td>M1</td><td>July 30 – October 2, 2026 (45 days)</td></tr>
+          <tr><td>M2</td><td>October 5 – December 17, 2026 (43 days)</td></tr>
+          <tr><td>M3</td><td>January 5 – March 12, 2027 (47 days)</td></tr>
+          <tr><td>M4</td><td>March 15 – May 26, 2027 (46 days)</td></tr>
+          <tr class="hl"><td>Total Instructional Days</td><td>181</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 05 -->
+    <section class="chap" id="c-attendance">
+      <div class="kicker">Section 05</div>
+      <h2>Attendance &amp; Chronic-Absence Supports</h2>
+      <div class="rule"></div>
+      <p class="lead">Indiana law requires school attendance for all students. Report all absences to the main office by 9:00 AM; a written note or physician documentation is required for an excused absence upon return.</p>
+      <div class="cols2">
+        <div><h3>Tardiness</h3><p>Sign in at the main office after 7:35 AM. Excessive tardiness is addressed through MTSS and parent conferences.</p></div>
+        <div><h3>Chronic Absenteeism</h3><p>Missing 10% or more of school days. Matchbook works actively with families to remove barriers.</p></div>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="chap" id="c-culture">
+      <div class="kicker">Section 06</div>
+      <h2>Culture, Recognition &amp; Student Support</h2>
+      <div class="rule"></div>
+      <p class="lead">Our culture is taught, rehearsed, and celebrated — not assumed.</p>
+      <table class="tbl">
+        <caption>Morning Meeting — The Six-Move Sequence</caption>
+        <thead><tr><th style="width:22%">Move</th><th>Family-Facing Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Regulate</td><td>Students settle their bodies and emotions.</td></tr>
+          <tr><td>Orient</td><td>Students understand the day's focus.</td></tr>
+          <tr><td>Connect</td><td>Students build belonging through voice and greeting.</td></tr>
+          <tr><td>Practice</td><td>Students rehearse the value or routine.</td></tr>
+          <tr><td>Commit</td><td>Students name the action they will try.</td></tr>
+          <tr><td>Transition</td><td>Students move into learning with purpose.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Restorative Practices:</strong> When conflicts arise, our first response is restorative — students get the opportunity to repair relationships, take responsibility, and grow, supported by a dedicated Restorative Team every day. <strong>Friday Cypher</strong> celebrates growth, not popularity, tied to what adults actually observe.</p>
+    </section>
+
+    <!-- 07 -->
+    <section class="chap" id="c-mtss">
+      <div class="kicker">Section 07</div>
+      <h2>MTSS, DBRC/CICO, Restorative Repair &amp; Re-Entry</h2>
+      <div class="rule"></div>
+      <table class="tbl">
+        <caption>MTSS In Plain Language</caption>
+        <thead><tr><th style="width:12%">Tier</th><th style="width:44%">What Families Should Know</th><th>Family Role</th></tr></thead>
+        <tbody>
+          <tr><td>Tier 1</td><td>Schoolwide expectations, routines, reteaching for all students.</td><td>Reinforce Safe, Respectful, Responsible at home.</td></tr>
+          <tr><td>Tier 2</td><td>Targeted supports like CICO, DBRC, mentor check-ins.</td><td>Attend the meeting and support the student's goal.</td></tr>
+          <tr><td>Tier 3</td><td>Individualized planning, intensive support, re-entry support.</td><td>Co-create the plan and attend review meetings.</td></tr>
+        </tbody>
+      </table>
+      <p>A DBRC (Daily Behavior Report Card) is a support tool — not a punishment. It gives frequent feedback and helps the family see what skill the student is practicing.</p>
+    </section>
+
+    <!-- 08 -->
+    <section class="chap" id="c-conduct">
+      <div class="kicker">Section 08</div>
+      <h2>Conduct, Dress &amp; Technology</h2>
+      <div class="rule"></div>
+      <p class="lead">Matchbook is a non-violent, non-uniform community. When in doubt about dress: would my Head of School be comfortable seeing me in this?</p>
+      <div class="box dark"><h4>Harassment, Intimidation &amp; Bullying (HIB)</h4><p>Bullying — including cyberbullying — results in consequences aligned with the Student Code of Conduct. Report any incident to a teacher, counselor, or administrator.</p></div>
+      <div class="box dark"><h4>Cell Phone Policy — Simple &amp; Firm</h4><p>Personal electronics may not be used, visible, or accessible during the school day. Devices are powered off and stored the entire day. To reach a student urgently, call the main office at (317) 226-4263.</p></div>
+      <p>Every student has a school-issued 1:1 device. A Technology Agreement must be signed before issuance; devices stay at school and are used for educational purposes only.</p>
+    </section>
+
+    <!-- 09 -->
+    <section class="chap" id="c-code">
+      <div class="kicker">Section 09</div>
+      <h2>Student Code of Conduct</h2>
+      <div class="rule"></div>
+      <p class="lead">Matchbook is a restorative school community. Restorative practice does not mean there are no consequences — it means consequences help students understand impact, take responsibility, repair when possible, and learn the next right step.</p>
+      <table class="tbl">
+        <caption>How Matchbook Responds To Behavior</caption>
+        <thead><tr><th style="width:13%">Level</th><th>Possible Matchbook Response</th></tr></thead>
+        <tbody>
+          <tr><td>Level 1</td><td>Reteaching, redirection, restorative conversation, family communication if patterns continue.</td></tr>
+          <tr><td>Level 2</td><td>Family partnership, counselor/dean/restorative support, MTSS review, DBRC/CICO.</td></tr>
+          <tr><td>Level 3</td><td>Administrator involvement, formal documentation, restorative re-entry plan, possible OSS.</td></tr>
+          <tr><td>Level 4</td><td>Immediate administrative review, due process, possible suspension or expulsion referral.</td></tr>
+        </tbody>
+      </table>
+      <div class="box"><h4>No Student Sent Home Without Family Contact</h4><p>No student is dismissed early or removed for disciplinary reasons without parent/guardian contact and administrative authorization, except in an emergency.</p></div>
+      <p><strong>Students with disabilities</strong> retain all protections under IDEA, Section 504, and Indiana Article 7 — nothing in this handbook limits those rights.</p>
+    </section>
+
+    <!-- 10 -->
+    <section class="chap" id="c-health">
+      <div class="kicker">Section 10</div>
+      <h2>Health, Safety &amp; Student Services</h2>
+      <div class="rule"></div>
+      <div class="cols2">
+        <div><h3>Immunizations</h3><p>Records must be on file by Day 1 per Indiana law.</p></div>
+        <div><h3>Medications</h3><p>Administered through the health office unless a physician authorizes self-carry.</p></div>
+        <div><h3>Counselors &amp; Social Workers</h3><p>Support goal-setting, academic planning, and social-emotional well-being. Families may reach out any time.</p></div>
+        <div><h3>Multilingual Learners</h3><p>SIOP-trained teachers; bilingual and newcomer services; annual WIDA ACCESS assessment.</p></div>
+      </div>
+      <div class="box"><h4>Anti-Harassment, Non-Discrimination &amp; Title IX</h4><p>Matchbook prohibits sex-based discrimination in compliance with Title IX. Report concerns to the main office at (317) 226-4263 or titleix@matchbooklearning.com.</p></div>
+    </section>
+
+    <!-- 11 -->
+    <section class="chap" id="c-calendar">
+      <div class="kicker">Section 11</div>
+      <h2>Calendar, Supplies &amp; Glossary</h2>
+      <div class="rule"></div>
+      <table class="tbl">
+        <caption>2026–2027 Key Dates</caption>
+        <thead><tr><th style="width:34%">Date</th><th>Event</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>July 30, 2026</td><td>First Day of School</td></tr>
+          <tr><td>Oct 8–9</td><td>Parent Conferences</td></tr>
+          <tr><td>Oct 12–16</td><td>Fall Break</td></tr>
+          <tr><td>Dec 21 – Jan 1</td><td>Winter Break</td></tr>
+          <tr><td>Mar 24–25</td><td>Parent Conferences</td></tr>
+          <tr><td>Mar 29 – Apr 2</td><td>Spring Break</td></tr>
+          <tr class="hl"><td>May 26, 2027</td><td>Last Day of School</td></tr>
+        </tbody>
+      </table>
+      <div class="box"><h4>Bring All Supplies On The First Day</h4><p>Please send 48 No. 2 pencils — the most-used supply. Kindergarten families: include a labeled change of clothes for emergencies.</p></div>
+      <table class="tbl">
+        <caption>Glossary Of Student Support Terms</caption>
+        <thead><tr><th style="width:22%">Term</th><th>Family-Friendly Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>MTSS</td><td>Matching student needs to instruction, intervention, and support.</td></tr>
+          <tr><td>CICO</td><td>Check-In/Check-Out — a daily adult connection routine.</td></tr>
+          <tr><td>DBRC</td><td>Daily Behavior Report Card — regular feedback tool.</td></tr>
+          <tr><td>Re-entry</td><td>A plan for returning to class after a support event or removal.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 12 -->
+    <section class="chap" id="c-forms">
+      <div class="kicker">Section 12</div>
+      <h2>Forms &amp; Family Agreements</h2>
+      <div class="rule"></div>
+      <p class="lead">A few forms keep every student safe and supported. Complete and return before or during the first week of school: Handbook Acknowledgement, Technology Agreement, Internet Safety, Cell Phone Agreement, Attendance Agreement, Media Release, FERPA Notice, Emergency Contact / Authorized Pickup, and Health / Medication Forms.</p>
+      <div class="agree">
+        <h3>Student Agreement</h3>
+        <p>As a Matchbook Learning Cardinal, I commit to:</p>
+        <ul class="commit">
+          <li>Coming to school every day, on time, ready to learn</li>
+          <li>Treating every person in this building with respect</li>
+          <li>Following the dress code and keeping personal electronics powered off all day</li>
+          <li>Never using physical aggression, threats, or harassment toward anyone</li>
+          <li>Reporting bullying, threats, or unsafe situations to a staff member</li>
+        </ul>
+      </div>
+      <div class="agree">
+        <h3>Parent / Guardian Agreement</h3>
+        <p>As a Matchbook Learning family, we commit to:</p>
+        <ul class="commit">
+          <li>Ensuring our child arrives ready to learn by 7:35 AM every day</li>
+          <li>Reading all school communications and keeping contact information current</li>
+          <li>Monitoring our child's progress through PowerSchool regularly</li>
+          <li>Supporting school consequences and attending a reinstatement meeting after any suspension</li>
+        </ul>
+      </div>
+      <div class="box"><h4>Draft Status</h4><p>This integrated-framework page is built from current Matchbook handbook, culture/playbook, and Tier 2/Tier 3 support content. Official publication requires leadership and legal review of marked policy items, confirmed dates, and Spanish translation for multilingual families.</p></div>
+      <p style="text-align:center;font-size:12.5px;color:var(--muted);margin-top:14px">© 2026–2027 Matchbook Learning · at Wendell Phillips School 63 · Public Charter · Tuition-Free · 1163 N. Belmont Ave, Indianapolis, IN 46222 · (317) 226-4263</p>
+      <a class="gw-cta" href="index.html#sec-family">← Back to Family &amp; Community Engagement</a>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var bar = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  });
+  var chaps = document.querySelectorAll('.chap[id]');
+  var links = document.querySelectorAll('.rail a[data-chap]');
+  if ('IntersectionObserver' in window && chaps.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-chap') === e.target.id); });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    chaps.forEach(function(c){ io.observe(c); });
+  }
+})();
+</script>
+</body>
+</html>
